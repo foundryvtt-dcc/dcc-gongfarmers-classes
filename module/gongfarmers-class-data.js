@@ -578,6 +578,135 @@ export const GONGFARMERS_CLASSES = {
         }
       }
     }
+  },
+
+  // ---- 2016 Collection ----
+
+  'hot-dog-suit': {
+    label: 'HotDogSuit.ActorSheetHotDogSuit',
+    sheetHeight: 635,
+    mixin () {
+      // A four-level joke class with no class-specific rollable die; its
+      // abilities (Baffle, Pink Paper Flyers, the Bastich Luck tricks) are
+      // descriptive notes on the class tab.
+    },
+    defaults: {
+      sheetClass: 'Hot-Dog-Suit',
+      localize: { 'class.className': 'HotDogSuit.HotDogSuit' },
+      literal: {
+        'details.critRange': 20,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'hot-dog-suit': { id: 'hot-dog-suit', template: classPartial('hot-dog-suit') } },
+      tabs: { sheet: { tabs: [{ id: 'hot-dog-suit', group: 'sheet', label: 'HotDogSuit.HotDogSuit' }] } }
+    }
+  },
+
+  barbarian: {
+    label: 'Barbarian.ActorSheetBarbarian',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Warrior-style attack/deed die; rolled anew each attack and added to
+      // both attack and damage. Shared deedDie field; label pinned in defaults.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Barbarian.DeedDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+      // Savage Skills: a per-level modifier added to animal-grace tasks.
+      schema.skills.fields.savageSkills = new f.SchemaField({
+        label: new f.StringField({ initial: 'Barbarian.SavageSkills' }),
+        value: new f.StringField({ initial: '' })
+      })
+      // Smell Sorcery: a per-level detect-magic die (rolled + level + Luck).
+      schema.skills.fields.smellSorcery = new f.SchemaField({
+        label: new f.StringField({ initial: 'Barbarian.SmellSorcery' }),
+        die: new f.StringField({ initial: '1d14' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Barbarian',
+      localize: { 'class.className': 'Barbarian.Barbarian' },
+      enrichHtml: { 'class.mightyDeedsLink': 'DCC.MightyDeedsLink' },
+      literal: {
+        // Improved critical threat range, widening to 17-20 (set per level).
+        'details.critRange': 19,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'manual',
+        'config.addClassLevelToInitiative': true,
+        // deedDie is shared with the deed-die classes; pin this class's label.
+        'skills.deedDie.label': 'Barbarian.DeedDie'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), barbarian: { id: 'barbarian', template: classPartial('barbarian') } },
+      tabs: { sheet: { tabs: [{ id: 'barbarian', group: 'sheet', label: 'Barbarian.Barbarian' }] } }
+    }
+  },
+
+  'halfling-hucker': {
+    label: 'HalflingHucker.ActorSheetHalflingHucker',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Luck Die: spent with a Luck point to add to thrown-weapon attack and
+      // damage rolls for the round. Sneak & Hide comes from the DCC halfling
+      // mixin on the shared Player schema (this class uses the halfling table).
+      schema.skills.fields.luckDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'HalflingHucker.LuckDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Halfling-Hucker',
+      localize: { 'class.className': 'HalflingHucker.HalflingHucker' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'halfling-hucker': { id: 'halfling-hucker', template: classPartial('halfling-hucker') } },
+      tabs: { sheet: { tabs: [{ id: 'halfling-hucker', group: 'sheet', label: 'HalflingHucker.HalflingHucker' }] } }
+    }
+  },
+
+  'techno-necromancer': {
+    label: 'TechnoNecromancer.ActorSheetTechnoNecromancer',
+    sheetHeight: 640,
+    mixin () {
+      // Innate spellcaster from a bespoke necromancy list (no spellbook).
+      // Modeled on the wizard spell tab; no class-specific schema fields.
+    },
+    defaults: {
+      sheetClass: 'Techno-Necromancer',
+      localize: { 'class.className': 'TechnoNecromancer.TechnoNecromancer' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'techno-necromancer': { id: 'techno-necromancer', template: classPartial('techno-necromancer') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'techno-necromancer', group: 'sheet', label: 'TechnoNecromancer.TechnoNecromancer' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
   }
 }
 

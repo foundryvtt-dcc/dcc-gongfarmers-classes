@@ -43,7 +43,11 @@ const CLASSES = [
   { id: 'arcane-warrior', sheetClass: 'Arcane-Warrior', flag: 'dcc-gongfarmers-classes-arcane-warrior.ActorSheetArcaneWarrior', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
   { id: 'mystic-arcanist', sheetClass: 'Mystic-Arcanist', flag: 'dcc-gongfarmers-classes-mystic-arcanist.ActorSheetMysticArcanist', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
   { id: 'spell-thief', sheetClass: 'Spell-Thief', flag: 'dcc-gongfarmers-classes-spell-thief.ActorSheetSpellThief', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
-  { id: 'rune-sage', sheetClass: 'Rune-Sage', flag: 'dcc-gongfarmers-classes-rune-sage.ActorSheetRuneSage', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'l' }
+  { id: 'rune-sage', sheetClass: 'Rune-Sage', flag: 'dcc-gongfarmers-classes-rune-sage.ActorSheetRuneSage', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'l' },
+  { id: 'hot-dog-suit', sheetClass: 'Hot-Dog-Suit', flag: 'dcc-gongfarmers-classes-hot-dog-suit.ActorSheetHotDogSuit', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n', levels: 4 },
+  { id: 'barbarian', sheetClass: 'Barbarian', flag: 'dcc-gongfarmers-classes-barbarian.ActorSheetBarbarian', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
+  { id: 'halfling-hucker', sheetClass: 'Halfling-Hucker', flag: 'dcc-gongfarmers-classes-halfling-hucker.ActorSheetHalflingHucker', dieField: 'system.skills.luckDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'techno-necromancer', sheetClass: 'Techno-Necromancer', flag: 'dcc-gongfarmers-classes-techno-necromancer.ActorSheetTechnoNecromancer', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'c' }
 ]
 
 const consoleErrors = []
@@ -77,7 +81,10 @@ test('registers every class for progression load', async ({ page }) => {
 
 test('ships a 40+ item level-data pack', async ({ page }) => {
   const size = await page.evaluate((pack) => game.packs.get(pack)?.index?.size ?? 0, PACK)
-  expect(size).toBeGreaterThanOrEqual(CLASSES.length * 10)
+  // Most classes ship 10 level items; a few (e.g. the 4-level Hot-Dog Suit)
+  // ship fewer, so expect the per-class sum rather than CLASSES.length * 10.
+  const expectedItems = CLASSES.reduce((n, c) => n + (c.levels ?? 10), 0)
+  expect(size).toBeGreaterThanOrEqual(expectedItems)
 })
 
 test('ships a reference journal crediting every class with the downloads link', async ({ page }) => {

@@ -11,15 +11,32 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 16 / ~57 implemented
+## Status: 20 / ~57 implemented
 
-### Done & E2E-verified (16)
+### Done & E2E-verified (20)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
   Mystic Arcanist, Spell Thief, Rune Sage
+- **2016:** Hot-Dog Suit (V1), Barbarian (V1), Halfling Hucker (V1),
+  Techno-necromancer (V6, Crawljammer)
 
-The DCC-native portion of the 2020 collection is now complete.
+The DCC-native portions of the 2020 and 2016 collections are now complete.
+
+#### Notes from the 2016 build
+- **Hot-Dog Suit is a 4-level class** (then multiclasses). Its chart has only
+  levels 1–4, so `buildLevelItems.mjs` emits 4 items for it. The E2E
+  "ships a 40+ item level-data pack" test now sums a per-class `levels` field
+  (default 10) instead of assuming `CLASSES.length * 10` — set `levels: 4` on
+  the Hot-Dog Suit row.
+- **Barbarian** is a deed-die warrior variant with two extra per-level columns
+  (Savage Skills value + Smell Sorcery die, both custom skill mixin fields) and
+  a **per-level crit threat range** (`system.details.critRange` 19→18→17 set in
+  the chart). It borrows the warrior title table.
+- **Halfling Hucker** uses the **standard DCC Halfling table** (copied from
+  `dcc-core-book/assets/json/halfling-combined-chart.json`) for base attributes;
+  only its Luck Die (custom field) and titles are class-specific. Sneak & Hide
+  comes from the DCC built-in halfling mixin on the shared Player schema.
 
 ### Excluded (not leveled classes — documented)
 - Kraken Slayer (2020) — a magic item, not a class
@@ -38,11 +55,11 @@ The DCC-native portion of the 2020 collection is now complete.
   (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
   future dedicated MCC effort rather than mixing systems here.
 
-### Pending (~35)
-- **2016 (4), 2017 (6), 2018 (12), 2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
+### Pending (~31)
+- **2017 (6), 2018 (12), 2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
   see CLASS_INVENTORY.md for the per-class list, types, and build flags.
 
-Build order: 2020 done (DCC-native); next 2016 → 2025.
+Build order: 2020 + 2016 done (DCC-native); next 2017 → 2025.
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

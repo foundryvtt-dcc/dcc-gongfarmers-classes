@@ -16,6 +16,10 @@ import * as ArcaneWarriorSheets from './actor-sheets-arcane-warrior.js'
 import * as MysticArcanistSheets from './actor-sheets-mystic-arcanist.js'
 import * as SpellThiefSheets from './actor-sheets-spell-thief.js'
 import * as RuneSageSheets from './actor-sheets-rune-sage.js'
+import * as HotDogSuitSheets from './actor-sheets-hot-dog-suit.js'
+import * as BarbarianSheets from './actor-sheets-barbarian.js'
+import * as HalflingHuckerSheets from './actor-sheets-halfling-hucker.js'
+import * as TechnoNecromancerSheets from './actor-sheets-techno-necromancer.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -39,7 +43,11 @@ const GONGFARMERS_SHEETS = [
   { sheet: ArcaneWarriorSheets.ActorSheetArcaneWarrior, scope: 'dcc-gongfarmers-classes-arcane-warrior', label: 'ArcaneWarrior.ActorSheetArcaneWarrior' },
   { sheet: MysticArcanistSheets.ActorSheetMysticArcanist, scope: 'dcc-gongfarmers-classes-mystic-arcanist', label: 'MysticArcanist.ActorSheetMysticArcanist' },
   { sheet: SpellThiefSheets.ActorSheetSpellThief, scope: 'dcc-gongfarmers-classes-spell-thief', label: 'SpellThief.ActorSheetSpellThief' },
-  { sheet: RuneSageSheets.ActorSheetRuneSage, scope: 'dcc-gongfarmers-classes-rune-sage', label: 'RuneSage.ActorSheetRuneSage' }
+  { sheet: RuneSageSheets.ActorSheetRuneSage, scope: 'dcc-gongfarmers-classes-rune-sage', label: 'RuneSage.ActorSheetRuneSage' },
+  { sheet: HotDogSuitSheets.ActorSheetHotDogSuit, scope: 'dcc-gongfarmers-classes-hot-dog-suit', label: 'HotDogSuit.ActorSheetHotDogSuit' },
+  { sheet: BarbarianSheets.ActorSheetBarbarian, scope: 'dcc-gongfarmers-classes-barbarian', label: 'Barbarian.ActorSheetBarbarian' },
+  { sheet: HalflingHuckerSheets.ActorSheetHalflingHucker, scope: 'dcc-gongfarmers-classes-halfling-hucker', label: 'HalflingHucker.ActorSheetHalflingHucker' },
+  { sheet: TechnoNecromancerSheets.ActorSheetTechnoNecromancer, scope: 'dcc-gongfarmers-classes-techno-necromancer', label: 'TechnoNecromancer.ActorSheetTechnoNecromancer' }
 ]
 
 /* -------------------------------------------- */

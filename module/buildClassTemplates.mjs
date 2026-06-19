@@ -90,6 +90,31 @@ const META = {
     abilities: ['Powers', 'PatronRestriction', 'DisapprovalCorruption', 'Luck', 'WeaponTraining'],
     tableDice: [],
     caster: 'MysticArcanist.CasterNote'
+  },
+  'hot-dog-suit': {
+    prefix: 'HotDogSuit',
+    dice: [],
+    abilities: ['ArmorWeapons', 'Baffle', 'PinkPaperFlyers', 'IgnoredOverlooked', 'ElementalInteractions', 'LuckyBastich', 'Advancement'],
+    tableDice: []
+  },
+  barbarian: {
+    prefix: 'Barbarian',
+    dice: [{ labelKey: 'Barbarian.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['DeedDieAbility', 'MightyDeeds', 'Loincloth', 'AnimalInstincts', 'SavageSkillsAbility', 'ArmedWithAnything', 'SmellSorceryAbility', 'Superstitions', 'Primitive'],
+    tableDice: [{ header: 'Savage Skills', key: 'system.skills.savageSkills.value' }, { header: 'Smell Sorcery', key: 'system.skills.smellSorcery.die' }]
+  },
+  'halfling-hucker': {
+    prefix: 'HalflingHucker',
+    dice: [{ labelKey: 'HalflingHucker.LuckDie', field: 'system.skills.luckDie.die', roll: false }],
+    abilities: ['WeaponTraining', 'TwoFistedThrower', 'HalflingTraits', 'LuckyTosser', 'Prizewinner'],
+    tableDice: [{ header: 'Luck Die', key: 'system.skills.luckDie.die' }]
+  },
+  'techno-necromancer': {
+    prefix: 'TechnoNecromancer',
+    dice: [],
+    abilities: ['WeaponTraining', 'TechnoMagicalAccessory', 'Magic', 'CyberanimateDead', 'Luck', 'Languages'],
+    tableDice: [],
+    caster: 'TechnoNecromancer.CasterNote'
   }
 }
 

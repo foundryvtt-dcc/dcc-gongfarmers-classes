@@ -41,12 +41,12 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | ~~Kraken Slayer~~ | 10 | — | ❌ not a class (magic item in an NPC writeup) |
 
 ## 2016 Collection
-| Class | Vol | Type |
-|-------|-----|------|
-| Hot-Dog Suit | 1 | skill (joke class) |
-| Barbarian | 1 | martial (warrior variant) ⚠ generic name |
-| Halfling Hucker | 1 | race (halfling variant) |
-| Techno-necromancer | 6 | caster (Crawljammer) |
+| Class | Vol | Type | Status |
+|-------|-----|------|--------|
+| Hot-Dog Suit | 1 | skill (joke class, 4-level) | ✅ |
+| Barbarian | 1 | martial (warrior variant) | ✅ |
+| Halfling Hucker | 1 | race (halfling variant) | ✅ |
+| Techno-necromancer | 6 | caster (Crawljammer) | ✅ |
 
 ## 2017 Collection
 | Class | Vol | Type |
@@ -113,10 +113,10 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 16 (✅) — 2015: all 4; 2020 (DCC-native): Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human, Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior, Mystic Arcanist, Spell Thief, Rune Sage. **2020 DCC-native classes are complete.**
+- **Done & E2E-verified:** 20 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4): Hot-Dog Suit, Barbarian, Halfling Hucker, Techno-necromancer. **2020 + 2016 DCC-native classes are complete.**
 - **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure, not a PC class).
 - **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
-- **Pending:** ~35 — all of 2016/2017/2018/2019/2021/2024/2025.
+- **Pending:** ~31 — all of 2017/2018/2019/2021/2024/2025.
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).
