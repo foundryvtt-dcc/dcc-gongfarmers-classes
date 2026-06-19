@@ -1,0 +1,73 @@
+{{!-- Dervish Class Tab --}}
+<section class="tab {{tabs.dervish.id}} {{tabs.dervish.cssClass}}" data-tab="{{tabs.dervish.id}}"
+         data-group="{{tabs.dervish.group}}">
+
+  <div class="grid-container">
+    <div class="grid-col-span-12 dark-border">
+      <div class="box-title">{{localize "Dervish.DervishAbilities"}}</div>
+      <div class="grid-tpl-two grid-row-gap-8 p-5">
+        <div class="grid-tpl-max-25" data-skill="deedDie">
+          <label class="skill-check rollable" for="system.skills.deedDie.die"
+                 data-action="rollSkillCheck"
+                 data-drag="true"
+                 data-drag-action="skill"
+                 title="{{localize 'DCC.RollSkillCheckHint'}}">
+            {{localize "Dervish.DeedDie"}}
+          </label>
+          <input type="text" id="system.skills.deedDie.die" name="system.skills.deedDie.die"
+                 value="{{system.skills.deedDie.die}}" data-dtype="String"/>
+        </div>
+        <ul class="class-note grid-col-span-2 data-font">
+          <li>{{localize "Dervish.HolyRite"}}
+            <ul class="class-note flexcol"><li>{{localize "Dervish.HolyRiteDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Dervish.LayOnHands"}}
+            <ul class="class-note flexcol"><li>{{localize "Dervish.LayOnHandsDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Dervish.ThievingSkills"}}
+            <ul class="class-note flexcol"><li>{{localize "Dervish.ThievingSkillsDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Dervish.Tracking"}}
+            <ul class="class-note flexcol"><li>{{localize "Dervish.TrackingDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Dervish.Survival"}}
+            <ul class="class-note flexcol"><li>{{localize "Dervish.SurvivalDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Dervish.Asceticism"}}
+            <ul class="class-note flexcol"><li>{{localize "Dervish.AsceticismDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Dervish.Languages"}}
+            <ul class="class-note flexcol"><li>{{localize "Dervish.LanguagesDesc"}}</li></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "Dervish.LevelTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">{{localize "DCC.Level"}}</div>
+        <div class="divTableHead">{{localize "Dervish.DeedDie"}}</div>
+        <div class="divTableHead">Crit Die/Table</div>
+        <div class="divTableHead">Action Dice</div>
+        <div class="divTableHead">Ref</div>
+        <div class="divTableHead">Fort</div>
+        <div class="divTableHead">Will</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">d2</div><div class="divTableCell">1d8/III</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">d3</div><div class="divTableCell">1d10/III</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">d4</div><div class="divTableCell">1d12/III</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">d5</div><div class="divTableCell">1d14/III</div><div class="divTableCell">1d20</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">d6</div><div class="divTableCell">1d16/IV</div><div class="divTableCell">1d20+1d14</div><div class="divTableCell">+2</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">6</div><div class="divTableCell">d7</div><div class="divTableCell">1d20/IV</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">7</div><div class="divTableCell">d8</div><div class="divTableCell">1d20/V</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">+3</div><div class="divTableCell">+4</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">8</div><div class="divTableCell">d10</div><div class="divTableCell">1d24/V</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div></div>
+        <div class="divTableRow"><div class="divTableCell">9</div><div class="divTableCell">d10+1</div><div class="divTableCell">1d30/V</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">+4</div><div class="divTableCell">+5</div><div class="divTableCell">+4</div></div>
+        <div class="divTableRow"><div class="divTableCell">10</div><div class="divTableCell">d10+2</div><div class="divTableCell">2d20/V</div><div class="divTableCell">1d20+1d20+1d14</div><div class="divTableCell">+5</div><div class="divTableCell">+6</div><div class="divTableCell">+5</div></div>
+      </div>
+    </div>
+
+    <p class="grid-col-span-12 class-note data-font">{{localize "Dervish.Credit"}}</p>
+  </div>
+</section>

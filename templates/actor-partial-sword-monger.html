@@ -1,0 +1,91 @@
+{{!-- Sword Monger Class Tab --}}
+<section class="tab {{tabs.sword-monger.id}} {{tabs.sword-monger.cssClass}}" data-tab="{{tabs.sword-monger.id}}"
+         data-group="{{tabs.sword-monger.group}}">
+
+  <div class="grid-container">
+    <div class="grid-col-span-12 dark-border">
+      <div class="box-title">{{localize "SwordMonger.SwordMongerAbilities"}}</div>
+      <div class="grid-tpl-two grid-row-gap-8 p-5">
+        <div class="grid-tpl-max-25" data-skill="deedDie">
+          <label class="skill-check rollable" for="system.skills.deedDie.die"
+                 data-action="rollSkillCheck"
+                 data-drag="true"
+                 data-drag-action="skill"
+                 title="{{localize 'DCC.RollSkillCheckHint'}}">
+            {{localize "SwordMonger.DeedDie"}}
+          </label>
+          <input type="text" id="system.skills.deedDie.die" name="system.skills.deedDie.die"
+                 value="{{system.skills.deedDie.die}}" data-dtype="String"/>
+        </div>
+        <ul class="class-note grid-col-span-2 data-font">
+          <li>{{localize "SwordMonger.TenetOfTheBlade"}}
+            <ul class="class-note flexcol"><li>{{localize "SwordMonger.TenetOfTheBladeDesc"}}</li></ul>
+          </li>
+          <li>{{localize "SwordMonger.BladeDeed"}}
+            <ul class="class-note flexcol"><li>{{localize "SwordMonger.BladeDeedDesc"}}</li></ul>
+          </li>
+          <li>{{localize "SwordMonger.BladeLuck"}}
+            <ul class="class-note flexcol"><li>{{localize "SwordMonger.BladeLuckDesc"}}</li></ul>
+          </li>
+          <li>{{localize "SwordMonger.Initiative"}}
+            <ul class="class-note flexcol"><li>{{localize "SwordMonger.InitiativeDesc"}}</li></ul>
+          </li>
+          <li>{{localize "SwordMonger.Immortality"}}
+            <ul class="class-note flexcol"><li>{{localize "SwordMonger.ImmortalityDesc"}}</li></ul>
+          </li>
+          <li>{{localize "SwordMonger.SenseSibling"}}
+            <ul class="class-note flexcol"><li>{{localize "SwordMonger.SenseSiblingDesc"}}</li></ul>
+          </li>
+          <li>{{localize "SwordMonger.CuttingTheCord"}}
+            <ul class="class-note flexcol"><li>{{localize "SwordMonger.CuttingTheCordDesc"}}</li></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "SwordMonger.LevelTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">{{localize "DCC.Level"}}</div>
+        <div class="divTableHead">{{localize "SwordMonger.DeedDie"}}</div>
+        <div class="divTableHead">Crit Die/Table</div>
+        <div class="divTableHead">Threat Range</div>
+        <div class="divTableHead">Action Dice</div>
+        <div class="divTableHead">Ref</div>
+        <div class="divTableHead">Fort</div>
+        <div class="divTableHead">Will</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">+d4</div><div class="divTableCell">1d12/III</div><div class="divTableCell">19-20</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+0</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">+d5</div><div class="divTableCell">1d14/IV</div><div class="divTableCell">19-20</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+0</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">+d6</div><div class="divTableCell">1d16/IV</div><div class="divTableCell">19-20</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+2</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">+d7</div><div class="divTableCell">1d20/V</div><div class="divTableCell">19-20</div><div class="divTableCell">1d20</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">+d8</div><div class="divTableCell">1d24/V</div><div class="divTableCell">18-20</div><div class="divTableCell">1d20+1d14</div><div class="divTableCell">+2</div><div class="divTableCell">+3</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">6</div><div class="divTableCell">+d9</div><div class="divTableCell">1d30/V</div><div class="divTableCell">18-20</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+2</div><div class="divTableCell">+4</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">7</div><div class="divTableCell">+d10</div><div class="divTableCell">2d20/V</div><div class="divTableCell">18-20</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+3</div><div class="divTableCell">+4</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">8</div><div class="divTableCell">+d10+1</div><div class="divTableCell">2d20/V</div><div class="divTableCell">17-20</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+3</div><div class="divTableCell">+5</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">9</div><div class="divTableCell">+d10+2</div><div class="divTableCell">2d20/V</div><div class="divTableCell">17-20</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+3</div><div class="divTableCell">+5</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">10</div><div class="divTableCell">+d10+3</div><div class="divTableCell">2d20/V</div><div class="divTableCell">17-20</div><div class="divTableCell">1d20+1d16+1d14</div><div class="divTableCell">+4</div><div class="divTableCell">+6</div><div class="divTableCell">+3</div></div>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "SwordMonger.TitlesTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">{{localize "DCC.Level"}}</div>
+        <div class="divTableHead">{{localize "DCC.AlignmentL"}}</div>
+        <div class="divTableHead">{{localize "DCC.AlignmentN"}}</div>
+        <div class="divTableHead">{{localize "DCC.AlignmentC"}}</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">Condignist</div><div class="divTableCell">Harmonizer</div><div class="divTableCell">Insatiate</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">Concordian</div><div class="divTableCell">Selfsame</div><div class="divTableCell">Esurient</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">Altruist</div><div class="divTableCell">Balance Blade</div><div class="divTableCell">Greedkin</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">Martyr</div><div class="divTableCell">Cord Proctor</div><div class="divTableCell">Cord Biter</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">Blade Saint</div><div class="divTableCell">Meridan</div><div class="divTableCell">Godwhore</div></div>
+      </div>
+    </div>
+
+    <p class="grid-col-span-12 class-note data-font">{{localize "SwordMonger.Credit"}}</p>
+  </div>
+</section>

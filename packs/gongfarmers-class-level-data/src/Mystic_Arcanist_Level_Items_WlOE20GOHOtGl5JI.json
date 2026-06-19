@@ -1,0 +1,23 @@
+{
+  "name": "Mystic Arcanist Level Items",
+  "type": "Item",
+  "color": "#a9a9a9",
+  "folder": null,
+  "_id": "WlOE20GOHOtGl5JI",
+  "description": "",
+  "sorting": "a",
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!folders!WlOE20GOHOtGl5JI"
+}

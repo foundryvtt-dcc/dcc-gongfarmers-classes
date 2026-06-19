@@ -1,0 +1,147 @@
+{
+  "1": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "III",
+      "system.details.critRange": 19,
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d4",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+0"
+    },
+    "titles": { "lawful": "Condignist", "neutral": "Harmonizer", "chaotic": "Insatiate" }
+  },
+  "2": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "IV",
+      "system.details.critRange": 19,
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d5",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+0"
+    },
+    "titles": { "lawful": "Concordian", "neutral": "Selfsame", "chaotic": "Esurient" }
+  },
+  "3": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d16",
+      "system.attributes.critical.table": "IV",
+      "system.details.critRange": 19,
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d6",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+1"
+    },
+    "titles": { "lawful": "Altruist", "neutral": "Balance Blade", "chaotic": "Greedkin" }
+  },
+  "4": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d20",
+      "system.attributes.critical.table": "V",
+      "system.details.critRange": 19,
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d7",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+1"
+    },
+    "titles": { "lawful": "Martyr", "neutral": "Cord Proctor", "chaotic": "Cord Biter" }
+  },
+  "5": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d24",
+      "system.attributes.critical.table": "V",
+      "system.details.critRange": 18,
+      "system.attributes.actionDice.value": "1d20,1d14",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d8",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+1"
+    },
+    "titles": { "lawful": "Blade Saint", "neutral": "Meridan", "chaotic": "Godwhore" }
+  },
+  "6": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d30",
+      "system.attributes.critical.table": "V",
+      "system.details.critRange": 18,
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d9",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+2"
+    }
+  },
+  "7": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "2d20",
+      "system.attributes.critical.table": "V",
+      "system.details.critRange": 18,
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d10",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+2"
+    }
+  },
+  "8": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "2d20",
+      "system.attributes.critical.table": "V",
+      "system.details.critRange": 17,
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d10+1",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+5",
+      "system.saves.wil.classBonus": "+2"
+    }
+  },
+  "9": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "2d20",
+      "system.attributes.critical.table": "V",
+      "system.details.critRange": 17,
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d10+2",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+5",
+      "system.saves.wil.classBonus": "+3"
+    }
+  },
+  "10": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "2d20",
+      "system.attributes.critical.table": "V",
+      "system.details.critRange": 17,
+      "system.attributes.actionDice.value": "1d20,1d16,1d14",
+      "system.attributes.hitDice.value": "1d10",
+      "system.skills.deedDie.die": "1d10+3",
+      "system.saves.ref.classBonus": "+4",
+      "system.saves.frt.classBonus": "+6",
+      "system.saves.wil.classBonus": "+3"
+    }
+  }
+}

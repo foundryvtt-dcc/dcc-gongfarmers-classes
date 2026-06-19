@@ -1,0 +1,85 @@
+{{!-- Assassin Class Tab --}}
+<section class="tab {{tabs.assassin.id}} {{tabs.assassin.cssClass}}" data-tab="{{tabs.assassin.id}}"
+         data-group="{{tabs.assassin.group}}">
+
+  <div class="grid-container">
+    <div class="grid-col-span-12 dark-border">
+      <div class="box-title">{{localize "Assassin.AssassinAbilities"}}</div>
+      <div class="grid-tpl-two grid-row-gap-8 p-5">
+        <div class="grid-tpl-max-25" data-skill="poisonDie">
+          <label class="skill-check rollable" for="system.skills.poisonDie.die"
+                 data-action="rollSkillCheck"
+                 data-drag="true"
+                 data-drag-action="skill"
+                 title="{{localize 'DCC.RollSkillCheckHint'}}">
+            {{localize "Assassin.PoisonDie"}}
+          </label>
+          <input type="text" id="system.skills.poisonDie.die" name="system.skills.poisonDie.die"
+                 value="{{system.skills.poisonDie.die}}" data-dtype="String"/>
+        </div>
+        <ul class="class-note grid-col-span-2 data-font">
+          <li>{{localize "Assassin.GiftOfVenom"}}
+            <ul class="class-note flexcol"><li>{{localize "Assassin.GiftOfVenomDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Assassin.Assassinations"}}
+            <ul class="class-note flexcol"><li>{{localize "Assassin.AssassinationsDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Assassin.HiddenWeapon"}}
+            <ul class="class-note flexcol"><li>{{localize "Assassin.HiddenWeaponDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Assassin.MasterOfPoison"}}
+            <ul class="class-note flexcol"><li>{{localize "Assassin.MasterOfPoisonDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Assassin.ThievesCant"}}
+            <ul class="class-note flexcol"><li>{{localize "Assassin.ThievesCantDesc"}}</li></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "Assassin.PoisonTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">d7</div>
+        <div class="divTableHead">{{localize "Assassin.PoisonEffect"}}</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">{{localize "Assassin.Poison1"}}</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">{{localize "Assassin.Poison2"}}</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">{{localize "Assassin.Poison3"}}</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">{{localize "Assassin.Poison4"}}</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">{{localize "Assassin.Poison5"}}</div></div>
+        <div class="divTableRow"><div class="divTableCell">6</div><div class="divTableCell">{{localize "Assassin.Poison6"}}</div></div>
+        <div class="divTableRow"><div class="divTableCell">7</div><div class="divTableCell">{{localize "Assassin.Poison7"}}</div></div>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "Assassin.LevelTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">{{localize "DCC.Level"}}</div>
+        <div class="divTableHead">{{localize "Assassin.PoisonDie"}}</div>
+        <div class="divTableHead">Crit Die/Table</div>
+        <div class="divTableHead">Action Dice</div>
+        <div class="divTableHead">Fort</div>
+        <div class="divTableHead">Ref</div>
+        <div class="divTableHead">Will</div>
+        <div class="divTableHead">{{localize "DCC.Title"}}</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">+d3</div><div class="divTableCell">1d10/II</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">Clipper</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">+d4</div><div class="divTableCell">1d12/II</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">Butcher</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">+d5</div><div class="divTableCell">1d14/II</div><div class="divTableCell">1d20</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">Dropper</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">+d5</div><div class="divTableCell">1d16/II</div><div class="divTableCell">1d20</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">Eliminator</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">+d6</div><div class="divTableCell">1d20/II</div><div class="divTableCell">1d20</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div><div class="divTableCell">Assassin</div></div>
+        <div class="divTableRow"><div class="divTableCell">6</div><div class="divTableCell">+d6</div><div class="divTableCell">1d24/II</div><div class="divTableCell">1d20+1d14</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div><div class="divTableCell">Liquidator</div></div>
+        <div class="divTableRow"><div class="divTableCell">7</div><div class="divTableCell">+d7</div><div class="divTableCell">1d30/II</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+4</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div><div class="divTableCell">Problem-Solver</div></div>
+        <div class="divTableRow"><div class="divTableCell">8</div><div class="divTableCell">+d7</div><div class="divTableCell">1d30+2/II</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div><div class="divTableCell">Maestro</div></div>
+        <div class="divTableRow"><div class="divTableCell">9</div><div class="divTableCell">+d8</div><div class="divTableCell">1d30+4/II</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div><div class="divTableCell">Paragon of Death</div></div>
+        <div class="divTableRow"><div class="divTableCell">10</div><div class="divTableCell">+d10</div><div class="divTableCell">1d30+6/II</div><div class="divTableCell">1d24+1d20</div><div class="divTableCell">+5</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div><div class="divTableCell">Destroyer</div></div>
+      </div>
+    </div>
+
+    <p class="grid-col-span-12 class-note data-font">{{localize "Assassin.Credit"}}</p>
+  </div>
+</section>

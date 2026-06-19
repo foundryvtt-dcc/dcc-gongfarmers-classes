@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "barbearian",
+    "level": "1",
+    "levelData": "system.attributes.critical.die=1d12\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d12\nsystem.skills.ragesPerDay.value=1\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+0\n"
+  },
+  "name": "barbearian-1",
+  "type": "level",
+  "folder": "xDSWSV5s9qizFuUk",
+  "_id": "Sm8GpKbc9fA5WQnB",
+  "effects": [],
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!Sm8GpKbc9fA5WQnB"
+}

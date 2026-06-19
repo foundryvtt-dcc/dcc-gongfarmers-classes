@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "sword-monger",
+    "level": "5",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=1d24\nsystem.attributes.critical.table=V\nsystem.details.critRange=18\nsystem.attributes.actionDice.value=1d20,1d14\nsystem.attributes.hitDice.value=1d10\nsystem.skills.deedDie.die=1d8\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+3\nsystem.saves.wil.classBonus=+1\n",
+    "levelDataLawful": "system.details.title.value=Blade Saint\n",
+    "levelDataNeutral": "system.details.title.value=Meridan\n",
+    "levelDataChaotic": "system.details.title.value=Godwhore\n"
+  },
+  "name": "sword-monger-5",
+  "type": "level",
+  "folder": "mHyiTNr37hCSQeV1",
+  "_id": "AsnS3vz8StSDzTp6",
+  "effects": [],
+  "sort": 500,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!AsnS3vz8StSDzTp6"
+}

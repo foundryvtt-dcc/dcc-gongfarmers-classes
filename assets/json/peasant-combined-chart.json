@@ -1,0 +1,131 @@
+{
+  "1": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d6",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d4",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+0"
+    }
+  },
+  "2": {
+    "level_info": {
+      "system.details.attackBonus": "+1",
+      "system.attributes.critical.die": "1d8",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d10",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+0"
+    }
+  },
+  "3": {
+    "level_info": {
+      "system.details.attackBonus": "+1",
+      "system.attributes.critical.die": "1d8",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d12",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+1"
+    }
+  },
+  "4": {
+    "level_info": {
+      "system.details.attackBonus": "+2",
+      "system.attributes.critical.die": "1d10",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d12",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+1"
+    }
+  },
+  "5": {
+    "level_info": {
+      "system.details.attackBonus": "+2",
+      "system.attributes.critical.die": "1d10",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d14",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+1"
+    }
+  },
+  "6": {
+    "level_info": {
+      "system.details.attackBonus": "+3",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d14",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+2"
+    }
+  },
+  "7": {
+    "level_info": {
+      "system.details.attackBonus": "+3",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20,1d14",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d16",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+2"
+    }
+  },
+  "8": {
+    "level_info": {
+      "system.details.attackBonus": "+4",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d16",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+5",
+      "system.saves.wil.classBonus": "+2"
+    }
+  },
+  "9": {
+    "level_info": {
+      "system.details.attackBonus": "+4",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d20",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+5",
+      "system.saves.wil.classBonus": "+3"
+    }
+  },
+  "10": {
+    "level_info": {
+      "system.details.attackBonus": "+5",
+      "system.attributes.critical.die": "1d16",
+      "system.attributes.critical.table": "I",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d4",
+      "system.skills.hobbyDie.die": "1d20",
+      "system.saves.ref.classBonus": "+4",
+      "system.saves.frt.classBonus": "+6",
+      "system.saves.wil.classBonus": "+3"
+    }
+  }
+}

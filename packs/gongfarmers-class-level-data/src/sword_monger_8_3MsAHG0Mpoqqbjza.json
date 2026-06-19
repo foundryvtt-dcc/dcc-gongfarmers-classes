@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "sword-monger",
+    "level": "8",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=2d20\nsystem.attributes.critical.table=V\nsystem.details.critRange=17\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d10\nsystem.skills.deedDie.die=1d10+1\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+5\nsystem.saves.wil.classBonus=+2\n"
+  },
+  "name": "sword-monger-8",
+  "type": "level",
+  "folder": "mHyiTNr37hCSQeV1",
+  "_id": "3MsAHG0Mpoqqbjza",
+  "effects": [],
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!3MsAHG0Mpoqqbjza"
+}

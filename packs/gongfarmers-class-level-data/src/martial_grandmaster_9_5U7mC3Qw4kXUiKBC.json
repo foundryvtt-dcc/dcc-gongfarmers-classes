@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "martial-grandmaster",
+    "level": "9",
+    "levelData": "system.details.attackBonus=+7\nsystem.attributes.critical.die=1d24\nsystem.attributes.critical.table=M\nsystem.attributes.actionDice.value=1d24,1d20,1d16\nsystem.attributes.hitDice.value=2d6\nsystem.skills.unarmedDamage.die=1d5\nsystem.skills.combatLuckDie.die=1d6\nsystem.saves.ref.classBonus=+6\nsystem.saves.frt.classBonus=+3\nsystem.saves.wil.classBonus=+3\n"
+  },
+  "name": "martial-grandmaster-9",
+  "type": "level",
+  "folder": "AXpHOWA4xT4xwLFs",
+  "_id": "5U7mC3Qw4kXUiKBC",
+  "effects": [],
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!5U7mC3Qw4kXUiKBC"
+}

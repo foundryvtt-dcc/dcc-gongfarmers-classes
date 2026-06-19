@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "peasant",
+    "level": "8",
+    "levelData": "system.details.attackBonus=+4\nsystem.attributes.critical.die=1d14\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d4\nsystem.skills.hobbyDie.die=1d16\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+5\nsystem.saves.wil.classBonus=+2\n"
+  },
+  "name": "peasant-8",
+  "type": "level",
+  "folder": "KAhOgp1AM9EtHB0y",
+  "_id": "7YS9I52mAKtioVq0",
+  "effects": [],
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!7YS9I52mAKtioVq0"
+}

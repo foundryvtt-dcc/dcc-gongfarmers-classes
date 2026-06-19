@@ -1,0 +1,77 @@
+{{!-- Luchador Class Tab --}}
+<section class="tab {{tabs.luchador.id}} {{tabs.luchador.cssClass}}" data-tab="{{tabs.luchador.id}}"
+         data-group="{{tabs.luchador.group}}">
+
+  <div class="grid-container">
+    <div class="grid-col-span-12 dark-border">
+      <div class="box-title">{{localize "Luchador.LuchadorAbilities"}}</div>
+      <div class="grid-tpl-two grid-row-gap-8 p-5">
+        <div class="grid-tpl-max-25" data-skill="luchaDie">
+          <label class="skill-check rollable" for="system.skills.luchaDie.die"
+                 data-action="rollSkillCheck"
+                 data-drag="true"
+                 data-drag-action="skill"
+                 title="{{localize 'DCC.RollSkillCheckHint'}}">
+            {{localize "Luchador.LuchaDie"}}
+          </label>
+          <input type="text" id="system.skills.luchaDie.die" name="system.skills.luchaDie.die"
+                 value="{{system.skills.luchaDie.die}}" data-dtype="String"/>
+        </div>
+        <div class="grid-tpl-max-25" data-skill="unarmedDamage">
+          <label class="skill-check rollable" for="system.skills.unarmedDamage.die"
+                 data-action="rollSkillCheck"
+                 data-drag="true"
+                 data-drag-action="skill"
+                 title="{{localize 'DCC.RollSkillCheckHint'}}">
+            {{localize "Luchador.UnarmedDamage"}}
+          </label>
+          <input type="text" id="system.skills.unarmedDamage.die" name="system.skills.unarmedDamage.die"
+                 value="{{system.skills.unarmedDamage.die}}" data-dtype="String"/>
+        </div>
+        <ul class="class-note grid-col-span-2 data-font">
+          <li>{{localize "Luchador.MasksOfPower"}}
+            <ul class="class-note flexcol"><li>{{localize "Luchador.MasksOfPowerDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Luchador.UnarmedCombat"}}
+            <ul class="class-note flexcol"><li>{{localize "Luchador.UnarmedCombatDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Luchador.PowerOfLucha"}}
+            <ul class="class-note flexcol">
+              <li>{{localize "Luchador.Tecnicos"}}</li>
+              <li>{{localize "Luchador.Rudos"}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "Luchador.LevelTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">{{localize "DCC.Level"}}</div>
+        <div class="divTableHead">Atk</div>
+        <div class="divTableHead">Crit Die/Table</div>
+        <div class="divTableHead">Action Dice</div>
+        <div class="divTableHead">Unarmed Dmg</div>
+        <div class="divTableHead">{{localize "Luchador.LuchaDie"}}</div>
+        <div class="divTableHead">Ref</div>
+        <div class="divTableHead">Fort</div>
+        <div class="divTableHead">Will</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">+0</div><div class="divTableCell">1d10/III</div><div class="divTableCell">1d20</div><div class="divTableCell">1d6</div><div class="divTableCell">1d3</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">+1</div><div class="divTableCell">1d12/III</div><div class="divTableCell">1d20</div><div class="divTableCell">1d6</div><div class="divTableCell">1d4</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">+2</div><div class="divTableCell">1d14/III</div><div class="divTableCell">1d20</div><div class="divTableCell">1d7</div><div class="divTableCell">1d5</div><div class="divTableCell">+2</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">+2</div><div class="divTableCell">1d16/III</div><div class="divTableCell">1d20</div><div class="divTableCell">1d8</div><div class="divTableCell">1d6</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">+3</div><div class="divTableCell">1d20/III</div><div class="divTableCell">1d20+1d14</div><div class="divTableCell">1d8</div><div class="divTableCell">1d7</div><div class="divTableCell">+3</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">6</div><div class="divTableCell">+4</div><div class="divTableCell">1d24/IV</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">1d10</div><div class="divTableCell">1d8+1</div><div class="divTableCell">+4</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">7</div><div class="divTableCell">+5</div><div class="divTableCell">1d30/IV</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">1d10</div><div class="divTableCell">1d8+2</div><div class="divTableCell">+4</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">8</div><div class="divTableCell">+5</div><div class="divTableCell">1d30/IV</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">1d12</div><div class="divTableCell">1d8+3</div><div class="divTableCell">+5</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">9</div><div class="divTableCell">+6</div><div class="divTableCell">2d16/IV</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">1d12</div><div class="divTableCell">1d8+4</div><div class="divTableCell">+5</div><div class="divTableCell">+3</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">10</div><div class="divTableCell">+7</div><div class="divTableCell">2d20/IV</div><div class="divTableCell">1d20+1d20+1d14</div><div class="divTableCell">1d14</div><div class="divTableCell">1d8+5</div><div class="divTableCell">+6</div><div class="divTableCell">+4</div><div class="divTableCell">+4</div></div>
+      </div>
+    </div>
+
+    <p class="grid-col-span-12 class-note data-font">{{localize "Luchador.Credit"}}</p>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "tarantion-elf",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d7\nsystem.attributes.critical.table=M\nsystem.details.critRange=20\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d8\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+1\n",
+    "levelDataLawful": "system.details.title.value=Jules\n",
+    "levelDataNeutral": "system.details.title.value=Jules\n",
+    "levelDataChaotic": "system.details.title.value=Jules\n"
+  },
+  "name": "tarantion-elf-2",
+  "type": "level",
+  "folder": "fXkEe4XG7oHUSnu8",
+  "_id": "nEP8K2PzfSAXMCXt",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!nEP8K2PzfSAXMCXt"
+}

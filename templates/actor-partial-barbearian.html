@@ -1,0 +1,67 @@
+{{!-- Barbearian Class Tab --}}
+<section class="tab {{tabs.barbearian.id}} {{tabs.barbearian.cssClass}}" data-tab="{{tabs.barbearian.id}}"
+         data-group="{{tabs.barbearian.group}}">
+
+  <div class="grid-container">
+    <div class="grid-col-span-12 dark-border">
+      <div class="box-title">{{localize "Barbearian.BarbearianAbilities"}}</div>
+      <div class="grid-tpl-two grid-row-gap-8 p-5">
+        <div class="grid-tpl-max-25">
+          <label>{{localize "Barbearian.RagesPerDay"}}</label>
+          <input type="text" id="system.skills.ragesPerDay.value" name="system.skills.ragesPerDay.value"
+                 value="{{system.skills.ragesPerDay.value}}" data-dtype="String"/>
+        </div>
+        <ul class="class-note grid-col-span-2 data-font">
+          <li>{{localize "Barbearian.NaturalWeapons"}}
+            <ul class="class-note flexcol"><li>{{localize "Barbearian.NaturalWeaponsDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Barbearian.ThickSkin"}}
+            <ul class="class-note flexcol"><li>{{localize "Barbearian.ThickSkinDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Barbearian.BerzerkerRage"}}
+            <ul class="class-note flexcol"><li>{{localize "Barbearian.BerzerkerRageDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Barbearian.BearHug"}}
+            <ul class="class-note flexcol"><li>{{localize "Barbearian.BearHugDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Barbearian.MissileSwat"}}
+            <ul class="class-note flexcol"><li>{{localize "Barbearian.MissileSwatDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Barbearian.Climber"}}
+            <ul class="class-note flexcol"><li>{{localize "Barbearian.ClimberDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Barbearian.LargeAndSlow"}}
+            <ul class="class-note flexcol"><li>{{localize "Barbearian.LargeAndSlowDesc"}}</li></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "Barbearian.LevelTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">{{localize "DCC.Level"}}</div>
+        <div class="divTableHead">{{localize "Barbearian.RagesPerDay"}}</div>
+        <div class="divTableHead">Crit Die/Table</div>
+        <div class="divTableHead">Action Dice</div>
+        <div class="divTableHead">Ref</div>
+        <div class="divTableHead">Fort</div>
+        <div class="divTableHead">Will</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">1</div><div class="divTableCell">1d12/III</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+0</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">1</div><div class="divTableCell">1d14/III</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+0</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">1</div><div class="divTableCell">1d16/IV</div><div class="divTableCell">1d20</div><div class="divTableCell">+1</div><div class="divTableCell">+2</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">2</div><div class="divTableCell">1d20/IV</div><div class="divTableCell">1d20</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">2</div><div class="divTableCell">1d24/V</div><div class="divTableCell">1d20+1d14</div><div class="divTableCell">+2</div><div class="divTableCell">+3</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">6</div><div class="divTableCell">2</div><div class="divTableCell">1d30/V</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">+2</div><div class="divTableCell">+4</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">7</div><div class="divTableCell">3</div><div class="divTableCell">1d30/V</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">+3</div><div class="divTableCell">+4</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">8</div><div class="divTableCell">3</div><div class="divTableCell">2d20/V</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">+3</div><div class="divTableCell">+5</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">9</div><div class="divTableCell">3</div><div class="divTableCell">2d20/V</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">+3</div><div class="divTableCell">+5</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">10</div><div class="divTableCell">4</div><div class="divTableCell">2d20/V</div><div class="divTableCell">1d20+1d20+1d14</div><div class="divTableCell">+4</div><div class="divTableCell">+6</div><div class="divTableCell">+3</div></div>
+      </div>
+    </div>
+
+    <p class="grid-col-span-12 class-note data-font">{{localize "Barbearian.Credit"}}</p>
+  </div>
+</section>

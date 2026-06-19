@@ -1,0 +1,68 @@
+{{!-- Peasant Class Tab --}}
+<section class="tab {{tabs.peasant.id}} {{tabs.peasant.cssClass}}" data-tab="{{tabs.peasant.id}}"
+         data-group="{{tabs.peasant.group}}">
+
+  <div class="grid-container">
+    <div class="grid-col-span-12 dark-border">
+      <div class="box-title">{{localize "Peasant.PeasantAbilities"}}</div>
+      <div class="grid-tpl-two grid-row-gap-8 p-5">
+        <div class="grid-tpl-max-25" data-skill="hobbyDie">
+          <label class="skill-check rollable" for="system.skills.hobbyDie.die"
+                 data-action="rollSkillCheck"
+                 data-drag="true"
+                 data-drag-action="skill"
+                 title="{{localize 'DCC.RollSkillCheckHint'}}">
+            {{localize "Peasant.HobbyDie"}}
+          </label>
+          <input type="text" id="system.skills.hobbyDie.die" name="system.skills.hobbyDie.die"
+                 value="{{system.skills.hobbyDie.die}}" data-dtype="String"/>
+        </div>
+        <ul class="class-note grid-col-span-2 data-font">
+          <li>{{localize "Peasant.WeaponTraining"}}
+            <ul class="class-note flexcol"><li>{{localize "Peasant.WeaponTrainingDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Peasant.Expert"}}
+            <ul class="class-note flexcol"><li>{{localize "Peasant.ExpertDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Peasant.Luck"}}
+            <ul class="class-note flexcol"><li>{{localize "Peasant.LuckDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Peasant.Hobby"}}
+            <ul class="class-note flexcol"><li>{{localize "Peasant.HobbyDesc"}}</li></ul>
+          </li>
+          <li>{{localize "Peasant.LifeOfAdventure"}}
+            <ul class="class-note flexcol"><li>{{localize "Peasant.LifeOfAdventureDesc"}}</li></ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="grid-col-span-12 label-font mt-8">{{localize "Peasant.LevelTable"}}</h4>
+    <div class="divTable classTable grid-col-span-12">
+      <div class="divTableHeading"><div class="divTableRow">
+        <div class="divTableHead">{{localize "DCC.Level"}}</div>
+        <div class="divTableHead">Atk</div>
+        <div class="divTableHead">Crit Die/Table</div>
+        <div class="divTableHead">Action Dice</div>
+        <div class="divTableHead">{{localize "Peasant.HobbyDie"}}</div>
+        <div class="divTableHead">Ref</div>
+        <div class="divTableHead">Fort</div>
+        <div class="divTableHead">Will</div>
+      </div></div>
+      <div class="divTableBody">
+        <div class="divTableRow"><div class="divTableCell">1</div><div class="divTableCell">+0</div><div class="divTableCell">1d6/I</div><div class="divTableCell">1d20</div><div class="divTableCell">&mdash;</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+0</div></div>
+        <div class="divTableRow"><div class="divTableCell">2</div><div class="divTableCell">+1</div><div class="divTableCell">1d8/I</div><div class="divTableCell">1d20</div><div class="divTableCell">1d10</div><div class="divTableCell">+1</div><div class="divTableCell">+1</div><div class="divTableCell">+0</div></div>
+        <div class="divTableRow"><div class="divTableCell">3</div><div class="divTableCell">+1</div><div class="divTableCell">1d8/I</div><div class="divTableCell">1d20</div><div class="divTableCell">1d12</div><div class="divTableCell">+1</div><div class="divTableCell">+2</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">4</div><div class="divTableCell">+2</div><div class="divTableCell">1d10/I</div><div class="divTableCell">1d20</div><div class="divTableCell">1d12</div><div class="divTableCell">+2</div><div class="divTableCell">+2</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">5</div><div class="divTableCell">+2</div><div class="divTableCell">1d10/I</div><div class="divTableCell">1d20</div><div class="divTableCell">1d14</div><div class="divTableCell">+2</div><div class="divTableCell">+3</div><div class="divTableCell">+1</div></div>
+        <div class="divTableRow"><div class="divTableCell">6</div><div class="divTableCell">+3</div><div class="divTableCell">1d12/I</div><div class="divTableCell">1d20</div><div class="divTableCell">1d14</div><div class="divTableCell">+2</div><div class="divTableCell">+4</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">7</div><div class="divTableCell">+3</div><div class="divTableCell">1d12/I</div><div class="divTableCell">1d20+1d14</div><div class="divTableCell">1d16</div><div class="divTableCell">+3</div><div class="divTableCell">+4</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">8</div><div class="divTableCell">+4</div><div class="divTableCell">1d14/I</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">1d16</div><div class="divTableCell">+3</div><div class="divTableCell">+5</div><div class="divTableCell">+2</div></div>
+        <div class="divTableRow"><div class="divTableCell">9</div><div class="divTableCell">+4</div><div class="divTableCell">1d14/I</div><div class="divTableCell">1d20+1d16</div><div class="divTableCell">1d20</div><div class="divTableCell">+3</div><div class="divTableCell">+5</div><div class="divTableCell">+3</div></div>
+        <div class="divTableRow"><div class="divTableCell">10</div><div class="divTableCell">+5</div><div class="divTableCell">1d16/I</div><div class="divTableCell">1d20+1d20</div><div class="divTableCell">1d20</div><div class="divTableCell">+4</div><div class="divTableCell">+6</div><div class="divTableCell">+3</div></div>
+      </div>
+    </div>
+
+    <p class="grid-col-span-12 class-note data-font">{{localize "Peasant.Credit"}}</p>
+  </div>
+</section>

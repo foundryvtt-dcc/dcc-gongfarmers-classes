@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "luchador",
+    "level": "3",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d14\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=2d5\nsystem.skills.luchaDie.die=1d5\nsystem.skills.unarmedDamage.die=1d7\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+1\n"
+  },
+  "name": "luchador-3",
+  "type": "level",
+  "folder": "wktJprDnzfMWIu7d",
+  "_id": "wwUv7c3mg8yehz41",
+  "effects": [],
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!wwUv7c3mg8yehz41"
+}

@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "dervish",
+    "level": "6",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=1d20\nsystem.attributes.critical.table=IV\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d10\nsystem.skills.deedDie.die=1d7\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+3\nsystem.saves.wil.classBonus=+3\n"
+  },
+  "name": "dervish-6",
+  "type": "level",
+  "folder": "c943KBu15xDaP8w9",
+  "_id": "SVkuoiVwYHqEGJnK",
+  "effects": [],
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!SVkuoiVwYHqEGJnK"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "dcc-gongfarmers-classes",
+  "version": "0.1.0",
+  "description": "Player classes from the Gongfarmer's Almanac 2015 Collection for Dungeon Crawl Classics",
+  "scripts": {
+    "format": "standard --fix",
+    "todb": "node module/compilePacks.js",
+    "tojson": "node module/extractPacks.js",
+    "build-levels": "node module/buildLevelItems.mjs"
+  },
+  "engines": {
+    "npm": ">=10.0.0",
+    "node": ">=20.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "assets/",
+      "metadata/",
+      "packs/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes.git"
+  },
+  "author": "DCC Foundry Volunteer Team (https://discord.gg/2PR9YH9)",
+  "contributors": [
+    {
+      "name": "Tim L. White"
+    }
+  ],
+  "homepage": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes#readme",
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.2",
+    "eslint": "^9.39.1",
+    "standard": "^17.1.2"
+  },
+  "type": "module"
+}
