@@ -20,7 +20,7 @@ Manifest URL: https://raw.githubusercontent.com/foundryvtt-dcc/dcc-gongfarmers-c
 | **Heavenly Hitman** | 2020 V8 | 1d6 | Flat | Cleric-style caster + thief skills, Divine Wrath / Channel Harm |
 | **Human** | 2020 V7 | 1d8 | Flat | Highly Skilled, Master of Diplomacy, Infinite Variety |
 | **Fowl Summoner** | 2020 V7 | 1d5 | Flat | Wizard caster (Personality), bird summoning |
-| **Tarantion Elf** | 2020 V7 | 1d8 | Flat | Elf wizard, dual crit dice, widening threat range, Legendary Move |
+| **Tarantino Elf** | 2020 V7 | 1d8 | Flat | Elf wizard, dual crit dice, widening threat range, Legendary Move |
 | **Priest of the Old Father** | 2020 V8 | 1d8 | Flat | Elf cleric caster, King of Elfland patron |
 | **Arcane Warrior** | 2020 V8 | 1d8 | Magic die | Wizard caster + warrior deed die ("Magic or Might") |
 | **Mystic Arcanist** | 2020 V8 | 1d6 | Flat | Hybrid cleric + wizard caster (both via Intelligence) |

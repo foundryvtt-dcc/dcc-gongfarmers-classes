@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "spell-thief",
+    "level": "7",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=1d30\nsystem.attributes.critical.table=V\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d4\nsystem.skills.deedDie.die=1d10\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+3\nsystem.saves.wil.classBonus=+3\n"
+  },
+  "name": "spell-thief-7",
+  "type": "level",
+  "folder": "xTOAzAtqf263bwsr",
+  "_id": "7Wt0SM7BSbzdh4TN",
+  "effects": [],
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!7Wt0SM7BSbzdh4TN"
+}

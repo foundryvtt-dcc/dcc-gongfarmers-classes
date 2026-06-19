@@ -26,12 +26,12 @@ Status: ✅ done & E2E-verified · ⬜ pending.
 | Human | 7 | basic | ✅ |
 | Fowl Summoner | 7 | caster | ✅ |
 | Hive Master | 7 | caster | ❌ excluded — no level table/hit die/progression (only a d7+Luck swarm table) |
-| Tarantion Elf | 7 | race/caster | ✅ |
+| Tarantino Elf | 7 | race/caster | ✅ |
 | Priest of the Old Father | 8 | caster (cleric) | ✅ |
 | Arcane Warrior | 8 | caster (wizard)+martial | ✅ |
 | Mystic Arcanist | 8 | caster | ✅ |
 | Rune Sage | 8 | caster (rune system) | ⬜ |
-| Spell Thief | 8 | caster + thief | ⬜ |
+| Spell Thief | 8 | caster + thief | ✅ |
 | Runelords | 8 | caster (custom rune system) | ⬜ |
 | Moremen | 13 | race (mutant) | ⬜ |
 | Scholar | 14 | skill | ⬜ |
@@ -113,9 +113,9 @@ Status: ✅ done & E2E-verified · ⬜ pending.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 14 (✅) — 2015: all 4; 2020: Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human, Fowl Summoner, Tarantion Elf, Priest of the Old Father, Arcane Warrior, Mystic Arcanist.
+- **Done & E2E-verified:** 15 (✅) — 2015: all 4; 2020: Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human, Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior, Mystic Arcanist, Spell Thief.
 - **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression).
-- **Pending:** ~43 — 2020: Rune Sage, Spell Thief, Runelords, Moremen, Scholar, Mastermind, Insectaur, Geologian (8); plus all of 2016/2017/2018/2019/2021/2024/2025.
+- **Pending:** ~42 — 2020: Rune Sage, Runelords, Moremen, Scholar, Mastermind, Insectaur, Geologian (7); plus all of 2016/2017/2018/2019/2021/2024/2025.
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).

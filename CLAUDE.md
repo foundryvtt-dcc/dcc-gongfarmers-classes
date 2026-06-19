@@ -15,6 +15,7 @@ V14) and registers each class through the DCC **extension API**
 
 ```bash
 npm run build-levels  # Regenerate packs/.../src/*.json from assets/json/*-combined-chart.json
+node module/buildReferenceJournal.mjs  # Regenerate the About & Credits journal pack source
 npm run todb          # Compile JSON pack source to LevelDB (Foundry must be shut down)
 npm run tojson        # Extract LevelDB packs to JSON source
 npm run format        # StandardJS auto-fix
@@ -55,12 +56,26 @@ npm run format        # StandardJS auto-fix
 - `system.levelData` is newline-separated `key=value` Foundry paths applied to
   the actor on level change; titles go in `levelDataLawful/Neutral/Chaotic`.
 
+### Reference journal pack
+- `packs/gongfarmers-almanac-reference` (type `JournalEntry`) is an in-Foundry
+  "The Gongfarmer's Almanac" entry: an About page linking to
+  `https://gongfarmersalmanac.com/downloads/` and a Class Credits page.
+- `module/buildReferenceJournal.mjs` generates its `src/` from the `*.Credit`
+  keys in `lang/en.json`, so adding a class + its `Credit` key keeps the journal
+  in sync — just rebuild and `npm run todb`.
+
 ### Classes
 2015 Collection (V1: Men & Magic): Assassin, Dervish, Luchador, Sword Monger.
 2020 Collection: Martial Grandmaster (V7), with further 2020 classes in
 progress. Each class = one combined-chart + one `GONGFARMERS_CLASSES` entry +
 a sheet stub + a template + lang keys. Spellcaster classes additionally include
 a `clericSpells`/`wizardSpells` sheet part and set `class.spellCheckAbility`.
+
+**Every class MUST have a `<Prefix>.Credit` lang key** (author/artist +
+collection + volume). It is required, not optional — the reference journal is
+built from these strings, so a missing credit drops the class from the in-Foundry
+credits page. See "Credits are mandatory" in `docs/00-progress.md` for the
+one-liner that audits for missing credits.
 
 ## Code Style
 

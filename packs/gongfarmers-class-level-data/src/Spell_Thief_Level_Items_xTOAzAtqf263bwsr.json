@@ -1,9 +1,9 @@
 {
-  "name": "Tarantion Elf Level Items",
+  "name": "Spell Thief Level Items",
   "type": "Item",
   "color": "#a9a9a9",
   "folder": null,
-  "_id": "fXkEe4XG7oHUSnu8",
+  "_id": "xTOAzAtqf263bwsr",
   "description": "",
   "sorting": "a",
   "sort": 0,
@@ -19,5 +19,5 @@
     "modifiedTime": 0,
     "lastModifiedBy": "dccGongfarmer000"
   },
-  "_key": "!folders!fXkEe4XG7oHUSnu8"
+  "_key": "!folders!xTOAzAtqf263bwsr"
 }

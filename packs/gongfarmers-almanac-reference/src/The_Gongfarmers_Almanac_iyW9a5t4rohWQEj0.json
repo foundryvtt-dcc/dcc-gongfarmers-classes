@@ -1,0 +1,100 @@
+{
+  "name": "The Gongfarmer’s Almanac",
+  "_id": "iyW9a5t4rohWQEj0",
+  "pages": [
+    {
+      "sort": 100000,
+      "name": "About the Gongfarmer’s Almanac",
+      "type": "text",
+      "_id": "Tr2iVufXqe8gOrfA",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The classes in this module come from <strong>The Gongfarmer's Almanac</strong>, a free, fan-made zine for the <em>Dungeon Crawl Classics</em> RPG produced each year by the DCC community (the \"Gongfarmers\") and released under Goodman Games' third-party / community-content terms.</p>\n<p>Every volume is available — free, pay-what-you-want — from the official downloads page:</p>\n<p><a href=\"https://gongfarmersalmanac.com/downloads/\">https://gongfarmersalmanac.com/downloads/</a></p>\n<p>If you enjoy these classes, please grab the original almanacs to read each class's full text, art, and the dozens of adventures, monsters, magic items, and patrons that ship alongside them. This module reproduces only the mechanical level progressions and sheet tabs needed to play the classes in Foundry VTT.</p>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "dcc",
+        "systemVersion": "0.70.0",
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": "dccGongfarmer000"
+      },
+      "_key": "!journal.pages!iyW9a5t4rohWQEj0.Tr2iVufXqe8gOrfA"
+    },
+    {
+      "sort": 200000,
+      "name": "Class Credits",
+      "type": "text",
+      "_id": "uRZZEXnVytxMbOuh",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This module ships <strong>15</strong> classes drawn from the almanacs below. Each is credited to its original author(s) and artist(s) and the volume it first appeared in. All rights remain with the respective creators and Goodman Games.</p>\n  <h2><a href=\"https://gongfarmersalmanac.com/downloads/gfa-2015/\">2015 Collection</a></h2>\n  <h3>Volume 1</h3>\n  <ul>\n    <li>Assassin by Julian Bernick</li>\n    <li>Dervish by Edgar Johnson</li>\n    <li>Luchador by Reid “Reidzilla” San Filippo</li>\n    <li>Sword Monger by David Baity</li>\n  </ul>\n  <h2><a href=\"https://gongfarmersalmanac.com/downloads/gfa-2020/\">2020 Collection</a></h2>\n  <h3>Volume 7</h3>\n  <ul>\n    <li>Fowl Summoner — words and art by Clayton Williams</li>\n    <li>Human by Dieter Zimmerman</li>\n    <li>Martial Grandmaster by bygrinstow (art by Matt Sutton)</li>\n    <li>Peasant by Matthew Carr (art by Colin Mills)</li>\n    <li>Tarantino Elf — compiled by Jeremiah Edward Sprague, Mihailo Tešić, Ari-Matti Piippo & bygrinstow; art by Cheese Hasselberger</li>\n  </ul>\n  <h3>Volume 8</h3>\n  <ul>\n    <li>Arcane Warrior by Ed Kabara</li>\n    <li>Barbearian by Randy Andrews (art by Jonathan Byrne)</li>\n    <li>Heavenly Hitman by Ed Kabara</li>\n    <li>Mystic Arcanist by Ed Kabara</li>\n    <li>Priest of the Old Father by Ed Kabara</li>\n    <li>Spell Thief by Ed Kabara</li>\n  </ul>",
+        "markdown": ""
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "dcc",
+        "systemVersion": "0.70.0",
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": "dccGongfarmer000"
+      },
+      "_key": "!journal.pages!iyW9a5t4rohWQEj0.uRZZEXnVytxMbOuh"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!journal!iyW9a5t4rohWQEj0"
+}

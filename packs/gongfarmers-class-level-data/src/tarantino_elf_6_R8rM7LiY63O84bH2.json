@@ -1,14 +1,14 @@
 {
   "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
   "system": {
-    "class": "tarantion-elf",
+    "class": "tarantino-elf",
     "level": "6",
     "levelData": "system.details.attackBonus=+4\nsystem.attributes.critical.die=1d10\nsystem.attributes.critical.table=M\nsystem.details.critRange=19\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d8\nsystem.saves.ref.classBonus=+4\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+3\n"
   },
-  "name": "tarantion-elf-6",
+  "name": "tarantino-elf-6",
   "type": "level",
-  "folder": "fXkEe4XG7oHUSnu8",
-  "_id": "9rZOZ9wz6KxOWk6X",
+  "folder": "qnGCDux0djEdriNl",
+  "_id": "R8rM7LiY63O84bH2",
   "effects": [],
   "sort": 600,
   "ownership": {
@@ -26,5 +26,5 @@
     "modifiedTime": 0,
     "lastModifiedBy": "dccGongfarmer000"
   },
-  "_key": "!items!9rZOZ9wz6KxOWk6X"
+  "_key": "!items!R8rM7LiY63O84bH2"
 }

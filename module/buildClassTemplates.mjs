@@ -49,12 +49,12 @@ const META = {
     tableDice: [],
     caster: 'FowlSummoner.CasterNote'
   },
-  'tarantion-elf': {
-    prefix: 'TarantionElf',
+  'tarantino-elf': {
+    prefix: 'TarantinoElf',
     dice: [],
     abilities: ['WeaponTraining', 'Spellcasting', 'CatchPhrase', 'Iron', 'UltraViolence', 'LegendaryMove'],
     tableDice: [],
-    caster: 'TarantionElf.CasterNote'
+    caster: 'TarantinoElf.CasterNote'
   },
   'priest-of-the-old-father': {
     prefix: 'PriestOldFather',
@@ -69,6 +69,13 @@ const META = {
     abilities: ['WeaponTraining', 'MagicDieAbility', 'MagicOrMight', 'CasterLevel', 'Luck'],
     tableDice: [{ header: 'Magic Die', key: 'system.skills.deedDie.die' }],
     caster: 'ArcaneWarrior.CasterNote'
+  },
+  'spell-thief': {
+    prefix: 'SpellThief',
+    dice: [{ labelKey: 'SpellThief.MagicDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'ThievingSkills', 'Magic', 'StealSpell', 'Luck'],
+    tableDice: [{ header: 'Magic Die', key: 'system.skills.deedDie.die' }],
+    caster: 'SpellThief.CasterNote'
   },
   'mystic-arcanist': {
     prefix: 'MysticArcanist',

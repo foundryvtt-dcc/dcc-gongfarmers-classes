@@ -349,13 +349,13 @@ export const GONGFARMERS_CLASSES = {
     }
   },
 
-  'tarantion-elf': {
-    label: 'TarantionElf.ActorSheetTarantionElf',
+  'tarantino-elf': {
+    label: 'TarantinoElf.ActorSheetTarantinoElf',
     sheetHeight: 640,
     mixin () {},
     defaults: {
-      sheetClass: 'Tarantion-Elf',
-      localize: { 'class.className': 'TarantionElf.TarantionElf' },
+      sheetClass: 'Tarantino-Elf',
+      localize: { 'class.className': 'TarantinoElf.TarantinoElf' },
       literal: {
         'details.critRange': 20,
         'config.showSkills': true,
@@ -367,13 +367,13 @@ export const GONGFARMERS_CLASSES = {
     sheetPart: {
       parts: {
         ...commonParts(),
-        'tarantion-elf': { id: 'tarantion-elf', template: classPartial('tarantion-elf') },
+        'tarantino-elf': { id: 'tarantino-elf', template: classPartial('tarantino-elf') },
         wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
       },
       tabs: {
         sheet: {
           tabs: [
-            { id: 'tarantion-elf', group: 'sheet', label: 'TarantionElf.TarantionElf' },
+            { id: 'tarantino-elf', group: 'sheet', label: 'TarantinoElf.TarantinoElf' },
             { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
           ]
         }
@@ -447,6 +447,53 @@ export const GONGFARMERS_CLASSES = {
         sheet: {
           tabs: [
             { id: 'arcane-warrior', group: 'sheet', label: 'ArcaneWarrior.ArcaneWarrior' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  'spell-thief': {
+    label: 'SpellThief.ActorSheetSpellThief',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // The "magic die" — a deed die added to attack and damage and to the
+      // spell check (1d20 + Int + magic die). Shared deedDie field; the label
+      // is pinned per-class in defaults.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'SpellThief.MagicDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+      // Casts as a wizard and uses the thief skill block + backstab — both
+      // already contributed to the shared Player schema by the DCC
+      // wizard/thief mixins, so no further fields are added here.
+    },
+    defaults: {
+      sheetClass: 'Spell-Thief',
+      localize: { 'class.className': 'SpellThief.SpellThief' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showBackstab': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'manual',
+        // deedDie is shared with the deed-die classes; pin this class's label.
+        'skills.deedDie.label': 'SpellThief.MagicDie'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'spell-thief': { id: 'spell-thief', template: classPartial('spell-thief') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'spell-thief', group: 'sheet', label: 'SpellThief.SpellThief' },
             { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
           ]
         }

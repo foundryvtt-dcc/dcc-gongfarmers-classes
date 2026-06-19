@@ -10,10 +10,11 @@ import * as BarbearianSheets from './actor-sheets-barbearian.js'
 import * as HeavenlyHitmanSheets from './actor-sheets-heavenly-hitman.js'
 import * as HumanSheets from './actor-sheets-human.js'
 import * as FowlSummonerSheets from './actor-sheets-fowl-summoner.js'
-import * as TarantionElfSheets from './actor-sheets-tarantion-elf.js'
+import * as TarantinoElfSheets from './actor-sheets-tarantino-elf.js'
 import * as PriestOldFatherSheets from './actor-sheets-priest-of-the-old-father.js'
 import * as ArcaneWarriorSheets from './actor-sheets-arcane-warrior.js'
 import * as MysticArcanistSheets from './actor-sheets-mystic-arcanist.js'
+import * as SpellThiefSheets from './actor-sheets-spell-thief.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -32,10 +33,11 @@ const GONGFARMERS_SHEETS = [
   { sheet: HeavenlyHitmanSheets.ActorSheetHeavenlyHitman, scope: 'dcc-gongfarmers-classes-heavenly-hitman', label: 'HeavenlyHitman.ActorSheetHeavenlyHitman' },
   { sheet: HumanSheets.ActorSheetHuman, scope: 'dcc-gongfarmers-classes-human', label: 'Human.ActorSheetHuman' },
   { sheet: FowlSummonerSheets.ActorSheetFowlSummoner, scope: 'dcc-gongfarmers-classes-fowl-summoner', label: 'FowlSummoner.ActorSheetFowlSummoner' },
-  { sheet: TarantionElfSheets.ActorSheetTarantionElf, scope: 'dcc-gongfarmers-classes-tarantion-elf', label: 'TarantionElf.ActorSheetTarantionElf' },
+  { sheet: TarantinoElfSheets.ActorSheetTarantinoElf, scope: 'dcc-gongfarmers-classes-tarantino-elf', label: 'TarantinoElf.ActorSheetTarantinoElf' },
   { sheet: PriestOldFatherSheets.ActorSheetPriestOldFather, scope: 'dcc-gongfarmers-classes-priest-of-the-old-father', label: 'PriestOldFather.ActorSheetPriestOldFather' },
   { sheet: ArcaneWarriorSheets.ActorSheetArcaneWarrior, scope: 'dcc-gongfarmers-classes-arcane-warrior', label: 'ArcaneWarrior.ActorSheetArcaneWarrior' },
-  { sheet: MysticArcanistSheets.ActorSheetMysticArcanist, scope: 'dcc-gongfarmers-classes-mystic-arcanist', label: 'MysticArcanist.ActorSheetMysticArcanist' }
+  { sheet: MysticArcanistSheets.ActorSheetMysticArcanist, scope: 'dcc-gongfarmers-classes-mystic-arcanist', label: 'MysticArcanist.ActorSheetMysticArcanist' },
+  { sheet: SpellThiefSheets.ActorSheetSpellThief, scope: 'dcc-gongfarmers-classes-spell-thief', label: 'SpellThief.ActorSheetSpellThief' }
 ]
 
 /* -------------------------------------------- */

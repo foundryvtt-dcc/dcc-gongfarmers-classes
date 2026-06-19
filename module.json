@@ -68,6 +68,13 @@
       "path": "packs/gongfarmers-class-level-data",
       "system": "dcc",
       "type": "Item"
+    },
+    {
+      "name": "gongfarmers-almanac-reference",
+      "label": "Gongfarmer's Almanac — About & Credits",
+      "path": "packs/gongfarmers-almanac-reference",
+      "system": "dcc",
+      "type": "JournalEntry"
     }
   ]
 }

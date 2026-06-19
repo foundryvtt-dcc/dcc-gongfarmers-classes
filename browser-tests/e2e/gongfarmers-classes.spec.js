@@ -38,10 +38,11 @@ const CLASSES = [
   { id: 'heavenly-hitman', sheetClass: 'Heavenly-Hitman', flag: 'dcc-gongfarmers-classes-heavenly-hitman.ActorSheetHeavenlyHitman', dieField: null, dieAtL1: false, extraTab: 'clericSpells', alignment: 'n' },
   { id: 'human', sheetClass: 'Human', flag: 'dcc-gongfarmers-classes-human.ActorSheetHuman', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n' },
   { id: 'fowl-summoner', sheetClass: 'Fowl-Summoner', flag: 'dcc-gongfarmers-classes-fowl-summoner.ActorSheetFowlSummoner', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
-  { id: 'tarantion-elf', sheetClass: 'Tarantion-Elf', flag: 'dcc-gongfarmers-classes-tarantion-elf.ActorSheetTarantionElf', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
+  { id: 'tarantino-elf', sheetClass: 'Tarantino-Elf', flag: 'dcc-gongfarmers-classes-tarantino-elf.ActorSheetTarantinoElf', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
   { id: 'priest-of-the-old-father', sheetClass: 'Priest-Of-The-Old-Father', flag: 'dcc-gongfarmers-classes-priest-of-the-old-father.ActorSheetPriestOldFather', dieField: null, dieAtL1: false, extraTab: 'clericSpells', alignment: 'n' },
   { id: 'arcane-warrior', sheetClass: 'Arcane-Warrior', flag: 'dcc-gongfarmers-classes-arcane-warrior.ActorSheetArcaneWarrior', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
-  { id: 'mystic-arcanist', sheetClass: 'Mystic-Arcanist', flag: 'dcc-gongfarmers-classes-mystic-arcanist.ActorSheetMysticArcanist', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' }
+  { id: 'mystic-arcanist', sheetClass: 'Mystic-Arcanist', flag: 'dcc-gongfarmers-classes-mystic-arcanist.ActorSheetMysticArcanist', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
+  { id: 'spell-thief', sheetClass: 'Spell-Thief', flag: 'dcc-gongfarmers-classes-spell-thief.ActorSheetSpellThief', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' }
 ]
 
 const consoleErrors = []
@@ -76,6 +77,32 @@ test('registers every class for progression load', async ({ page }) => {
 test('ships a 40+ item level-data pack', async ({ page }) => {
   const size = await page.evaluate((pack) => game.packs.get(pack)?.index?.size ?? 0, PACK)
   expect(size).toBeGreaterThanOrEqual(CLASSES.length * 10)
+})
+
+test('ships a reference journal crediting every class with the downloads link', async ({ page }) => {
+  const journalPack = `${MODULE_ID}.gongfarmers-almanac-reference`
+  const out = await page.evaluate(async (pack) => {
+    const p = game.packs.get(pack)
+    if (!p) return { found: false }
+    const docs = await p.getDocuments()
+    const entry = docs[0]
+    const content = entry.pages.map(pg => pg.text?.content || '').join('\n')
+    return {
+      found: true,
+      documentName: p.documentName,
+      entryCount: docs.length,
+      pageCount: entry.pages.size,
+      hasDownloadsLink: content.includes('https://gongfarmersalmanac.com/downloads/'),
+      creditLines: (content.match(/<li>/g) || []).length
+    }
+  }, journalPack)
+  expect(out.found, 'reference journal pack exists').toBe(true)
+  expect(out.documentName).toBe('JournalEntry')
+  expect(out.entryCount).toBeGreaterThanOrEqual(1)
+  expect(out.pageCount).toBeGreaterThanOrEqual(2)
+  expect(out.hasDownloadsLink, 'links to the almanac downloads page').toBe(true)
+  // One credit line per shipped class.
+  expect(out.creditLines).toBe(CLASSES.length)
 })
 
 for (const c of CLASSES) {
