@@ -77,6 +77,13 @@ const META = {
     tableDice: [{ header: 'Magic Die', key: 'system.skills.deedDie.die' }],
     caster: 'SpellThief.CasterNote'
   },
+  'rune-sage': {
+    prefix: 'RuneSage',
+    dice: [{ labelKey: 'RuneSage.MagicDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'Magic', 'Rune', 'SwordAndStone', 'DwarfTraits', 'Luck'],
+    tableDice: [{ header: 'Magic Die', key: 'system.skills.deedDie.die' }],
+    caster: 'RuneSage.CasterNote'
+  },
   'mystic-arcanist': {
     prefix: 'MysticArcanist',
     dice: [],

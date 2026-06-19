@@ -15,6 +15,7 @@ import * as PriestOldFatherSheets from './actor-sheets-priest-of-the-old-father.
 import * as ArcaneWarriorSheets from './actor-sheets-arcane-warrior.js'
 import * as MysticArcanistSheets from './actor-sheets-mystic-arcanist.js'
 import * as SpellThiefSheets from './actor-sheets-spell-thief.js'
+import * as RuneSageSheets from './actor-sheets-rune-sage.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -37,7 +38,8 @@ const GONGFARMERS_SHEETS = [
   { sheet: PriestOldFatherSheets.ActorSheetPriestOldFather, scope: 'dcc-gongfarmers-classes-priest-of-the-old-father', label: 'PriestOldFather.ActorSheetPriestOldFather' },
   { sheet: ArcaneWarriorSheets.ActorSheetArcaneWarrior, scope: 'dcc-gongfarmers-classes-arcane-warrior', label: 'ArcaneWarrior.ActorSheetArcaneWarrior' },
   { sheet: MysticArcanistSheets.ActorSheetMysticArcanist, scope: 'dcc-gongfarmers-classes-mystic-arcanist', label: 'MysticArcanist.ActorSheetMysticArcanist' },
-  { sheet: SpellThiefSheets.ActorSheetSpellThief, scope: 'dcc-gongfarmers-classes-spell-thief', label: 'SpellThief.ActorSheetSpellThief' }
+  { sheet: SpellThiefSheets.ActorSheetSpellThief, scope: 'dcc-gongfarmers-classes-spell-thief', label: 'SpellThief.ActorSheetSpellThief' },
+  { sheet: RuneSageSheets.ActorSheetRuneSage, scope: 'dcc-gongfarmers-classes-rune-sage', label: 'RuneSage.ActorSheetRuneSage' }
 ]
 
 /* -------------------------------------------- */

@@ -11,25 +11,38 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 15 / ~57 implemented
+## Status: 16 / ~57 implemented
 
-### Done & E2E-verified (15)
+### Done & E2E-verified (16)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
-  Mystic Arcanist, Spell Thief
+  Mystic Arcanist, Spell Thief, Rune Sage
+
+The DCC-native portion of the 2020 collection is now complete.
 
 ### Excluded (not leveled classes — documented)
 - Kraken Slayer (2020) — a magic item, not a class
 - Hive Master (2020) — no level table / hit die / progression (swarm table only)
+- Runelords (2020 V8) — no level 1–10 table; an endowment subsystem (ability
+  points passed dedicate→lord via forcibles), not a standard leveled PC class
+- Moremen (2020 V13) — not a PC class; an antagonist faction ("The Mutants
+  with More") plus a Lvl 1–3 mini-adventure with monster stat blocks only
 
-### Pending (~42)
-- **Rest of 2020 (7):** Rune Sage, Runelords, Moremen, Scholar,
-  Mastermind, Insectaur, Geologian
+### Deferred — MCC (Mutant Crawl Classics) content (2020 V14)
+- Scholar, Mastermind, Insectaur, Geologian (all by Tim Snider) have clean
+  level 1–10 tables + titles, but are MCC/Terra A.D. classes (random mutations,
+  Artifact Checks, AI-recognition rolls, glowburn/radburn, Clan-of-Cog/Curators
+  alignments). No MCC system is installed, so they would have to be *adapted*
+  to DCC (mutant traits as notes + an Artifact-Check value). **Decision
+  (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
+  future dedicated MCC effort rather than mixing systems here.
+
+### Pending (~35)
 - **2016 (4), 2017 (6), 2018 (12), 2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
   see CLASS_INVENTORY.md for the per-class list, types, and build flags.
 
-Build order: finish 2020, then 2016 → 2025.
+Build order: 2020 done (DCC-native); next 2016 → 2025.
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

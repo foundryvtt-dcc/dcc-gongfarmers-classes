@@ -42,7 +42,8 @@ const CLASSES = [
   { id: 'priest-of-the-old-father', sheetClass: 'Priest-Of-The-Old-Father', flag: 'dcc-gongfarmers-classes-priest-of-the-old-father.ActorSheetPriestOldFather', dieField: null, dieAtL1: false, extraTab: 'clericSpells', alignment: 'n' },
   { id: 'arcane-warrior', sheetClass: 'Arcane-Warrior', flag: 'dcc-gongfarmers-classes-arcane-warrior.ActorSheetArcaneWarrior', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
   { id: 'mystic-arcanist', sheetClass: 'Mystic-Arcanist', flag: 'dcc-gongfarmers-classes-mystic-arcanist.ActorSheetMysticArcanist', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
-  { id: 'spell-thief', sheetClass: 'Spell-Thief', flag: 'dcc-gongfarmers-classes-spell-thief.ActorSheetSpellThief', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' }
+  { id: 'spell-thief', sheetClass: 'Spell-Thief', flag: 'dcc-gongfarmers-classes-spell-thief.ActorSheetSpellThief', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
+  { id: 'rune-sage', sheetClass: 'Rune-Sage', flag: 'dcc-gongfarmers-classes-rune-sage.ActorSheetRuneSage', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'l' }
 ]
 
 const consoleErrors = []

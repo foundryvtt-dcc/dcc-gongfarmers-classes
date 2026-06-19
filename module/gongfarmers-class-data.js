@@ -501,6 +501,51 @@ export const GONGFARMERS_CLASSES = {
     }
   },
 
+  'rune-sage': {
+    label: 'RuneSage.ActorSheetRuneSage',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // The "magic die" — a deed die added to attack and to the wizard
+      // spell check (1d20 + Int + magic die). Shared deedDie field; the
+      // label is pinned per-class in defaults.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'RuneSage.MagicDie' }),
+        die: new f.StringField({ initial: '1d2' })
+      })
+      // Casts as a wizard (spells are carved into runes); the wizard mixin
+      // already contributes the spell fields to the shared Player schema.
+    },
+    defaults: {
+      sheetClass: 'Rune-Sage',
+      localize: { 'class.className': 'RuneSage.RuneSage' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'manual',
+        // deedDie is shared with the deed-die classes; pin this class's label.
+        'skills.deedDie.label': 'RuneSage.MagicDie'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'rune-sage': { id: 'rune-sage', template: classPartial('rune-sage') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'rune-sage', group: 'sheet', label: 'RuneSage.RuneSage' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
   'mystic-arcanist': {
     label: 'MysticArcanist.ActorSheetMysticArcanist',
     sheetHeight: 640,

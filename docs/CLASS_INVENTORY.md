@@ -5,7 +5,7 @@ Gongfarmer's Almanac collections present in `~/Documents/DCC/`, for
 implementation in this module. Compiled 2026-06-19.
 
 Legend — **type**: martial · caster · race (race-as-class) · skill · hybrid · NPC.
-Status: ✅ done & E2E-verified · ⬜ pending.
+Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 
 ## 2015 Collection (V1: Men & Magic)
 | Class | Type | Status |
@@ -30,14 +30,14 @@ Status: ✅ done & E2E-verified · ⬜ pending.
 | Priest of the Old Father | 8 | caster (cleric) | ✅ |
 | Arcane Warrior | 8 | caster (wizard)+martial | ✅ |
 | Mystic Arcanist | 8 | caster | ✅ |
-| Rune Sage | 8 | caster (rune system) | ⬜ |
+| Rune Sage | 8 | caster (wizard + magic die) | ✅ |
 | Spell Thief | 8 | caster + thief | ✅ |
-| Runelords | 8 | caster (custom rune system) | ⬜ |
-| Moremen | 13 | race (mutant) | ⬜ |
-| Scholar | 14 | skill | ⬜ |
-| Mastermind | 14 | skill (psionic) | ⬜ |
-| Insectaur | 14 | race (mutant) | ⬜ |
-| Geologian | 14 | race (mutant) | ⬜ |
+| Runelords | 8 | caster (custom rune system) | ❌ excluded — no level 1–10 table; endowment subsystem, not a standard leveled class |
+| Moremen | 13 | race (mutant) | ❌ excluded — not a PC class (antagonist faction + Lvl 1–3 adventure with monster stat blocks) |
+| Scholar | 14 | skill | ⏸ deferred (MCC) |
+| Mastermind | 14 | skill (psionic) | ⏸ deferred (MCC) |
+| Insectaur | 14 | race (mutant) | ⏸ deferred (MCC) |
+| Geologian | 14 | race (mutant) | ⏸ deferred (MCC) |
 | ~~Kraken Slayer~~ | 10 | — | ❌ not a class (magic item in an NPC writeup) |
 
 ## 2016 Collection
@@ -113,9 +113,10 @@ Status: ✅ done & E2E-verified · ⬜ pending.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 15 (✅) — 2015: all 4; 2020: Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human, Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior, Mystic Arcanist, Spell Thief.
-- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression).
-- **Pending:** ~42 — 2020: Rune Sage, Runelords, Moremen, Scholar, Mastermind, Insectaur, Geologian (7); plus all of 2016/2017/2018/2019/2021/2024/2025.
+- **Done & E2E-verified:** 16 (✅) — 2015: all 4; 2020 (DCC-native): Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human, Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior, Mystic Arcanist, Spell Thief, Rune Sage. **2020 DCC-native classes are complete.**
+- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure, not a PC class).
+- **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
+- **Pending:** ~35 — all of 2016/2017/2018/2019/2021/2024/2025.
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).
@@ -126,5 +127,5 @@ Status: ✅ done & E2E-verified · ⬜ pending.
 - **classId collisions** with the existing `dcc-crawl-classes` module: 2017 **Orc** and 2021 **Gnome** (crawl already ships `orc`/`gnome`). Disambiguate (e.g. `orc-gfa` / `gnome-gfa`) or skip if redundant. 2016 **Barbarian** / 2018 **Berserker** are warrior variants — keep distinct ids.
 - **Spellcasters** (many): need a `clericSpells` or `wizardSpells` sheet part + `class.spellCheckAbility`, like Heavenly Hitman / the crawl Paladin. Pattern established.
 - **Races/race-as-class:** racial traits go in the class tab as notes; level data still drives saves/crit/action dice/hit die.
-- **Non-standard systems** that won't map cleanly to DCC fields: Runelords/Rune Sage (rune system), Weird Frontiers classes (Hex tokens, Fumble Die), Lycanthrope (overlay/template), Adventurer (cycles core classes). These need per-class design decisions; flag for review when reached.
+- **Non-standard systems** that won't map cleanly to DCC fields: Weird Frontiers classes (Hex tokens, Fumble Die), Lycanthrope (overlay/template), Adventurer (cycles core classes). These need per-class design decisions; flag for review when reached. (Rune Sage's "rune system" mapped fine — it's a wizard caster whose magic die is the deedDie field, like Arcane Warrior; the rune-carving mechanic is descriptive. Runelords' endowment system has no level table and was excluded.)
 - **2021 Vols 2 & 5** not supplied — any classes there are unknown.

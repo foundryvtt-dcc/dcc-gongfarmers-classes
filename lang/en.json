@@ -297,5 +297,25 @@
   "SpellThief.LuckDesc": "The Luck modifier applies to rolls to steal spells.",
   "SpellThief.LevelTable": "Table ST-1: Spell Thief",
   "SpellThief.CasterNote": "Wizard spells are managed on the Spells tab. Known spells rise from 3 (level 1) to 7 (level 10); max spell level from 1 to 5. The spell-thief bonus to steal/negate spells rises from +3 (level 1) to +15 (level 10).",
-  "SpellThief.Credit": "Spell Thief by Ed Kabara — The Gongfarmer's Almanac 2020 Collection, Volume 8: Character Class — Styles & Rules."
+  "SpellThief.Credit": "Spell Thief by Ed Kabara — The Gongfarmer's Almanac 2020 Collection, Volume 8: Character Class — Styles & Rules.",
+
+  "RuneSage.ActorSheetRuneSage": "Rune Sage",
+  "RuneSage.RuneSage": "Rune Sage",
+  "RuneSage.Abilities": "Rune Sage Abilities",
+  "RuneSage.MagicDie": "Magic Die",
+  "RuneSage.WeaponTraining": "Weapon & Armor Training",
+  "RuneSage.WeaponTrainingDesc": "Always a dwarf. Trained in the battleaxe, club, dagger, handaxe, longsword, mace, short sword, spear, two-handed sword, and warhammer, plus the crossbow, javelin, shortbow, and sling. Wears the heaviest armor they can afford.",
+  "RuneSage.Magic": "Magic",
+  "RuneSage.MagicDesc": "Casts wizard spells. Knows 2 spells at 1st level; to cast, roll 1d20 + Intelligence modifier + Magic Die (may spellburn as a wizard). A cast spell is carved into an object over 1 minute per spell level, using the result rolled at casting, and persists for a number of days equal to the spell level.",
+  "RuneSage.Rune": "Rune",
+  "RuneSage.RuneDesc": "A carved rune may be used by anyone. On their turn a character may trigger a rune as their action; anyone other than its creator must spellburn at least 1 point (cutting themselves to fuel it with blood) to fire it, and may spellburn extra points to raise the previously rolled result. A rune sage may have only as many runes carved at once as their Rune Cast number; casting a new spell while at the limit immediately triggers the oldest rune.",
+  "RuneSage.SwordAndStone": "Sword and Stone",
+  "RuneSage.SwordAndStoneDesc": "When the rune sage's attack (magic) die comes up 3 or better, they may trigger one previously carved rune as part of that attack — once per turn.",
+  "RuneSage.DwarfTraits": "Dwarf Traits",
+  "RuneSage.DwarfTraitsDesc": "Infravision to 60'. Base movement speed 20'. Automatically knows Dwarven at 1st level.",
+  "RuneSage.Luck": "Luck",
+  "RuneSage.LuckDesc": "The Luck modifier applies to the rune sage's Armor Class.",
+  "RuneSage.LevelTable": "Table RS-1: Rune Sage",
+  "RuneSage.CasterNote": "Wizard spells are managed on the Spells tab. Known spells rise from 2 (level 1) to 7 (level 10); max spell level from 1 to 5; runes carved at once (Rune Cast) from 2 to 6. Spells are cast as carved runes — see the class writeup.",
+  "RuneSage.Credit": "Rune Sage by Ed Kabara — The Gongfarmer's Almanac 2020 Collection, Volume 8: Character Class — Styles & Rules."
 }
