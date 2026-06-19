@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "fater",
+    "level": "3",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=1d10\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+2\nsystem.skills.deedDie.die=1d4\nsystem.skills.unarmedDamage.die=1d6\nsystem.skills.wildHealing.value=1d5 (×4)\n",
+    "levelDataLawful": "system.details.title.value=The Logician\n",
+    "levelDataNeutral": "system.details.title.value=The Logician\n",
+    "levelDataChaotic": "system.details.title.value=The Logician\n"
+  },
+  "name": "fater-3",
+  "type": "level",
+  "folder": "TaidAuhltGe4GMAG",
+  "_id": "1CD87lDRRyUAtX1t",
+  "effects": [],
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!1CD87lDRRyUAtX1t"
+}

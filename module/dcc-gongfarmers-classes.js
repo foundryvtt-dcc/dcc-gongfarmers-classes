@@ -38,6 +38,11 @@ import * as QuantumTravelerSheets from './actor-sheets-quantum-traveler.js'
 import * as SageSheets from './actor-sheets-sage.js'
 import * as ScoutSheets from './actor-sheets-scout.js'
 import * as SoldierSheets from './actor-sheets-soldier.js'
+import * as AntiClericSheets from './actor-sheets-anti-cleric.js'
+import * as CambionSheets from './actor-sheets-cambion.js'
+import * as ChildrenOfTheWildSheets from './actor-sheets-children-of-the-wild.js'
+import * as GodlingSheets from './actor-sheets-godling.js'
+import * as FaterSheets from './actor-sheets-fater.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -83,7 +88,12 @@ const GONGFARMERS_SHEETS = [
   { sheet: QuantumTravelerSheets.ActorSheetQuantumTraveler, scope: 'dcc-gongfarmers-classes-quantum-traveler', label: 'QuantumTraveler.ActorSheetQuantumTraveler' },
   { sheet: SageSheets.ActorSheetSage, scope: 'dcc-gongfarmers-classes-sage', label: 'Sage.ActorSheetSage' },
   { sheet: ScoutSheets.ActorSheetScout, scope: 'dcc-gongfarmers-classes-scout', label: 'Scout.ActorSheetScout' },
-  { sheet: SoldierSheets.ActorSheetSoldier, scope: 'dcc-gongfarmers-classes-soldier', label: 'Soldier.ActorSheetSoldier' }
+  { sheet: SoldierSheets.ActorSheetSoldier, scope: 'dcc-gongfarmers-classes-soldier', label: 'Soldier.ActorSheetSoldier' },
+  { sheet: AntiClericSheets.ActorSheetAntiCleric, scope: 'dcc-gongfarmers-classes-anti-cleric', label: 'AntiCleric.ActorSheetAntiCleric' },
+  { sheet: CambionSheets.ActorSheetCambion, scope: 'dcc-gongfarmers-classes-cambion', label: 'Cambion.ActorSheetCambion' },
+  { sheet: ChildrenOfTheWildSheets.ActorSheetChildrenOfTheWild, scope: 'dcc-gongfarmers-classes-children-of-the-wild', label: 'ChildrenOfTheWild.ActorSheetChildrenOfTheWild' },
+  { sheet: GodlingSheets.ActorSheetGodling, scope: 'dcc-gongfarmers-classes-godling', label: 'Godling.ActorSheetGodling' },
+  { sheet: FaterSheets.ActorSheetFater, scope: 'dcc-gongfarmers-classes-fater', label: 'Fater.ActorSheetFater' }
 ]
 
 /* -------------------------------------------- */

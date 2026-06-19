@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "godling",
+    "level": "8",
+    "levelData": "system.details.attackBonus=+6\nsystem.attributes.critical.die=1d20\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d8\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+5\nsystem.saves.wil.classBonus=+3\nsystem.skills.bloodlineAbilities.value=10\n",
+    "levelDataLawful": "system.details.title.value=Exalted\n",
+    "levelDataNeutral": "system.details.title.value=Exalted\n",
+    "levelDataChaotic": "system.details.title.value=Exalted\n"
+  },
+  "name": "godling-8",
+  "type": "level",
+  "folder": "6B4ArlzTzvY0ENCd",
+  "_id": "fzZG9U6IS4qLXkXn",
+  "effects": [],
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!fzZG9U6IS4qLXkXn"
+}

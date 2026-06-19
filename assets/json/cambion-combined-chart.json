@@ -1,0 +1,192 @@
+{
+  "1": {
+    "level_info": {
+      "system.details.attackBonus": "+1",
+      "system.attributes.critical.die": "1d10",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+0",
+      "system.skills.beastDie.die": "1d4",
+      "system.skills.aspects.value": "1"
+    },
+    "titles": {
+      "lawful": "Whelp",
+      "neutral": "Whelp",
+      "chaotic": "Whelp"
+    }
+  },
+  "2": {
+    "level_info": {
+      "system.details.attackBonus": "+2",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+0",
+      "system.skills.beastDie.die": "1d5",
+      "system.skills.aspects.value": "2"
+    },
+    "titles": {
+      "lawful": "Devilkin",
+      "neutral": "Devilkin",
+      "chaotic": "Devilkin"
+    }
+  },
+  "3": {
+    "level_info": {
+      "system.details.attackBonus": "+3",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+1",
+      "system.skills.beastDie.die": "1d6",
+      "system.skills.aspects.value": "2"
+    },
+    "titles": {
+      "lawful": "Hellborn",
+      "neutral": "Hellborn",
+      "chaotic": "Hellborn"
+    }
+  },
+  "4": {
+    "level_info": {
+      "system.details.attackBonus": "+4",
+      "system.attributes.critical.die": "1d16",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+1",
+      "system.skills.beastDie.die": "1d7",
+      "system.skills.aspects.value": "3"
+    },
+    "titles": {
+      "lawful": "Fiend",
+      "neutral": "Fiend",
+      "chaotic": "Fiend"
+    }
+  },
+  "5": {
+    "level_info": {
+      "system.details.attackBonus": "+5",
+      "system.attributes.critical.die": "1d20",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20,1d14",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+1",
+      "system.skills.beastDie.die": "1d8",
+      "system.skills.aspects.value": "3"
+    },
+    "titles": {
+      "lawful": "Tormentor",
+      "neutral": "Tormentor",
+      "chaotic": "Tormentor"
+    }
+  },
+  "6": {
+    "level_info": {
+      "system.details.attackBonus": "+6",
+      "system.attributes.critical.die": "1d24",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+1",
+      "system.skills.beastDie.die": "1d10",
+      "system.skills.aspects.value": "4"
+    },
+    "titles": {
+      "lawful": "Bloodfiend",
+      "neutral": "Bloodfiend",
+      "chaotic": "Bloodfiend"
+    }
+  },
+  "7": {
+    "level_info": {
+      "system.details.attackBonus": "+7",
+      "system.attributes.critical.die": "1d30",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+2",
+      "system.skills.beastDie.die": "1d12",
+      "system.skills.aspects.value": "4"
+    },
+    "titles": {
+      "lawful": "Chosen of the Crones",
+      "neutral": "Chosen of the Crones",
+      "chaotic": "Chosen of the Crones"
+    }
+  },
+  "8": {
+    "level_info": {
+      "system.details.attackBonus": "+8",
+      "system.attributes.critical.die": "1d30",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+2",
+      "system.skills.beastDie.die": "1d12+1",
+      "system.skills.aspects.value": "5"
+    },
+    "titles": {
+      "lawful": "Infernal Scourge",
+      "neutral": "Infernal Scourge",
+      "chaotic": "Infernal Scourge"
+    }
+  },
+  "9": {
+    "level_info": {
+      "system.details.attackBonus": "+9",
+      "system.attributes.critical.die": "2d20",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+5",
+      "system.saves.wil.classBonus": "+2",
+      "system.skills.beastDie.die": "1d12+2",
+      "system.skills.aspects.value": "5"
+    },
+    "titles": {
+      "lawful": "Hell-Tyrant",
+      "neutral": "Hell-Tyrant",
+      "chaotic": "Hell-Tyrant"
+    }
+  },
+  "10": {
+    "level_info": {
+      "system.details.attackBonus": "+10",
+      "system.attributes.critical.die": "2d20",
+      "system.attributes.critical.table": "M",
+      "system.attributes.actionDice.value": "1d20,1d20,1d14",
+      "system.attributes.hitDice.value": "1d10",
+      "system.saves.ref.classBonus": "+4",
+      "system.saves.frt.classBonus": "+6",
+      "system.saves.wil.classBonus": "+3",
+      "system.skills.beastDie.die": "1d12+3",
+      "system.skills.aspects.value": "6"
+    },
+    "titles": {
+      "lawful": "Cambion Prince",
+      "neutral": "Cambion Prince",
+      "chaotic": "Cambion Prince"
+    }
+  }
+}

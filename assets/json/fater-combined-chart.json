@@ -1,0 +1,202 @@
+{
+  "1": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d8",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+0",
+      "system.saves.wil.classBonus": "+1",
+      "system.skills.deedDie.die": "1d3",
+      "system.skills.unarmedDamage.die": "1d4",
+      "system.skills.wildHealing.value": "1d3 (×2)"
+    },
+    "titles": {
+      "lawful": "The Skeptic",
+      "neutral": "The Skeptic",
+      "chaotic": "The Skeptic"
+    }
+  },
+  "2": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d8",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+2",
+      "system.skills.deedDie.die": "1d3+1",
+      "system.skills.unarmedDamage.die": "1d6",
+      "system.skills.wildHealing.value": "1d4 (×3)"
+    },
+    "titles": {
+      "lawful": "The Theorist",
+      "neutral": "The Theorist",
+      "chaotic": "The Theorist"
+    }
+  },
+  "3": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d10",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+2",
+      "system.skills.deedDie.die": "1d4",
+      "system.skills.unarmedDamage.die": "1d6",
+      "system.skills.wildHealing.value": "1d5 (×4)"
+    },
+    "titles": {
+      "lawful": "The Logician",
+      "neutral": "The Logician",
+      "chaotic": "The Logician"
+    }
+  },
+  "4": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+2",
+      "system.skills.deedDie.die": "1d5",
+      "system.skills.unarmedDamage.die": "1d8",
+      "system.skills.wildHealing.value": "1d6 (×5)"
+    },
+    "titles": {
+      "lawful": "The Thinker",
+      "neutral": "The Thinker",
+      "chaotic": "The Thinker"
+    }
+  },
+  "5": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+3",
+      "system.skills.deedDie.die": "1d6",
+      "system.skills.unarmedDamage.die": "1d10",
+      "system.skills.wildHealing.value": "1d8 (×6)"
+    },
+    "titles": {
+      "lawful": "The Enlightened",
+      "neutral": "The Enlightened",
+      "chaotic": "The Enlightened"
+    }
+  },
+  "6": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d14",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+4",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+3",
+      "system.skills.deedDie.die": "1d8",
+      "system.skills.unarmedDamage.die": "1d12",
+      "system.skills.wildHealing.value": "1d10 (×7)"
+    },
+    "titles": {
+      "lawful": "The Philosopher",
+      "neutral": "The Philosopher",
+      "chaotic": "The Philosopher"
+    }
+  },
+  "7": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d14",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+4",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+3",
+      "system.skills.deedDie.die": "1d8+2",
+      "system.skills.unarmedDamage.die": "1d12+2",
+      "system.skills.wildHealing.value": "1d12 (×8)"
+    },
+    "titles": {
+      "lawful": "The Seer",
+      "neutral": "The Seer",
+      "chaotic": "The Seer"
+    }
+  },
+  "8": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d16",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+4",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+3",
+      "system.skills.deedDie.die": "1d10",
+      "system.skills.unarmedDamage.die": "1d14",
+      "system.skills.wildHealing.value": "1d14 (×9)"
+    },
+    "titles": {
+      "lawful": "The Wise",
+      "neutral": "The Wise",
+      "chaotic": "The Wise"
+    }
+  },
+  "9": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d16",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+5",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+3",
+      "system.skills.deedDie.die": "1d10+2",
+      "system.skills.unarmedDamage.die": "1d14+2",
+      "system.skills.wildHealing.value": "1d16 (×10)"
+    },
+    "titles": {
+      "lawful": "The Knower",
+      "neutral": "The Knower",
+      "chaotic": "The Knower"
+    }
+  },
+  "10": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d20",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d6",
+      "system.saves.ref.classBonus": "+6",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+5",
+      "system.skills.deedDie.die": "1d12",
+      "system.skills.unarmedDamage.die": "1d16",
+      "system.skills.wildHealing.value": "1d16 (×12)"
+    },
+    "titles": {
+      "lawful": "The Prophet",
+      "neutral": "The Prophet",
+      "chaotic": "The Prophet"
+    }
+  }
+}

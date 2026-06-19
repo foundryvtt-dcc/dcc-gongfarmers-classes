@@ -231,6 +231,41 @@ const META = {
     dice: [],
     abilities: ['WeaponTraining', 'SleepOnDemand', 'Scrounger', 'MilitarySpecialty', 'Specialties'],
     tableDice: []
+  },
+
+  // ---- 2019 Collection ----
+
+  'anti-cleric': {
+    prefix: 'AntiCleric',
+    dice: [],
+    abilities: ['ClericBaseline', 'ChoosingAGod', 'WeaponArmor', 'CasterLevel', 'Power', 'Catastrophe', 'Sacrifice', 'DrainLife', 'LayOnHands', 'CommandChaos'],
+    tableDice: [],
+    caster: 'AntiCleric.CasterNote'
+  },
+  cambion: {
+    prefix: 'Cambion',
+    dice: [{ labelKey: 'Cambion.BeastDie', field: 'system.skills.beastDie.die', roll: true }],
+    abilities: ['WeaponsArmor', 'NatureOfTheBeast', 'Rampage', 'HideOfTheBeast', 'InfernalStrength', 'AspectsOfTheDemon'],
+    tableDice: [{ header: 'Beast Die', key: 'system.skills.beastDie.die' }, { header: 'Aspects', key: 'system.skills.aspects.value' }]
+  },
+  'children-of-the-wild': {
+    prefix: 'ChildrenOfTheWild',
+    dice: [],
+    abilities: ['WeaponTraining', 'HedgeMagician', 'Tiny', 'Flight', 'IronVulnerability', 'CriticalFinesse', 'NaturalLuck'],
+    tableDice: [{ header: 'Known Spells', key: 'system.skills.knownSpells.value' }, { header: 'Max Spell Lvl', key: 'system.skills.maxSpellLevel.value' }],
+    caster: 'ChildrenOfTheWild.CasterNote'
+  },
+  godling: {
+    prefix: 'Godling',
+    dice: [{ labelKey: 'Godling.BloodlineAbilities', field: 'system.skills.bloodlineAbilities.value', roll: false }],
+    abilities: ['WeaponTraining', 'TheBloodTells', 'HereditaryDoom', 'Luck', 'ActionDice', 'Languages'],
+    tableDice: [{ header: 'Bloodline Powers', key: 'system.skills.bloodlineAbilities.value' }]
+  },
+  fater: {
+    prefix: 'Fater',
+    dice: [{ labelKey: 'Fater.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['WeaponsTraining', 'ArmorBonus', 'AttackModifier', 'Polymath', 'ThiefSkills', 'StrengthOfMind', 'WildHealingAbility', 'HandOfFate', 'WillToLive', 'Languages'],
+    tableDice: [{ header: 'Deed Die', key: 'system.skills.deedDie.die' }, { header: 'Unarmed', key: 'system.skills.unarmedDamage.die' }, { header: 'Wild Healing', key: 'system.skills.wildHealing.value' }]
   }
 }
 

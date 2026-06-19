@@ -1,0 +1,172 @@
+{
+  "1": {
+    "level_info": {
+      "system.details.attackBonus": "+0",
+      "system.attributes.critical.die": "1d8",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+0",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+1"
+    },
+    "titles": {
+      "lawful": "Heretic",
+      "neutral": "Heretic",
+      "chaotic": "Heretic"
+    }
+  },
+  "2": {
+    "level_info": {
+      "system.details.attackBonus": "+1",
+      "system.attributes.critical.die": "1d8",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+0",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+1"
+    },
+    "titles": {
+      "lawful": "Blasphemer",
+      "neutral": "Blasphemer",
+      "chaotic": "Blasphemer"
+    }
+  },
+  "3": {
+    "level_info": {
+      "system.details.attackBonus": "+2",
+      "system.attributes.critical.die": "1d10",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+1",
+      "system.saves.wil.classBonus": "+2"
+    },
+    "titles": {
+      "lawful": "Cultist",
+      "neutral": "Cultist",
+      "chaotic": "Cultist"
+    }
+  },
+  "4": {
+    "level_info": {
+      "system.details.attackBonus": "+2",
+      "system.attributes.critical.die": "1d10",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+2"
+    },
+    "titles": {
+      "lawful": "Defiler",
+      "neutral": "Defiler",
+      "chaotic": "Defiler"
+    }
+  },
+  "5": {
+    "level_info": {
+      "system.details.attackBonus": "+3",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+1",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+3"
+    },
+    "titles": {
+      "lawful": "Dark Priest",
+      "neutral": "Dark Priest",
+      "chaotic": "Dark Priest"
+    }
+  },
+  "6": {
+    "level_info": {
+      "system.details.attackBonus": "+4",
+      "system.attributes.critical.die": "1d12",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d14",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+2",
+      "system.saves.wil.classBonus": "+4"
+    },
+    "titles": {
+      "lawful": "Plague Bishop",
+      "neutral": "Plague Bishop",
+      "chaotic": "Plague Bishop"
+    }
+  },
+  "7": {
+    "level_info": {
+      "system.details.attackBonus": "+5",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d16",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+4"
+    },
+    "titles": {
+      "lawful": "Voice of Ruin",
+      "neutral": "Voice of Ruin",
+      "chaotic": "Voice of Ruin"
+    }
+  },
+  "8": {
+    "level_info": {
+      "system.details.attackBonus": "+5",
+      "system.attributes.critical.die": "1d14",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+2",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+5"
+    },
+    "titles": {
+      "lawful": "Unholy Vicar",
+      "neutral": "Unholy Vicar",
+      "chaotic": "Unholy Vicar"
+    }
+  },
+  "9": {
+    "level_info": {
+      "system.details.attackBonus": "+6",
+      "system.attributes.critical.die": "1d16",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+3",
+      "system.saves.wil.classBonus": "+5"
+    },
+    "titles": {
+      "lawful": "Doom Prophet",
+      "neutral": "Doom Prophet",
+      "chaotic": "Doom Prophet"
+    }
+  },
+  "10": {
+    "level_info": {
+      "system.details.attackBonus": "+7",
+      "system.attributes.critical.die": "1d16",
+      "system.attributes.critical.table": "III",
+      "system.attributes.actionDice.value": "1d20,1d20",
+      "system.attributes.hitDice.value": "1d8",
+      "system.saves.ref.classBonus": "+3",
+      "system.saves.frt.classBonus": "+4",
+      "system.saves.wil.classBonus": "+6"
+    },
+    "titles": {
+      "lawful": "Antipope",
+      "neutral": "Antipope",
+      "chaotic": "Antipope"
+    }
+  }
+}

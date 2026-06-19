@@ -11,9 +11,9 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 38 / ~57 implemented
+## Status: 43 / ~57 implemented
 
-### Done & E2E-verified (38)
+### Done & E2E-verified (43)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
@@ -27,9 +27,43 @@ level 1–10 progression pack, a class sheet tab, and live E2E coverage.
   Berserker, Faerie, Goat'o'war (`goat-o-war`), Gongfarmer, Kith of Kingspire
   (`kith-of-kingspire`), Lycanthrope, Pirate, Quantum Traveler, Sage, Scout,
   Soldier (V6, 5-level)
+- **2019 (V11 "Classes & NPCs"):** Anti-Cleric, Cambion, Children of the Wild
+  (`children-of-the-wild`), Godling, Fater
 
-The DCC-native portions of the 2020, 2016, 2017, and 2018 collections are
+The DCC-native portions of the 2020, 2016, 2017, 2018, and 2019 collections are
 complete.
+
+#### Notes from the 2019 build
+- **Anti-Cleric** is a cleric in every mechanic — attack, crit, action dice,
+  saves, hit die (1d8), and spells known all "as a cleric" — so its chart is the
+  DCC cleric chart (no spell-slot fields, matching this module's other casters)
+  with Chaos-themed titles. Only its fuel (Power!) and disapproval (Catastrophe!)
+  differ, and those are descriptive notes. Spell check uses Personality (`per`)
+  since DCC supports only int/per/sta. clericSpells tab.
+- **Cambion** is a flat-attack martial using crit table **M** at every level. New
+  custom fields: `beastDie` (natural-weapon damage die, rollable) and `aspects`
+  (display-only count of demonic aspects gained). Its full Aspect lists (Vermin/
+  Fungi/Ooze/Metal/Leviathan/Shadows) are notes.
+- **Children of the Wild** is the 2019 Faerie class (distinct id
+  `children-of-the-wild`, no collision with the 2018 `faerie`). Wizard caster
+  (`int`, wizardSpells tab); new display-only fields `knownSpells` and
+  `maxSpellLevel` per level. Critical Finesse (Agility to hit/damage with fae
+  weapons) and Natural Luck (regains Luck as a thief, no Luck die) are notes.
+- **Godling** is an à-la-carte hybrid: a flat-attack class (table III) whose
+  `bloodlineAbilities` column tracks the cumulative count of "The Blood Tells"
+  powers; the 20-power menu and Hereditary Doom are notes. No spell tab (it has
+  no fixed spell list even though some powers grant casting). Source has no title
+  table — titles are module-supplied flavor.
+- **Fater** is a Deed-die class with **no fixed attack modifier** (`attackBonusMode:
+  manual`, chart `attackBonus +0`, deed die carries the real bonus — like Dervish).
+  Its deed die is explicitly **not** for Mighty Deeds (no `mightyDeedsLink`). Reuses
+  the shared `deedDie` + `unarmedDamage` fields (labels pinned in defaults) and adds
+  a display-only `wildHealing` field (amount + uses/day). Titles given in source.
+- **Author bylines:** the Fater's author is title-art only (no text layer) — OCR'd
+  to **Vasili Kaliman** (art Shawn Brewer). Others: Anti-Cleric (José Luiz Tzi),
+  Cambion (L.J. LaLonde), Children of the Wild (R.S. Tilton), Godling (Dieter
+  Zimmerman). The 2019 *collection* PDF is AES-encrypted — `pdftotext` (poppler)
+  reads it; `pypdf` needs the `cryptography` package.
 
 #### Notes from the 2018 build
 - **Soldier is a 5-level class** (Trench Crawl Classics, V6, by Eric Betts).
@@ -122,11 +156,11 @@ is the exception.)
   (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
   future dedicated MCC effort rather than mixing systems here.
 
-### Pending (~13)
-- **2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
+### Pending (~16)
+- **2021 (6), 2024 (6), 2025 (4)** —
   see CLASS_INVENTORY.md for the per-class list, types, and build flags.
 
-Build order: 2020 + 2016 + 2017 + 2018 done (DCC-native); next 2019 → 2025.
+Build order: 2020 + 2016 + 2017 + 2018 + 2019 done (DCC-native); next 2021 → 2025.
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

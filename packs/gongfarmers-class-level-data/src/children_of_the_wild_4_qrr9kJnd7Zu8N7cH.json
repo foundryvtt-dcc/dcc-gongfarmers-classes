@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "children-of-the-wild",
+    "level": "4",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d8\nsystem.attributes.critical.table=II\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+2\nsystem.skills.knownSpells.value=6\nsystem.skills.maxSpellLevel.value=2\n",
+    "levelDataLawful": "system.details.title.value=Faerie Noble\n",
+    "levelDataNeutral": "system.details.title.value=Faerie Noble\n",
+    "levelDataChaotic": "system.details.title.value=Faerie Noble\n"
+  },
+  "name": "children-of-the-wild-4",
+  "type": "level",
+  "folder": "O5wojR10eeoa6O4D",
+  "_id": "qrr9kJnd7Zu8N7cH",
+  "effects": [],
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!qrr9kJnd7Zu8N7cH"
+}

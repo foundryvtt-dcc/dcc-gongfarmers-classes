@@ -65,7 +65,12 @@ const CLASSES = [
   { id: 'quantum-traveler', sheetClass: 'Quantum-Traveler', flag: 'dcc-gongfarmers-classes-quantum-traveler.ActorSheetQuantumTraveler', dieField: 'system.class.luckDie', dieAtL1: true, extraTab: null, alignment: 'n' },
   { id: 'sage', sheetClass: 'Sage', flag: 'dcc-gongfarmers-classes-sage.ActorSheetSage', dieField: 'system.skills.curseDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
   { id: 'scout', sheetClass: 'Scout', flag: 'dcc-gongfarmers-classes-scout.ActorSheetScout', dieField: 'system.class.luckDie', dieAtL1: true, extraTab: null, alignment: 'n' },
-  { id: 'soldier', sheetClass: 'Soldier', flag: 'dcc-gongfarmers-classes-soldier.ActorSheetSoldier', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n', levels: 5 }
+  { id: 'soldier', sheetClass: 'Soldier', flag: 'dcc-gongfarmers-classes-soldier.ActorSheetSoldier', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n', levels: 5 },
+  { id: 'anti-cleric', sheetClass: 'Anti-Cleric', flag: 'dcc-gongfarmers-classes-anti-cleric.ActorSheetAntiCleric', dieField: null, dieAtL1: false, extraTab: 'clericSpells', alignment: 'c' },
+  { id: 'cambion', sheetClass: 'Cambion', flag: 'dcc-gongfarmers-classes-cambion.ActorSheetCambion', dieField: 'system.skills.beastDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
+  { id: 'children-of-the-wild', sheetClass: 'Children-Of-The-Wild', flag: 'dcc-gongfarmers-classes-children-of-the-wild.ActorSheetChildrenOfTheWild', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
+  { id: 'godling', sheetClass: 'Godling', flag: 'dcc-gongfarmers-classes-godling.ActorSheetGodling', dieField: 'system.skills.bloodlineAbilities.value', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'fater', sheetClass: 'Fater', flag: 'dcc-gongfarmers-classes-fater.ActorSheetFater', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'n' }
 ]
 
 const consoleErrors = []

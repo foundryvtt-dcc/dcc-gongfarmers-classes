@@ -76,13 +76,13 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Soldier | 6 | martial (Trench Crawl, 5-level) | ✅ |
 
 ## 2019 Collection (V11: Classes & NPCs)
-| Class | Vol | Type |
-|-------|-----|------|
-| The Anti-Cleric | 11 | caster |
-| The Cambion | 11 | martial (beast die) |
-| Children of the Wild (Faerie) | 11 | race/caster |
-| Godling | 11 | hybrid (powers menu) |
-| Fater | 11 | skill |
+| Class | Vol | Type | Status |
+|-------|-----|------|--------|
+| The Anti-Cleric | 11 | caster (cleric; Power!/Catastrophe!) — classId `anti-cleric` | ✅ |
+| The Cambion | 11 | martial (beast die + demon aspects) — classId `cambion` | ✅ |
+| Children of the Wild | 11 | race/caster (faerie wizard) — classId `children-of-the-wild` | ✅ |
+| Godling | 11 | hybrid (à-la-carte bloodline powers) — classId `godling` | ✅ |
+| Fater | 11 | skill/martial (deed die; no fixed attack mod) — classId `fater` | ✅ |
 
 ## 2021 (Volumes 1, 3, 4, 6 supplied; 2 & 5 missing)
 | Class | Vol | Type |
@@ -113,10 +113,10 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 38 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6). **2020 + 2016 + 2017 + 2018 DCC-native classes are complete.**
+- **Done & E2E-verified:** 43 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6); 2019 (5): Anti-Cleric, Cambion, Children of the Wild, Godling, Fater (all V11). **2020 + 2016 + 2017 + 2018 + 2019 DCC-native classes are complete.**
 - **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block).
 - **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
-- **Pending:** ~13 — all of 2019/2021/2024/2025.
+- **Pending:** ~16 — all of 2021 (6), 2024 (6), 2025 (4).
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).

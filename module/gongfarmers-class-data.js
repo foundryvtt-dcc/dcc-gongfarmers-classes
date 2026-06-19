@@ -1242,6 +1242,194 @@ export const GONGFARMERS_CLASSES = {
       parts: { ...commonParts(), soldier: { id: 'soldier', template: classPartial('soldier') } },
       tabs: { sheet: { tabs: [{ id: 'soldier', group: 'sheet', label: 'Soldier.Soldier' }] } }
     }
+  },
+
+  // ---- 2019 Collection ----
+
+  'anti-cleric': {
+    label: 'AntiCleric.ActorSheetAntiCleric',
+    sheetHeight: 640,
+    mixin () {
+      // No class-specific rollable die. The anti-cleric is a cleric in all
+      // mechanics (attack, crit, action dice, saves, hit die, spells known);
+      // its Power!/Sacrifice/Drain Life/Command Chaos features are notes.
+      // Cleric spell fields come from the DCC cleric mixin on the shared
+      // Player schema. Spell check uses Personality (DCC supports int/per/sta).
+    },
+    defaults: {
+      sheetClass: 'Anti-Cleric',
+      localize: { 'class.className': 'AntiCleric.AntiCleric' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'per',
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'anti-cleric': { id: 'anti-cleric', template: classPartial('anti-cleric') },
+        clericSpells: { id: 'clericSpells', template: 'systems/dcc/templates/actor-partial-cleric-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'anti-cleric', group: 'sheet', label: 'AntiCleric.AntiCleric' },
+            { id: 'clericSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  cambion: {
+    label: 'Cambion.ActorSheetCambion',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Beast Die: the damage die of the cambion's natural weaponry (claws,
+      // fangs, barbs); also added to physical skill tests. Grows by level.
+      schema.skills.fields.beastDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Cambion.BeastDie' }),
+        die: new f.StringField({ initial: '1d4' })
+      })
+      // Aspects of the Demon: the cumulative number of demonic aspects the
+      // cambion has gained (display-only count).
+      schema.skills.fields.aspects = new f.SchemaField({
+        label: new f.StringField({ initial: 'Cambion.Aspects' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Cambion',
+      localize: { 'class.className': 'Cambion.Cambion' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), cambion: { id: 'cambion', template: classPartial('cambion') } },
+      tabs: { sheet: { tabs: [{ id: 'cambion', group: 'sheet', label: 'Cambion.Cambion' }] } }
+    }
+  },
+
+  'children-of-the-wild': {
+    label: 'ChildrenOfTheWild.ActorSheetChildrenOfTheWild',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // The faerie casts as a hedge-magician wizard (no spellburn/corruption);
+      // the wizard mixin contributes the spell fields. Known Spells and Max
+      // Spell Level are display-only per-level columns.
+      schema.skills.fields.knownSpells = new f.SchemaField({
+        label: new f.StringField({ initial: 'ChildrenOfTheWild.KnownSpells' }),
+        value: new f.StringField({ initial: '' })
+      })
+      schema.skills.fields.maxSpellLevel = new f.SchemaField({
+        label: new f.StringField({ initial: 'ChildrenOfTheWild.MaxSpellLevel' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Children-Of-The-Wild',
+      localize: { 'class.className': 'ChildrenOfTheWild.ChildrenOfTheWild' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'children-of-the-wild': { id: 'children-of-the-wild', template: classPartial('children-of-the-wild') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'children-of-the-wild', group: 'sheet', label: 'ChildrenOfTheWild.ChildrenOfTheWild' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  godling: {
+    label: 'Godling.ActorSheetGodling',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Bloodline Abilities: the cumulative number of "The Blood Tells" powers
+      // the godling has chosen/rolled (display-only count). The à-la-carte
+      // powers themselves are notes; some grant spellcasting, but the godling
+      // has no fixed spell list, so no spell tab is added.
+      schema.skills.fields.bloodlineAbilities = new f.SchemaField({
+        label: new f.StringField({ initial: 'Godling.BloodlineAbilities' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Godling',
+      localize: { 'class.className': 'Godling.Godling' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), godling: { id: 'godling', template: classPartial('godling') } },
+      tabs: { sheet: { tabs: [{ id: 'godling', group: 'sheet', label: 'Godling.Godling' }] } }
+    }
+  },
+
+  fater: {
+    label: 'Fater.ActorSheetFater',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Deed die: the Fater receives no fixed attack modifier; instead a Deed
+      // die is added to bare-hand attack/damage, Polymath/thief-skill checks,
+      // Wild Healing, Will saves vs. mind-influence, and Hand of Fate re-rolls.
+      // Shared deedDie field; label pinned in defaults.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Fater.DeedDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+      // Unarmed damage die (shared unarmedDamage field; label pinned below) and
+      // the Wild Healing extract (amount + uses/day, display-only).
+      schema.skills.fields.unarmedDamage = new f.SchemaField({
+        label: new f.StringField({ initial: 'Fater.UnarmedDamage' }),
+        die: new f.StringField({ initial: '1d4' })
+      })
+      schema.skills.fields.wildHealing = new f.SchemaField({
+        label: new f.StringField({ initial: 'Fater.WildHealing' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Fater',
+      localize: { 'class.className': 'Fater.Fater' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'manual',
+        'skills.deedDie.label': 'Fater.DeedDie',
+        'skills.unarmedDamage.label': 'Fater.UnarmedDamage'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), fater: { id: 'fater', template: classPartial('fater') } },
+      tabs: { sheet: { tabs: [{ id: 'fater', group: 'sheet', label: 'Fater.Fater' }] } }
+    }
   }
 }
 

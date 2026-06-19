@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "cambion",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d12\nsystem.attributes.critical.table=M\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d10\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+0\nsystem.skills.beastDie.die=1d5\nsystem.skills.aspects.value=2\n",
+    "levelDataLawful": "system.details.title.value=Devilkin\n",
+    "levelDataNeutral": "system.details.title.value=Devilkin\n",
+    "levelDataChaotic": "system.details.title.value=Devilkin\n"
+  },
+  "name": "cambion-2",
+  "type": "level",
+  "folder": "VqDF89e0uygbGJvU",
+  "_id": "8w2aVmHZ3EGeHA6F",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!8w2aVmHZ3EGeHA6F"
+}
