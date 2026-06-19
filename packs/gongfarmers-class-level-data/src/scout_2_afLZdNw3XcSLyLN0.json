@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "scout",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+1\nsystem.attributes.critical.die=1d14\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.class.luckDie=d4\nsystem.skills.sneakSilently.value=+3\nsystem.skills.climbSheerSurfaces.value=+5\nsystem.skills.findTrap.value=+5\nsystem.skills.disableTrap.value=+5\nsystem.skills.handlePoison.value=+1\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+0\n",
+    "levelDataLawful": "system.details.title.value=Runner\n",
+    "levelDataNeutral": "system.details.title.value=Wanderer\n",
+    "levelDataChaotic": "system.details.title.value=Brigand\n"
+  },
+  "name": "scout-2",
+  "type": "level",
+  "folder": "2aze3QD7OxaxJuey",
+  "_id": "afLZdNw3XcSLyLN0",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!afLZdNw3XcSLyLN0"
+}

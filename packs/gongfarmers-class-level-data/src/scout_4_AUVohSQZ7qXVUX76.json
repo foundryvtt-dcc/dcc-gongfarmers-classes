@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "scout",
+    "level": "4",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d20\nsystem.attributes.critical.table=IV\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.class.luckDie=d6\nsystem.skills.sneakSilently.value=+7\nsystem.skills.climbSheerSurfaces.value=+8\nsystem.skills.findTrap.value=+8\nsystem.skills.disableTrap.value=+8\nsystem.skills.handlePoison.value=+3\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+1\n",
+    "levelDataLawful": "system.details.title.value=Patroller\n",
+    "levelDataNeutral": "system.details.title.value=Pathfinder\n",
+    "levelDataChaotic": "system.details.title.value=Highwayman\n"
+  },
+  "name": "scout-4",
+  "type": "level",
+  "folder": "2aze3QD7OxaxJuey",
+  "_id": "AUVohSQZ7qXVUX76",
+  "effects": [],
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!AUVohSQZ7qXVUX76"
+}

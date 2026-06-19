@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "berserker",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d12\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d10\nsystem.skills.savageInstinctDie.die=d4\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+1\n"
+  },
+  "name": "berserker-2",
+  "type": "level",
+  "folder": "kHpuZUB5ZFbfv3Ha",
+  "_id": "Hcnlq9XEEiLEX6ew",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!Hcnlq9XEEiLEX6ew"
+}

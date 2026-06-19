@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "lycanthrope",
+    "level": "10",
+    "levelData": "system.details.attackBonus=+10\nsystem.attributes.critical.die=1d20\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20,1d20\nsystem.attributes.hitDice.value=1d10\nsystem.skills.wolfFormBonus.value=+6\nsystem.skills.wolfFormCrit.die=2d24/M\nsystem.saves.ref.classBonus=+10\nsystem.saves.frt.classBonus=+10\nsystem.saves.wil.classBonus=-10\n"
+  },
+  "name": "lycanthrope-10",
+  "type": "level",
+  "folder": "OAdjwSO8BZrG9ASE",
+  "_id": "ZcUrpyhtXXmW2KHt",
+  "effects": [],
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!ZcUrpyhtXXmW2KHt"
+}

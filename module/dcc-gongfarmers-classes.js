@@ -26,6 +26,18 @@ import * as OrcSheets from './actor-sheets-orc-gfa.js'
 import * as HalfOrcSheets from './actor-sheets-half-orc.js'
 import * as PaladinGambrinusSheets from './actor-sheets-paladin-of-gambrinus.js'
 import * as BloodyHoundSheets from './actor-sheets-bloody-hound.js'
+import * as BardicRockerSheets from './actor-sheets-bardic-rocker.js'
+import * as BerserkerSheets from './actor-sheets-berserker.js'
+import * as FaerieSheets from './actor-sheets-faerie.js'
+import * as GoatOWarSheets from './actor-sheets-goat-o-war.js'
+import * as GongfarmerSheets from './actor-sheets-gongfarmer.js'
+import * as KithSheets from './actor-sheets-kith-of-kingspire.js'
+import * as LycanthropeSheets from './actor-sheets-lycanthrope.js'
+import * as PirateSheets from './actor-sheets-pirate.js'
+import * as QuantumTravelerSheets from './actor-sheets-quantum-traveler.js'
+import * as SageSheets from './actor-sheets-sage.js'
+import * as ScoutSheets from './actor-sheets-scout.js'
+import * as SoldierSheets from './actor-sheets-soldier.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -59,7 +71,19 @@ const GONGFARMERS_SHEETS = [
   { sheet: OrcSheets.ActorSheetOrc, scope: 'dcc-gongfarmers-classes-orc-gfa', label: 'Orc.ActorSheetOrc' },
   { sheet: HalfOrcSheets.ActorSheetHalfOrc, scope: 'dcc-gongfarmers-classes-half-orc', label: 'HalfOrc.ActorSheetHalfOrc' },
   { sheet: PaladinGambrinusSheets.ActorSheetPaladinGambrinus, scope: 'dcc-gongfarmers-classes-paladin-of-gambrinus', label: 'PaladinGambrinus.ActorSheetPaladinGambrinus' },
-  { sheet: BloodyHoundSheets.ActorSheetBloodyHound, scope: 'dcc-gongfarmers-classes-bloody-hound', label: 'BloodyHound.ActorSheetBloodyHound' }
+  { sheet: BloodyHoundSheets.ActorSheetBloodyHound, scope: 'dcc-gongfarmers-classes-bloody-hound', label: 'BloodyHound.ActorSheetBloodyHound' },
+  { sheet: BardicRockerSheets.ActorSheetBardicRocker, scope: 'dcc-gongfarmers-classes-bardic-rocker', label: 'BardicRocker.ActorSheetBardicRocker' },
+  { sheet: BerserkerSheets.ActorSheetBerserker, scope: 'dcc-gongfarmers-classes-berserker', label: 'Berserker.ActorSheetBerserker' },
+  { sheet: FaerieSheets.ActorSheetFaerie, scope: 'dcc-gongfarmers-classes-faerie', label: 'Faerie.ActorSheetFaerie' },
+  { sheet: GoatOWarSheets.ActorSheetGoatOWar, scope: 'dcc-gongfarmers-classes-goat-o-war', label: 'GoatOWar.ActorSheetGoatOWar' },
+  { sheet: GongfarmerSheets.ActorSheetGongfarmer, scope: 'dcc-gongfarmers-classes-gongfarmer', label: 'Gongfarmer.ActorSheetGongfarmer' },
+  { sheet: KithSheets.ActorSheetKith, scope: 'dcc-gongfarmers-classes-kith-of-kingspire', label: 'Kith.ActorSheetKith' },
+  { sheet: LycanthropeSheets.ActorSheetLycanthrope, scope: 'dcc-gongfarmers-classes-lycanthrope', label: 'Lycanthrope.ActorSheetLycanthrope' },
+  { sheet: PirateSheets.ActorSheetPirate, scope: 'dcc-gongfarmers-classes-pirate', label: 'Pirate.ActorSheetPirate' },
+  { sheet: QuantumTravelerSheets.ActorSheetQuantumTraveler, scope: 'dcc-gongfarmers-classes-quantum-traveler', label: 'QuantumTraveler.ActorSheetQuantumTraveler' },
+  { sheet: SageSheets.ActorSheetSage, scope: 'dcc-gongfarmers-classes-sage', label: 'Sage.ActorSheetSage' },
+  { sheet: ScoutSheets.ActorSheetScout, scope: 'dcc-gongfarmers-classes-scout', label: 'Scout.ActorSheetScout' },
+  { sheet: SoldierSheets.ActorSheetSoldier, scope: 'dcc-gongfarmers-classes-soldier', label: 'Soldier.ActorSheetSoldier' }
 ]
 
 /* -------------------------------------------- */

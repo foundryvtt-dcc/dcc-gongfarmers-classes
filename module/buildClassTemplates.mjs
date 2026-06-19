@@ -152,6 +152,85 @@ const META = {
     abilities: ['WeaponTraining', 'TechnoMagicalAccessory', 'Magic', 'CyberanimateDead', 'Luck', 'Languages'],
     tableDice: [],
     caster: 'TechnoNecromancer.CasterNote'
+  },
+
+  // ---- 2018 Collection ----
+
+  'bardic-rocker': {
+    prefix: 'BardicRocker',
+    dice: [{ labelKey: 'BardicRocker.PerformanceDie', field: 'system.skills.performanceDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'Perform', 'BardicKnowledge', 'Spells', 'AudienceDisapproval', 'SkillsOfShowmanship'],
+    tableDice: [{ header: 'Performance Die', key: 'system.skills.performanceDie.die' }],
+    caster: 'BardicRocker.CasterNote'
+  },
+  berserker: {
+    prefix: 'Berserker',
+    dice: [{ labelKey: 'Berserker.SavageInstinct', field: 'system.skills.savageInstinctDie.die', roll: false }],
+    abilities: ['WeaponTraining', 'SixthSense', 'Cleave', 'DangerousFrustration', 'SavageInstincts', 'Triggers'],
+    tableDice: [{ header: 'Savage Instinct', key: 'system.skills.savageInstinctDie.die' }]
+  },
+  faerie: {
+    prefix: 'Faerie',
+    dice: [{ labelKey: 'Faerie.SizeBonus', field: 'system.skills.sizeBonus.value', roll: false }],
+    abilities: ['WeaponTraining', 'Magic', 'NightVision', 'IronVulnerability', 'SizeAndCombat', 'Growth', 'Movement', 'Stealth', 'Luck'],
+    tableDice: [{ header: 'Sneak & Hide', key: 'system.skills.sneakAndHide.value' }, { header: 'Size Bonus', key: 'system.skills.sizeBonus.value' }],
+    caster: 'Faerie.CasterNote'
+  },
+  'goat-o-war': {
+    prefix: 'GoatOWar',
+    dice: [{ labelKey: 'GoatOWar.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'Communication', 'Speed', 'DeedDieAbility', 'Armor', 'GreatestOfAllTime', 'DarkMastersFavorite', 'ButtHead', 'EatAnything', 'GoatsInCoats'],
+    tableDice: [{ header: 'Deed Die', key: 'system.skills.deedDie.die' }]
+  },
+  gongfarmer: {
+    prefix: 'Gongfarmer',
+    dice: [],
+    abilities: ['WeaponTraining', 'LuckOfThePail', 'ExtremeFortitude', 'DarkVision', 'NightSoil'],
+    tableDice: []
+  },
+  'kith-of-kingspire': {
+    prefix: 'Kith',
+    dice: [{ labelKey: 'Kith.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'GratingSuperiority', 'IronVulnerability', 'HiddenWays', 'Infravision', 'MixedClass'],
+    tableDice: [{ header: 'Deed Die', key: 'system.skills.deedDie.die' }],
+    caster: 'Kith.CasterNote'
+  },
+  lycanthrope: {
+    prefix: 'Lycanthrope',
+    dice: [{ labelKey: 'Lycanthrope.WolfFormBonus', field: 'system.skills.wolfFormBonus.value', roll: false }],
+    abilities: ['WeaponTraining', 'BecomingLycanthrope', 'WolfForm', 'ShortFuse', 'HowlAtTheMoon', 'Regeneration', 'Vulnerabilities'],
+    tableDice: [{ header: 'Wolf Bonus', key: 'system.skills.wolfFormBonus.value' }, { header: 'Wolf Crit', key: 'system.skills.wolfFormCrit.die' }]
+  },
+  pirate: {
+    prefix: 'Pirate',
+    dice: [],
+    abilities: ['WeaponTraining', 'Swashbuckle', 'BuriedTreasure', 'StrengthInNumbers', 'Luck', 'Languages', 'ActionDice'],
+    tableDice: []
+  },
+  'quantum-traveler': {
+    prefix: 'QuantumTraveler',
+    dice: [{ labelKey: 'QuantumTraveler.LuckDie', field: 'system.class.luckDie', roll: false }],
+    abilities: ['WeaponTraining', 'Armor', 'PigLatin', 'ThatsNotReal', 'SeenIt', 'ScienceAndTechnology', 'LuckAndWits', 'SneakAndHide'],
+    tableDice: [{ header: 'Luck Die', key: 'system.class.luckDie' }]
+  },
+  sage: {
+    prefix: 'Sage',
+    dice: [{ labelKey: 'Sage.CurseDie', field: 'system.skills.curseDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'Loremaster', 'Magic', 'CurseDieAbility', 'SagelyAdvice', 'SupernaturalPatrons', 'Polyglot', 'PlanningAhead'],
+    tableDice: [{ header: 'Curse Die', key: 'system.skills.curseDie.die' }],
+    caster: 'Sage.CasterNote'
+  },
+  scout: {
+    prefix: 'Scout',
+    dice: [{ labelKey: 'Scout.LuckDie', field: 'system.class.luckDie', roll: false }],
+    abilities: ['LuckDieAbility', 'ThiefProgression', 'Ambush', 'HideInTheWilds', 'Track', 'SetTrap', 'ScoutSkills'],
+    tableDice: [{ header: 'Luck Die', key: 'system.class.luckDie' }]
+  },
+  soldier: {
+    prefix: 'Soldier',
+    dice: [],
+    abilities: ['WeaponTraining', 'SleepOnDemand', 'Scrounger', 'MilitarySpecialty', 'Specialties'],
+    tableDice: []
   }
 }
 

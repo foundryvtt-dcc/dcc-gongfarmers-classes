@@ -869,6 +869,379 @@ export const GONGFARMERS_CLASSES = {
       parts: { ...commonParts(), 'bloody-hound': { id: 'bloody-hound', template: classPartial('bloody-hound') } },
       tabs: { sheet: { tabs: [{ id: 'bloody-hound', group: 'sheet', label: 'BloodyHound.BloodyHound' }] } }
     }
+  },
+
+  // ---- 2018 Collection ----
+
+  'bardic-rocker': {
+    label: 'BardicRocker.ActorSheetBardicRocker',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Performance die: rolled to inspire allies (1d20 + performance die +
+      // level) and grows by level.
+      schema.skills.fields.performanceDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'BardicRocker.PerformanceDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+      // Casts spells with cleric-style disapproval (the source uses a Luck-based
+      // spell check; Personality is the closest supported DCC ability). Cleric
+      // fields come from the DCC cleric mixin on the shared Player schema.
+    },
+    defaults: {
+      sheetClass: 'Bardic-Rocker',
+      localize: { 'class.className': 'BardicRocker.BardicRocker' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'per',
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'bardic-rocker': { id: 'bardic-rocker', template: classPartial('bardic-rocker') },
+        clericSpells: { id: 'clericSpells', template: 'systems/dcc/templates/actor-partial-cleric-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'bardic-rocker', group: 'sheet', label: 'BardicRocker.BardicRocker' },
+            { id: 'clericSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  berserker: {
+    label: 'Berserker.ActorSheetBerserker',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Savage instinct: rolled on triggers during combat; the die expression
+      // grows (and compounds) by level.
+      schema.skills.fields.savageInstinctDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Berserker.SavageInstinct' }),
+        die: new f.StringField({ initial: 'd3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Berserker',
+      localize: { 'class.className': 'Berserker.Berserker' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), berserker: { id: 'berserker', template: classPartial('berserker') } },
+      tabs: { sheet: { tabs: [{ id: 'berserker', group: 'sheet', label: 'Berserker.Berserker' }] } }
+    }
+  },
+
+  faerie: {
+    label: 'Faerie.ActorSheetFaerie',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Size bonus: added to AC and Reflex saves (and to Luck), growing by
+      // level. Sneak & Hide comes from the DCC halfling mixin on the shared
+      // Player schema; faeries cast as wizards (wizard mixin contributes the
+      // spell fields).
+      schema.skills.fields.sizeBonus = new f.SchemaField({
+        label: new f.StringField({ initial: 'Faerie.SizeBonus' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Faerie',
+      localize: { 'class.className': 'Faerie.Faerie' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        faerie: { id: 'faerie', template: classPartial('faerie') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'faerie', group: 'sheet', label: 'Faerie.Faerie' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  'goat-o-war': {
+    label: 'GoatOWar.ActorSheetGoatOWar',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Deed die: a warrior-style die rolled with each attack and applied to
+      // attack and damage. Shared deedDie field; label pinned in defaults.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'GoatOWar.DeedDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Goat-O-War',
+      localize: { 'class.className': 'GoatOWar.GoatOWar' },
+      enrichHtml: { 'class.mightyDeedsLink': 'DCC.MightyDeedsLink' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'manual',
+        'skills.deedDie.label': 'GoatOWar.DeedDie'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'goat-o-war': { id: 'goat-o-war', template: classPartial('goat-o-war') } },
+      tabs: { sheet: { tabs: [{ id: 'goat-o-war', group: 'sheet', label: 'GoatOWar.GoatOWar' }] } }
+    }
+  },
+
+  gongfarmer: {
+    label: 'Gongfarmer.ActorSheetGongfarmer',
+    sheetHeight: 635,
+    mixin () {
+      // No class-specific rollable die; the gongfarmer's abilities (Luck of the
+      // Pail, Extreme Fortitude, Night Soil) are descriptive notes.
+    },
+    defaults: {
+      sheetClass: 'Gongfarmer',
+      localize: { 'class.className': 'Gongfarmer.Gongfarmer' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), gongfarmer: { id: 'gongfarmer', template: classPartial('gongfarmer') } },
+      tabs: { sheet: { tabs: [{ id: 'gongfarmer', group: 'sheet', label: 'Gongfarmer.Gongfarmer' }] } }
+    }
+  },
+
+  'kith-of-kingspire': {
+    label: 'Kith.ActorSheetKith',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Deed die: available when the kith takes the martial focus (a d3 Mighty
+      // Deed die). Shared deedDie field; label pinned in defaults. The mystic
+      // focus casts as a wizard (wizard mixin contributes the spell fields).
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Kith.DeedDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Kith-Of-Kingspire',
+      localize: { 'class.className': 'Kith.Kith' },
+      enrichHtml: { 'class.mightyDeedsLink': 'DCC.MightyDeedsLink' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'flat',
+        'skills.deedDie.label': 'Kith.DeedDie'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'kith-of-kingspire': { id: 'kith-of-kingspire', template: classPartial('kith-of-kingspire') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'kith-of-kingspire', group: 'sheet', label: 'Kith.Kith' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  lycanthrope: {
+    label: 'Lycanthrope.ActorSheetLycanthrope',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Wolf-form bonus: added to Str/Sta mods, AC, and perception while
+      // transformed. Wolf-form crit: the crit die/table used in wolf form.
+      schema.skills.fields.wolfFormBonus = new f.SchemaField({
+        label: new f.StringField({ initial: 'Lycanthrope.WolfFormBonus' }),
+        value: new f.StringField({ initial: '' })
+      })
+      schema.skills.fields.wolfFormCrit = new f.SchemaField({
+        label: new f.StringField({ initial: 'Lycanthrope.WolfFormCrit' }),
+        die: new f.StringField({ initial: '1d12/M' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Lycanthrope',
+      localize: { 'class.className': 'Lycanthrope.Lycanthrope' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), lycanthrope: { id: 'lycanthrope', template: classPartial('lycanthrope') } },
+      tabs: { sheet: { tabs: [{ id: 'lycanthrope', group: 'sheet', label: 'Lycanthrope.Lycanthrope' }] } }
+    }
+  },
+
+  pirate: {
+    label: 'Pirate.ActorSheetPirate',
+    sheetHeight: 635,
+    mixin () {
+      // No class-specific rollable die; the pirate's abilities (Swashbuckle,
+      // Buried Treasure, Strength in Numbers) are descriptive notes.
+    },
+    defaults: {
+      sheetClass: 'Pirate',
+      localize: { 'class.className': 'Pirate.Pirate' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), pirate: { id: 'pirate', template: classPartial('pirate') } },
+      tabs: { sheet: { tabs: [{ id: 'pirate', group: 'sheet', label: 'Pirate.Pirate' }] } }
+    }
+  },
+
+  'quantum-traveler': {
+    label: 'QuantumTraveler.ActorSheetQuantumTraveler',
+    sheetHeight: 640,
+    mixin () {
+      // Luck die (`class.luckDie`), the thief skill block, and Luck & Wits are
+      // DCC built-ins on the shared Player schema (the traveler uses them as a
+      // neutral thief); no class-specific fields are added here.
+    },
+    defaults: {
+      sheetClass: 'Quantum-Traveler',
+      localize: { 'class.className': 'QuantumTraveler.QuantumTraveler' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'quantum-traveler': { id: 'quantum-traveler', template: classPartial('quantum-traveler') } },
+      tabs: { sheet: { tabs: [{ id: 'quantum-traveler', group: 'sheet', label: 'QuantumTraveler.QuantumTraveler' }] } }
+    }
+  },
+
+  sage: {
+    label: 'Sage.ActorSheetSage',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Curse die: Luck spent to inflict a penalty die on a foe; grows by level.
+      schema.skills.fields.curseDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Sage.CurseDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+      // Casts patron-granted spells as a wizard (wizard mixin contributes the
+      // spell fields to the shared Player schema).
+    },
+    defaults: {
+      sheetClass: 'Sage',
+      localize: { 'class.className': 'Sage.Sage' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'flat',
+        'config.addClassLevelToInitiative': true
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        sage: { id: 'sage', template: classPartial('sage') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'sage', group: 'sheet', label: 'Sage.Sage' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  scout: {
+    label: 'Scout.ActorSheetScout',
+    sheetHeight: 640,
+    mixin () {
+      // A thief variant: Luck die (`class.luckDie`) and the thief skill block
+      // (sneak silently, climb sheer surfaces, find/disable trap, handle poison)
+      // are DCC built-ins on the shared Player schema, driven per-level by the
+      // chart. Ambush/hide-in-the-wilds/track/set-trap are descriptive notes.
+    },
+    defaults: {
+      sheetClass: 'Scout',
+      localize: { 'class.className': 'Scout.Scout' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), scout: { id: 'scout', template: classPartial('scout') } },
+      tabs: { sheet: { tabs: [{ id: 'scout', group: 'sheet', label: 'Scout.Scout' }] } }
+    }
+  },
+
+  soldier: {
+    label: 'Soldier.ActorSheetSoldier',
+    sheetHeight: 635,
+    mixin () {
+      // A 5-level Trench Crawl Classics class; its attack bonus and skills come
+      // from the chosen military specialty (descriptive notes), so no
+      // class-specific rollable die is added here.
+    },
+    defaults: {
+      sheetClass: 'Soldier',
+      localize: { 'class.className': 'Soldier.Soldier' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), soldier: { id: 'soldier', template: classPartial('soldier') } },
+      tabs: { sheet: { tabs: [{ id: 'soldier', group: 'sheet', label: 'Soldier.Soldier' }] } }
+    }
   }
 }
 

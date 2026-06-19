@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "faerie",
+    "level": "4",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d8\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d4\nsystem.skills.sneakAndHide.value=+8\nsystem.skills.sizeBonus.value=+5\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+2\n",
+    "levelDataLawful": "system.details.title.value=Puck\n",
+    "levelDataNeutral": "system.details.title.value=Puck\n",
+    "levelDataChaotic": "system.details.title.value=Spriggan\n"
+  },
+  "name": "faerie-4",
+  "type": "level",
+  "folder": "7Kq6e9a7rFGIFdJa",
+  "_id": "BXMqdIRwPzvy7IoV",
+  "effects": [],
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!BXMqdIRwPzvy7IoV"
+}

@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "faerie",
+    "level": "8",
+    "levelData": "system.details.attackBonus=+4\nsystem.attributes.critical.die=1d14\nsystem.attributes.critical.table=II\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d4\nsystem.skills.sneakAndHide.value=+13\nsystem.skills.sizeBonus.value=+6\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+3\nsystem.saves.wil.classBonus=+5\n"
+  },
+  "name": "faerie-8",
+  "type": "level",
+  "folder": "7Kq6e9a7rFGIFdJa",
+  "_id": "LLXhVi9tOLYeiM8F",
+  "effects": [],
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!LLXhVi9tOLYeiM8F"
+}

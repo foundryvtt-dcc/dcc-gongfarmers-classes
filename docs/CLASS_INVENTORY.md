@@ -60,20 +60,20 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Orc Berserker | 6 | NPC stat block | ❌ excluded — NPC stat block, not a leveled class |
 
 ## 2018 Collection (V1: New Class Explosion! + V6)
-| Class | Vol | Type |
-|-------|-----|------|
-| Bardic Rocker | 1 | caster (bard) |
-| Berserker | 1 | martial |
-| Faerie Class | 1 | race/caster |
-| Goat'o'war | 1 | race |
-| Gongfarmer | 1 | skill |
-| Kith of Kingspire | 1 | hybrid race |
-| Lycanthrope | 1 | template/overlay ⚠ may not fit standalone-class pattern |
-| Pirate | 1 | martial |
-| Quantum Traveler | 1 | skill (firearms) |
-| Sage | 1 | caster |
-| Scout | 1 | skill (thief variant) |
-| Soldier | 6 | martial (Trench Crawl, firearms) |
+| Class | Vol | Type | Status |
+|-------|-----|------|--------|
+| Bardic Rocker | 1 | caster (bard, performance die) | ✅ |
+| Berserker | 1 | martial (savage instinct die) | ✅ |
+| Faerie Class | 1 | race/caster (wizard; size bonus) | ✅ |
+| Goat'o'war | 1 | race (deed die) — classId `goat-o-war` | ✅ |
+| Gongfarmer | 1 | skill | ✅ |
+| Kith of Kingspire | 1 | hybrid race (martial/mystic) — classId `kith-of-kingspire` | ✅ |
+| Lycanthrope | 1 | race (wolf-form) — shipped as a full leveled class; curse overlay is notes | ✅ |
+| Pirate | 1 | martial | ✅ |
+| Quantum Traveler | 1 | skill (thief luck die) | ✅ |
+| Sage | 1 | caster (wizard; curse die) | ✅ |
+| Scout | 1 | skill (thief variant; luck die) | ✅ |
+| Soldier | 6 | martial (Trench Crawl, 5-level) | ✅ |
 
 ## 2019 Collection (V11: Classes & NPCs)
 | Class | Vol | Type |
@@ -113,10 +113,10 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 26 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound. **2020 + 2016 + 2017 DCC-native classes are complete.**
+- **Done & E2E-verified:** 38 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6). **2020 + 2016 + 2017 + 2018 DCC-native classes are complete.**
 - **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block).
 - **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
-- **Pending:** ~25 — all of 2018/2019/2021/2024/2025.
+- **Pending:** ~13 — all of 2019/2021/2024/2025.
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).

@@ -53,7 +53,19 @@ const CLASSES = [
   { id: 'orc-gfa', sheetClass: 'Orc-Gfa', flag: 'dcc-gongfarmers-classes-orc-gfa.ActorSheetOrc', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
   { id: 'half-orc', sheetClass: 'Half-Orc', flag: 'dcc-gongfarmers-classes-half-orc.ActorSheetHalfOrc', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
   { id: 'paladin-of-gambrinus', sheetClass: 'Paladin-Of-Gambrinus', flag: 'dcc-gongfarmers-classes-paladin-of-gambrinus.ActorSheetPaladinGambrinus', dieField: 'system.skills.smiteDie.die', dieAtL1: true, extraTab: 'clericSpells', alignment: 'n' },
-  { id: 'bloody-hound', sheetClass: 'Bloody-Hound', flag: 'dcc-gongfarmers-classes-bloody-hound.ActorSheetBloodyHound', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n' }
+  { id: 'bloody-hound', sheetClass: 'Bloody-Hound', flag: 'dcc-gongfarmers-classes-bloody-hound.ActorSheetBloodyHound', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n' },
+  { id: 'bardic-rocker', sheetClass: 'Bardic-Rocker', flag: 'dcc-gongfarmers-classes-bardic-rocker.ActorSheetBardicRocker', dieField: 'system.skills.performanceDie.die', dieAtL1: true, extraTab: 'clericSpells', alignment: 'n' },
+  { id: 'berserker', sheetClass: 'Berserker', flag: 'dcc-gongfarmers-classes-berserker.ActorSheetBerserker', dieField: 'system.skills.savageInstinctDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
+  { id: 'faerie', sheetClass: 'Faerie', flag: 'dcc-gongfarmers-classes-faerie.ActorSheetFaerie', dieField: 'system.skills.sizeBonus.value', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'c' },
+  { id: 'goat-o-war', sheetClass: 'Goat-O-War', flag: 'dcc-gongfarmers-classes-goat-o-war.ActorSheetGoatOWar', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
+  { id: 'gongfarmer', sheetClass: 'Gongfarmer', flag: 'dcc-gongfarmers-classes-gongfarmer.ActorSheetGongfarmer', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n' },
+  { id: 'kith-of-kingspire', sheetClass: 'Kith-Of-Kingspire', flag: 'dcc-gongfarmers-classes-kith-of-kingspire.ActorSheetKith', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'c' },
+  { id: 'lycanthrope', sheetClass: 'Lycanthrope', flag: 'dcc-gongfarmers-classes-lycanthrope.ActorSheetLycanthrope', dieField: 'system.skills.wolfFormBonus.value', dieAtL1: true, extraTab: null, alignment: 'c' },
+  { id: 'pirate', sheetClass: 'Pirate', flag: 'dcc-gongfarmers-classes-pirate.ActorSheetPirate', dieField: null, dieAtL1: false, extraTab: null, alignment: 'c' },
+  { id: 'quantum-traveler', sheetClass: 'Quantum-Traveler', flag: 'dcc-gongfarmers-classes-quantum-traveler.ActorSheetQuantumTraveler', dieField: 'system.class.luckDie', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'sage', sheetClass: 'Sage', flag: 'dcc-gongfarmers-classes-sage.ActorSheetSage', dieField: 'system.skills.curseDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
+  { id: 'scout', sheetClass: 'Scout', flag: 'dcc-gongfarmers-classes-scout.ActorSheetScout', dieField: 'system.class.luckDie', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'soldier', sheetClass: 'Soldier', flag: 'dcc-gongfarmers-classes-soldier.ActorSheetSoldier', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n', levels: 5 }
 ]
 
 const consoleErrors = []

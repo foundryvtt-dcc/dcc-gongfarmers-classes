@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "pirate",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d10\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d7\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+0\nsystem.saves.wil.classBonus=+1\n"
+  },
+  "name": "pirate-2",
+  "type": "level",
+  "folder": "yGDUJ2kHTZomLTqB",
+  "_id": "KjXOTNUJts4jr6dw",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!KjXOTNUJts4jr6dw"
+}

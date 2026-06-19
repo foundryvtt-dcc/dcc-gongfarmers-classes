@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "gongfarmer",
+    "level": "1",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=1d6\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d7\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+0\n",
+    "levelDataLawful": "system.details.title.value=Mucker-man\n",
+    "levelDataNeutral": "system.details.title.value=Mucker-man\n",
+    "levelDataChaotic": "system.details.title.value=Mucker-man\n"
+  },
+  "name": "gongfarmer-1",
+  "type": "level",
+  "folder": "PQpNm1PUvvdCp5Gc",
+  "_id": "MKYJrF65k3BM0P3l",
+  "effects": [],
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!MKYJrF65k3BM0P3l"
+}

@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "kith-of-kingspire",
+    "level": "6",
+    "levelData": "system.details.attackBonus=+5\nsystem.attributes.critical.die=1d12\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d8\nsystem.skills.deedDie.die=1d3\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+4\n"
+  },
+  "name": "kith-of-kingspire-6",
+  "type": "level",
+  "folder": "Jk7HhPhSmGCkheMy",
+  "_id": "CHqTPpjVlmQ1py0m",
+  "effects": [],
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!CHqTPpjVlmQ1py0m"
+}

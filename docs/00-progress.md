@@ -11,9 +11,9 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 26 / ~57 implemented
+## Status: 38 / ~57 implemented
 
-### Done & E2E-verified (26)
+### Done & E2E-verified (38)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
@@ -23,8 +23,41 @@ level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 - **2017 (V6 "Men and Magic" + V7):** Dwarf Sapper, Invincible Chicken,
   Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound (V7,
   Nowhere City Nights)
+- **2018 (V1 "New Class Explosion!" + V6 Trench Crawl):** Bardic Rocker,
+  Berserker, Faerie, Goat'o'war (`goat-o-war`), Gongfarmer, Kith of Kingspire
+  (`kith-of-kingspire`), Lycanthrope, Pirate, Quantum Traveler, Sage, Scout,
+  Soldier (V6, 5-level)
 
-The DCC-native portions of the 2020, 2016, and 2017 collections are complete.
+The DCC-native portions of the 2020, 2016, 2017, and 2018 collections are
+complete.
+
+#### Notes from the 2018 build
+- **Soldier is a 5-level class** (Trench Crawl Classics, V6, by Eric Betts).
+  Its chart has only levels 1–5, so set `levels: 5` on its E2E row. Attack is
+  "Per specialty" in the source (the chosen military specialty supplies the
+  attack/skill bonus); modeled as flat `+0` with the specialties described in
+  the class tab. It also carries a per-level **threat range** (`details.critRange`
+  20→19) in the chart.
+- **New custom mixin fields** (declared on the shared Player schema, driven
+  per-level by the chart, shown as class-tab columns): `performanceDie` (Bardic
+  Rocker), `savageInstinctDie` (Berserker — holds compound expressions like
+  `2d8+d6+d4`, display-only/non-rollable), `sizeBonus` (Faerie), `curseDie`
+  (Sage), `wolfFormBonus` + `wolfFormCrit` (Lycanthrope, the latter holds
+  `1d12/M`-style strings). Deed-die classes reuse the shared `deedDie`
+  (Goat'o'war, Kith martial focus).
+- **Thief built-ins reused:** Quantum Traveler & Scout use `class.luckDie`;
+  Scout additionally populates the canonical thief skill block (`sneakSilently`,
+  `climbSheerSurfaces`, `findTrap`, `disableTrap`, `handlePoison`) per level
+  from its single fixed (boss-bonus) table. Faerie's Sneak & Hide uses the
+  halfling `skills.sneakAndHide`.
+- **Casters:** Faerie / Kith / Sage cast as wizards (`spellCheckAbility: 'int'`,
+  wizardSpells tab). Bardic Rocker has cleric-style disapproval but a Luck-based
+  spell check — DCC only supports int/per/sta, so it ships `'per'` with the Luck
+  rule noted in the Spells ability text (clericSpells tab).
+- **Excluded from V1:** the Volume 1 "New Patrons", "Monsters", "New Rules",
+  and "New Adventures" sections are not PC classes. No 2018 class was excluded
+  as un-leveled — Lycanthrope ships as a full leveled class (its post-funnel
+  "curse" overlay rules are notes).
 
 #### Source-PDF note (2017)
 The bundled **`Gongfarmers Almanac 2017 Collection.pdf` is a scanned image with
@@ -89,11 +122,11 @@ is the exception.)
   (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
   future dedicated MCC effort rather than mixing systems here.
 
-### Pending (~25)
-- **2018 (12), 2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
+### Pending (~13)
+- **2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
   see CLASS_INVENTORY.md for the per-class list, types, and build flags.
 
-Build order: 2020 + 2016 + 2017 done (DCC-native); next 2018 → 2025.
+Build order: 2020 + 2016 + 2017 + 2018 done (DCC-native); next 2019 → 2025.
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

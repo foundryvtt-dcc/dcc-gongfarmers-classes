@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "sage",
+    "level": "6",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d10\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d6\nsystem.skills.curseDie.die=1d8\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+4\n"
+  },
+  "name": "sage-6",
+  "type": "level",
+  "folder": "IiLxNwbcgwjsRoGo",
+  "_id": "6RmW1D6Lqe2GAPqD",
+  "effects": [],
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!6RmW1D6Lqe2GAPqD"
+}
