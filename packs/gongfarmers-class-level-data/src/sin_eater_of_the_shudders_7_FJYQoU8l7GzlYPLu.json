@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "sin-eater-of-the-shudders",
+    "level": "7",
+    "levelData": "system.details.attackBonus=+5\nsystem.attributes.critical.die=1d20\nsystem.attributes.critical.table=II\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d8\nsystem.skills.spellsKnown.value=4 / 3 / 2\nsystem.skills.disguise.value=+12\nsystem.skills.sneak.value=7\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+5\nsystem.saves.wil.classBonus=+4\n",
+    "levelDataLawful": "system.details.title.value=Born-Again\n",
+    "levelDataNeutral": "system.details.title.value=Born-Again\n",
+    "levelDataChaotic": "system.details.title.value=Born-Again\n"
+  },
+  "name": "sin-eater-of-the-shudders-7",
+  "type": "level",
+  "folder": "yxCS5KQbRrzvD8kb",
+  "_id": "FJYQoU8l7GzlYPLu",
+  "effects": [],
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!FJYQoU8l7GzlYPLu"
+}

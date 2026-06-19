@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "gnome-gfa",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+1\nsystem.attributes.critical.die=1d6\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d5\nsystem.attributes.speed.value=20\nsystem.skills.trickDie.die=1d4\nsystem.skills.knownSpells.value=4\nsystem.skills.maxSpellLevel.value=1\nsystem.saves.ref.classBonus=+0\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+1\n",
+    "levelDataLawful": "system.details.title.value=Charmer\n",
+    "levelDataNeutral": "system.details.title.value=Charmer\n",
+    "levelDataChaotic": "system.details.title.value=Charmer\n"
+  },
+  "name": "gnome-gfa-2",
+  "type": "level",
+  "folder": "So6qXQrXYoFWjkkE",
+  "_id": "0YBxtGYalt4c4nYs",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!0YBxtGYalt4c4nYs"
+}

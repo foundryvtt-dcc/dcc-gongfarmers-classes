@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "supernatural-model",
+    "level": "8",
+    "levelData": "system.details.attackBonus=+4\nsystem.attributes.critical.die=1d16\nsystem.attributes.critical.table=II\nsystem.attributes.actionDice.value=1d20,1d20\nsystem.attributes.hitDice.value=1d8\nsystem.skills.knownSpells.value=8\nsystem.skills.maxSpellLevel.value=3\nsystem.saves.ref.classBonus=+5\nsystem.saves.frt.classBonus=+3\nsystem.saves.wil.classBonus=+4\n",
+    "levelDataLawful": "system.details.title.value=Muse\n",
+    "levelDataNeutral": "system.details.title.value=Muse\n",
+    "levelDataChaotic": "system.details.title.value=Muse\n"
+  },
+  "name": "supernatural-model-8",
+  "type": "level",
+  "folder": "fFCL09WEGlaf2XZK",
+  "_id": "HfdEib0JgMOvRVsf",
+  "effects": [],
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!HfdEib0JgMOvRVsf"
+}

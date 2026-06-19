@@ -70,7 +70,11 @@ const CLASSES = [
   { id: 'cambion', sheetClass: 'Cambion', flag: 'dcc-gongfarmers-classes-cambion.ActorSheetCambion', dieField: 'system.skills.beastDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
   { id: 'children-of-the-wild', sheetClass: 'Children-Of-The-Wild', flag: 'dcc-gongfarmers-classes-children-of-the-wild.ActorSheetChildrenOfTheWild', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' },
   { id: 'godling', sheetClass: 'Godling', flag: 'dcc-gongfarmers-classes-godling.ActorSheetGodling', dieField: 'system.skills.bloodlineAbilities.value', dieAtL1: true, extraTab: null, alignment: 'n' },
-  { id: 'fater', sheetClass: 'Fater', flag: 'dcc-gongfarmers-classes-fater.ActorSheetFater', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'n' }
+  { id: 'fater', sheetClass: 'Fater', flag: 'dcc-gongfarmers-classes-fater.ActorSheetFater', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'aetherian-warcat', sheetClass: 'Aetherian-Warcat', flag: 'dcc-gongfarmers-classes-aetherian-warcat.ActorSheetAetherianWarcat', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'gnome-gfa', sheetClass: 'Gnome-Gfa', flag: 'dcc-gongfarmers-classes-gnome-gfa.ActorSheetGnomeGfa', dieField: 'system.skills.trickDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
+  { id: 'sin-eater-of-the-shudders', sheetClass: 'Sin-Eater-Of-The-Shudders', flag: 'dcc-gongfarmers-classes-sin-eater-of-the-shudders.ActorSheetSinEaterOfTheShudders', dieField: null, dieAtL1: false, extraTab: 'clericSpells', alignment: 'n' },
+  { id: 'supernatural-model', sheetClass: 'Supernatural-Model', flag: 'dcc-gongfarmers-classes-supernatural-model.ActorSheetSupernaturalModel', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'c' }
 ]
 
 const consoleErrors = []

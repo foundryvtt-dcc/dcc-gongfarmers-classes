@@ -85,14 +85,14 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Fater | 11 | skill/martial (deed die; no fixed attack mod) — classId `fater` | ✅ |
 
 ## 2021 (Volumes 1, 3, 4, 6 supplied; 2 & 5 missing)
-| Class | Vol | Type |
-|-------|-----|------|
-| Enmascarado | 1 | martial (masks) |
-| Street Rat | 1 | skill (rogue) |
-| Supernatural Model | 1 | hybrid |
-| Aetherian Warcat | 3 | martial/race (unverified) |
-| Gnome | 4 | race/caster ⚠ classId collides with dcc-crawl-classes "gnome" |
-| Sin Eater of the Shudders | 6 | hybrid (ritual) |
+| Class | Vol | Type | Status |
+|-------|-----|------|--------|
+| Supernatural Model | 1 | hybrid (Personality caster) — classId `supernatural-model` | ✅ |
+| Aetherian Warcat | 3 | race/martial (deed die; warrior-style) — classId `aetherian-warcat` | ✅ |
+| Gnome | 4 | race/caster (illusionist; Trick Die) — classId `gnome-gfa` (collides with dcc-crawl-classes "gnome") | ✅ |
+| Sin Eater of the Shudders | 6 | hybrid (cleric caster; sin-eating) — classId `sin-eater-of-the-shudders` | ✅ |
+| Enmascarado | 1 | martial (masks) | ❌ excluded — no level 1–10 table; a mask subsystem (Paths, à-la-carte mask powers, Lucha de Apuestas) for the Weird Frontiers luchador |
+| Street Rat | 1 | skill (rogue; skullduggery die) | ⏸ deferred — supplied PDF's progression chart prints only levels 1–2 (rest of page is artwork); no faithful 10-level data |
 
 ## 2024 Collection
 | Class | Vol | Type |
@@ -113,10 +113,11 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 43 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6); 2019 (5): Anti-Cleric, Cambion, Children of the Wild, Godling, Fater (all V11). **2020 + 2016 + 2017 + 2018 + 2019 DCC-native classes are complete.**
-- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block).
+- **Done & E2E-verified:** 47 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6); 2019 (5): Anti-Cleric, Cambion, Children of the Wild, Godling, Fater (all V11); 2021 (4): Supernatural Model (V1), Aetherian Warcat (V3), Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6). **2020 + 2016 + 2017 + 2018 + 2019 DCC-native classes are complete; 2021's buildable classes are complete.**
+- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block), Enmascarado (2021 V1 — mask subsystem for the WF luchador, no level table).
 - **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
-- **Pending:** ~16 — all of 2021 (6), 2024 (6), 2025 (4).
+- **Deferred (incomplete source):** Street Rat (2021 V1) — the supplied PDF prints only levels 1–2 of its progression chart; revisit if a complete table surfaces.
+- **Pending:** ~10 — 2024 (6), 2025 (4).
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).
@@ -124,7 +125,7 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 - `browser-tests/e2e/gongfarmers-classes.spec.js` — add a row to its `CLASSES` table and the class is covered by the suite.
 
 ## Build considerations / flags
-- **classId collisions** with the existing `dcc-crawl-classes` module: 2017 **Orc** shipped as **`orc-gfa`** (done). 2021 **Gnome** still to disambiguate (e.g. `gnome-gfa`) or skip if redundant. 2016 **Barbarian** (done) / 2018 **Berserker** are warrior variants — kept distinct ids (`barbarian` vs the bear-race `barbearian`).
+- **classId collisions** with the existing `dcc-crawl-classes` module: 2017 **Orc** shipped as **`orc-gfa`** (done); 2021 **Gnome** shipped as **`gnome-gfa`** (done). 2016 **Barbarian** (done) / 2018 **Berserker** are warrior variants — kept distinct ids (`barbarian` vs the bear-race `barbearian`).
 - **Spellcasters** (many): need a `clericSpells` or `wizardSpells` sheet part + `class.spellCheckAbility`, like Heavenly Hitman / the crawl Paladin. Pattern established.
 - **Races/race-as-class:** racial traits go in the class tab as notes; level data still drives saves/crit/action dice/hit die.
 - **Non-standard systems** that won't map cleanly to DCC fields: Weird Frontiers classes (Hex tokens, Fumble Die), Lycanthrope (overlay/template), Adventurer (cycles core classes). These need per-class design decisions; flag for review when reached. (Rune Sage's "rune system" mapped fine — it's a wizard caster whose magic die is the deedDie field, like Arcane Warrior; the rune-carving mechanic is descriptive. Runelords' endowment system has no level table and was excluded.)

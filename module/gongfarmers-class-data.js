@@ -1342,7 +1342,11 @@ export const GONGFARMERS_CLASSES = {
         'config.showSkills': true,
         'config.showSpells': true,
         'class.spellCheckAbility': 'int',
-        'config.attackBonusMode': 'flat'
+        'config.attackBonusMode': 'flat',
+        // knownSpells/maxSpellLevel are shared schema fields (Gnome reuses them);
+        // pin our labels so a later mixin's field initial can't bleed through.
+        'skills.knownSpells.label': 'ChildrenOfTheWild.KnownSpells',
+        'skills.maxSpellLevel.label': 'ChildrenOfTheWild.MaxSpellLevel'
       }
     },
     sheetPart: {
@@ -1429,6 +1433,180 @@ export const GONGFARMERS_CLASSES = {
     sheetPart: {
       parts: { ...commonParts(), fater: { id: 'fater', template: classPartial('fater') } },
       tabs: { sheet: { tabs: [{ id: 'fater', group: 'sheet', label: 'Fater.Fater' }] } }
+    }
+  },
+
+  // ---- 2021 Collection ----
+  'aetherian-warcat': {
+    label: 'AetherianWarcat.ActorSheetAetherianWarcat',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Deed die: rolled with each attack as a warrior's (applied to attack,
+      // damage and initiative). Shared deedDie field; label pinned in defaults.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'AetherianWarcat.DeedDie' }),
+        die: new f.StringField({ initial: '1d2' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Aetherian-Warcat',
+      localize: { 'class.className': 'AetherianWarcat.AetherianWarcat' },
+      enrichHtml: { 'class.mightyDeedsLink': 'DCC.MightyDeedsLink' },
+      literal: {
+        'config.showSkills': true,
+        'config.attackBonusMode': 'manual',
+        'skills.deedDie.label': 'AetherianWarcat.DeedDie'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'aetherian-warcat': { id: 'aetherian-warcat', template: classPartial('aetherian-warcat') } },
+      tabs: { sheet: { tabs: [{ id: 'aetherian-warcat', group: 'sheet', label: 'AetherianWarcat.AetherianWarcat' }] } }
+    }
+  },
+  'gnome-gfa': {
+    label: 'Gnome.ActorSheetGnomeGfa',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Gnomes cast as illusionist wizards (Intelligence). The Trick Die is a
+      // per-level caster-level die rolled with each spell check; Known Spells
+      // and Max Spell Level are display-only per-level columns (shared fields).
+      schema.skills.fields.trickDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Gnome.TrickDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+      schema.skills.fields.knownSpells = new f.SchemaField({
+        label: new f.StringField({ initial: 'Gnome.KnownSpells' }),
+        value: new f.StringField({ initial: '' })
+      })
+      schema.skills.fields.maxSpellLevel = new f.SchemaField({
+        label: new f.StringField({ initial: 'Gnome.MaxSpellLevel' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Gnome-Gfa',
+      localize: { 'class.className': 'Gnome.Gnome' },
+      literal: {
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'flat',
+        'skills.trickDie.label': 'Gnome.TrickDie',
+        'skills.knownSpells.label': 'Gnome.KnownSpells',
+        'skills.maxSpellLevel.label': 'Gnome.MaxSpellLevel'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'gnome-gfa': { id: 'gnome-gfa', template: classPartial('gnome-gfa') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'gnome-gfa', group: 'sheet', label: 'Gnome.Gnome' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+  'sin-eater-of-the-shudders': {
+    label: 'SinEater.ActorSheetSinEaterOfTheShudders',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Sin-eaters cast cleric spells fuelled by consumed sins (no disapproval;
+      // a Personality-burn caster). Display-only per-level columns: spells known
+      // by spell level, the Hide/Disguise bonus, and the Sneak bonus.
+      schema.skills.fields.spellsKnown = new f.SchemaField({
+        label: new f.StringField({ initial: 'SinEater.SpellsKnown' }),
+        value: new f.StringField({ initial: '' })
+      })
+      schema.skills.fields.disguise = new f.SchemaField({
+        label: new f.StringField({ initial: 'SinEater.Disguise' }),
+        value: new f.StringField({ initial: '' })
+      })
+      schema.skills.fields.sneak = new f.SchemaField({
+        label: new f.StringField({ initial: 'SinEater.Sneak' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Sin-Eater-Of-The-Shudders',
+      localize: { 'class.className': 'SinEater.SinEater' },
+      literal: {
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'per',
+        'config.attackBonusMode': 'flat',
+        'skills.spellsKnown.label': 'SinEater.SpellsKnown',
+        'skills.disguise.label': 'SinEater.Disguise',
+        'skills.sneak.label': 'SinEater.Sneak'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'sin-eater-of-the-shudders': { id: 'sin-eater-of-the-shudders', template: classPartial('sin-eater-of-the-shudders') },
+        clericSpells: { id: 'clericSpells', template: 'systems/dcc/templates/actor-partial-cleric-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'sin-eater-of-the-shudders', group: 'sheet', label: 'SinEater.SinEater' },
+            { id: 'clericSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+  'supernatural-model': {
+    label: 'SupernaturalModel.ActorSheetSupernaturalModel',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // An innately-magical Personality caster (spellburn in d3s; caster level =
+      // class level). Spells Known and Max Spell Level are display-only per-level
+      // columns reusing the shared fields; labels pinned in defaults.
+      schema.skills.fields.knownSpells = new f.SchemaField({
+        label: new f.StringField({ initial: 'SupernaturalModel.KnownSpells' }),
+        value: new f.StringField({ initial: '' })
+      })
+      schema.skills.fields.maxSpellLevel = new f.SchemaField({
+        label: new f.StringField({ initial: 'SupernaturalModel.MaxSpellLevel' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Supernatural-Model',
+      localize: { 'class.className': 'SupernaturalModel.SupernaturalModel' },
+      literal: {
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'per',
+        'config.attackBonusMode': 'flat',
+        'skills.knownSpells.label': 'SupernaturalModel.KnownSpells',
+        'skills.maxSpellLevel.label': 'SupernaturalModel.MaxSpellLevel'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'supernatural-model': { id: 'supernatural-model', template: classPartial('supernatural-model') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'supernatural-model', group: 'sheet', label: 'SupernaturalModel.SupernaturalModel' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
     }
   }
 }

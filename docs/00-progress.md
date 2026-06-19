@@ -11,9 +11,9 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 43 / ~57 implemented
+## Status: 47 / ~57 implemented
 
-### Done & E2E-verified (43)
+### Done & E2E-verified (47)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
@@ -29,9 +29,53 @@ level 1–10 progression pack, a class sheet tab, and live E2E coverage.
   Soldier (V6, 5-level)
 - **2019 (V11 "Classes & NPCs"):** Anti-Cleric, Cambion, Children of the Wild
   (`children-of-the-wild`), Godling, Fater
+- **2021 (V1, V3, V4, V6):** Supernatural Model (V1), Aetherian Warcat (V3),
+  Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6)
 
 The DCC-native portions of the 2020, 2016, 2017, 2018, and 2019 collections are
-complete.
+complete, as are the buildable classes of the 2021 collection.
+
+#### Notes from the 2021 build
+- **Aetherian Warcat** (V3, Dan Steeby) is a warrior-style **deed-die** race-class
+  (HD 1d12, `attackBonusMode: manual`, `mightyDeedsLink`, like Goat'o'war): the
+  deed die drives attack/damage/initiative and Mighty Deeds begin at level 2. It
+  has a **growing second action die** (1d8→1d20, then a third die from level 7),
+  stored as comma action-dice strings, and a per-level **Base Movement** column
+  mapped natively to `system.attributes.speed.value` (45'→65'). No title table in
+  source — titles are module-supplied.
+- **Gnome** (V4, Mike McKeown, based on Crawl! #6) ships as **`gnome-gfa`** (plain
+  `gnome` collides with `dcc-crawl-classes`). Illusionist **wizard caster** (`int`,
+  wizardSpells tab), HD 1d5, base move 20'. Its **Trick Die** (caster-level die,
+  d3→d7) is a custom rollable field; Known Spells / Max Spell Level are display
+  columns. Titles 6–10 module-supplied (source lists only 1–5).
+- **Sin Eater of the Shudders** (V6, Daniel J. Bishop) is a **cleric caster**
+  (`per`, clericSpells tab) fuelled by consumed sins — no disapproval (failed
+  checks instead manifest sin/tarnish silver). HD 1d8. Display columns: Spells
+  Known (1/2/3 counts), Hide/Disguise bonus, Sneak bonus. The action-die
+  "starvation" mechanic and Silver Implement charges are notes.
+- **Supernatural Model** (V1, Stefan Surratt) is an innate **Personality caster**
+  (`per`, wizardSpells tab; spellburn in d3s, caster level = class level) with a
+  fixed beauty/charm spell list. HD 1d8, flat attack. Known Spells / Max Spell
+  Level display columns (shared fields). Titles 6–10 module-supplied (source 1–5).
+- **Shared display fields & label bleed:** `knownSpells`/`maxSpellLevel` are now
+  used by Children of the Wild, Gnome **and** Supernatural Model. Because every
+  class mixin re-declares these shared schema fields (last registration wins for
+  the field `initial`), each class now **pins its own label in `defaults.literal`**
+  (`skills.knownSpells.label`, etc.) — Children of the Wild was retrofitted to do
+  the same. Follow this pattern for any future class reusing a shared skill field.
+- **Excluded — Enmascarado** (V1, Yamil Camacho): not a leveled class, but a
+  **mask subsystem** (Paths Righteous/Damned/Walk-the-Line, à-la-carte mask
+  powers, Lucha de Apuestas) layered on the Weird Frontiers luchador — no HD /
+  saves / crit / action-dice table. Same rationale as Hive Master / Runelords.
+- **Deferred — Street Rat** (V1; author byline is title-art only, not OCR-
+  recovered — input thanks to Kurt A. Rauch): a real class (HD 1d7,
+  **skullduggery** deed-die, Path "on the line", thief-style skills), but the
+  **supplied PDF's progression chart prints only levels 1–2** —
+  the rest of the page is decorative artwork. A faithful 10-level pack can't be
+  built; revisit if a complete table surfaces.
+- **Source-PDF note (2021):** V3/V4/V6 have clean text layers (`pdftotext`). **V1
+  is a scanned image** (no text layer) — rendered at 200–450 DPI with `pdftoppm`
+  and OCR'd with `tesseract` (the table pages needed 450 DPI + `--psm 6`).
 
 #### Notes from the 2019 build
 - **Anti-Cleric** is a cleric in every mechanic — attack, crit, action dice,
@@ -146,6 +190,14 @@ is the exception.)
   with More") plus a Lvl 1–3 mini-adventure with monster stat blocks only
 - Orc Berserker (2017 V6) — an NPC stat block (battle madness/death throes),
   not a leveled PC class; orcs/half-orcs reduced below Int/Per 3 become these
+- Enmascarado (2021 V1) — a mask subsystem (Paths, à-la-carte mask powers,
+  Lucha de Apuestas) for the Weird Frontiers luchador; no level 1–10 table
+
+### Deferred — incomplete source data
+- Street Rat (2021 V1) — a complete class concept (HD 1d7, skullduggery deed
+  die, Path mechanics, thief skills), but the supplied PDF's progression chart
+  prints only levels 1–2 (the rest of the page is artwork). Build once a full
+  level 1–10 table is available.
 
 ### Deferred — MCC (Mutant Crawl Classics) content (2020 V14)
 - Scholar, Mastermind, Insectaur, Geologian (all by Tim Snider) have clean
@@ -156,11 +208,12 @@ is the exception.)
   (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
   future dedicated MCC effort rather than mixing systems here.
 
-### Pending (~16)
-- **2021 (6), 2024 (6), 2025 (4)** —
+### Pending (~10)
+- **2024 (6), 2025 (4)** —
   see CLASS_INVENTORY.md for the per-class list, types, and build flags.
 
-Build order: 2020 + 2016 + 2017 + 2018 + 2019 done (DCC-native); next 2021 → 2025.
+Build order: 2020 + 2016 + 2017 + 2018 + 2019 + 2021 done (DCC-native);
+next 2024 → 2025.
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

@@ -43,6 +43,10 @@ import * as CambionSheets from './actor-sheets-cambion.js'
 import * as ChildrenOfTheWildSheets from './actor-sheets-children-of-the-wild.js'
 import * as GodlingSheets from './actor-sheets-godling.js'
 import * as FaterSheets from './actor-sheets-fater.js'
+import * as AetherianWarcatSheets from './actor-sheets-aetherian-warcat.js'
+import * as GnomeGfaSheets from './actor-sheets-gnome-gfa.js'
+import * as SinEaterSheets from './actor-sheets-sin-eater-of-the-shudders.js'
+import * as SupernaturalModelSheets from './actor-sheets-supernatural-model.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -93,7 +97,11 @@ const GONGFARMERS_SHEETS = [
   { sheet: CambionSheets.ActorSheetCambion, scope: 'dcc-gongfarmers-classes-cambion', label: 'Cambion.ActorSheetCambion' },
   { sheet: ChildrenOfTheWildSheets.ActorSheetChildrenOfTheWild, scope: 'dcc-gongfarmers-classes-children-of-the-wild', label: 'ChildrenOfTheWild.ActorSheetChildrenOfTheWild' },
   { sheet: GodlingSheets.ActorSheetGodling, scope: 'dcc-gongfarmers-classes-godling', label: 'Godling.ActorSheetGodling' },
-  { sheet: FaterSheets.ActorSheetFater, scope: 'dcc-gongfarmers-classes-fater', label: 'Fater.ActorSheetFater' }
+  { sheet: FaterSheets.ActorSheetFater, scope: 'dcc-gongfarmers-classes-fater', label: 'Fater.ActorSheetFater' },
+  { sheet: AetherianWarcatSheets.ActorSheetAetherianWarcat, scope: 'dcc-gongfarmers-classes-aetherian-warcat', label: 'AetherianWarcat.ActorSheetAetherianWarcat' },
+  { sheet: GnomeGfaSheets.ActorSheetGnomeGfa, scope: 'dcc-gongfarmers-classes-gnome-gfa', label: 'Gnome.ActorSheetGnomeGfa' },
+  { sheet: SinEaterSheets.ActorSheetSinEaterOfTheShudders, scope: 'dcc-gongfarmers-classes-sin-eater-of-the-shudders', label: 'SinEater.ActorSheetSinEaterOfTheShudders' },
+  { sheet: SupernaturalModelSheets.ActorSheetSupernaturalModel, scope: 'dcc-gongfarmers-classes-supernatural-model', label: 'SupernaturalModel.ActorSheetSupernaturalModel' }
 ]
 
 /* -------------------------------------------- */

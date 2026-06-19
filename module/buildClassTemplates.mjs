@@ -266,6 +266,36 @@ const META = {
     dice: [{ labelKey: 'Fater.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
     abilities: ['WeaponsTraining', 'ArmorBonus', 'AttackModifier', 'Polymath', 'ThiefSkills', 'StrengthOfMind', 'WildHealingAbility', 'HandOfFate', 'WillToLive', 'Languages'],
     tableDice: [{ header: 'Deed Die', key: 'system.skills.deedDie.die' }, { header: 'Unarmed', key: 'system.skills.unarmedDamage.die' }, { header: 'Wild Healing', key: 'system.skills.wildHealing.value' }]
+  },
+
+  // ---- 2021 Collection ----
+
+  'aetherian-warcat': {
+    prefix: 'AetherianWarcat',
+    dice: [{ labelKey: 'AetherianWarcat.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['HitPoints', 'NaturalWeapons', 'DeedDieAbility', 'MultipleActions', 'Speed', 'MountedCombat', 'Occupation', 'Communication', 'ArmorPenalty', 'NoHands'],
+    tableDice: [{ header: 'Deed Die', key: 'system.skills.deedDie.die' }, { header: 'Base Move', key: 'system.attributes.speed.value' }]
+  },
+  'gnome-gfa': {
+    prefix: 'Gnome',
+    dice: [{ labelKey: 'Gnome.TrickDie', field: 'system.skills.trickDie.die', roll: true }],
+    abilities: ['HitPoints', 'Slow', 'WeaponTraining', 'Magic', 'TrickDieAbility', 'SturdyIllusion', 'AnimalTrick', 'Infravision', 'GemAffinity', 'Luck', 'Languages'],
+    tableDice: [{ header: 'Trick Die', key: 'system.skills.trickDie.die' }, { header: 'Known Spells', key: 'system.skills.knownSpells.value' }, { header: 'Max Spell Lvl', key: 'system.skills.maxSpellLevel.value' }],
+    caster: 'Gnome.CasterNote'
+  },
+  'sin-eater-of-the-shudders': {
+    prefix: 'SinEater',
+    dice: [],
+    abilities: ['WeaponTraining', 'LastMeal', 'Magic', 'Disapproval', 'SilverImplement', 'HealingMeal', 'TurnUnclean', 'SmellSpirits', 'DisguiseSelf', 'HideAndSneak', 'Luck'],
+    tableDice: [{ header: 'Spells Known', key: 'system.skills.spellsKnown.value' }, { header: 'Hide/Disguise', key: 'system.skills.disguise.value' }, { header: 'Sneak', key: 'system.skills.sneak.value' }],
+    caster: 'SinEater.CasterNote'
+  },
+  'supernatural-model': {
+    prefix: 'SupernaturalModel',
+    dice: [],
+    abilities: ['WeaponTraining', 'Magic', 'Spellburn', 'CasterLevel', 'SupernaturalPatrons', 'Clapback', 'RefinedSensibilities', 'ActionDice'],
+    tableDice: [{ header: 'Spells Known', key: 'system.skills.knownSpells.value' }, { header: 'Max Spell Lvl', key: 'system.skills.maxSpellLevel.value' }],
+    caster: 'SupernaturalModel.CasterNote'
   }
 }
 
