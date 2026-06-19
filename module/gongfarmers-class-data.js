@@ -649,15 +649,11 @@ export const GONGFARMERS_CLASSES = {
   'halfling-hucker': {
     label: 'HalflingHucker.ActorSheetHalflingHucker',
     sheetHeight: 640,
-    mixin (schema) {
-      const f = foundry.data.fields
-      // Luck Die: spent with a Luck point to add to thrown-weapon attack and
-      // damage rolls for the round. Sneak & Hide comes from the DCC halfling
-      // mixin on the shared Player schema (this class uses the halfling table).
-      schema.skills.fields.luckDie = new f.SchemaField({
-        label: new f.StringField({ initial: 'HalflingHucker.LuckDie' }),
-        die: new f.StringField({ initial: '1d3' })
-      })
+    mixin () {
+      // Luck Die (spent with a Luck point to add to thrown-weapon attack and
+      // damage) is the DCC built-in `class.luckDie`; Sneak & Hide comes from
+      // the DCC halfling mixin on the shared Player schema (this class uses
+      // the halfling table). No class-specific schema fields are added here.
     },
     defaults: {
       sheetClass: 'Halfling-Hucker',
@@ -706,6 +702,172 @@ export const GONGFARMERS_CLASSES = {
           ]
         }
       }
+    }
+  },
+
+  // ---- 2017 Collection ----
+
+  'dwarf-sapper': {
+    label: 'DwarfSapper.ActorSheetDwarfSapper',
+    sheetHeight: 640,
+    mixin () {
+      // A dwarf skirmisher with backstab + a thief skill set + a luck die,
+      // all DCC built-ins (`class.backstab`, `class.luckDie`, the thief skill
+      // block) on the shared Player schema — driven per-level by the chart.
+    },
+    defaults: {
+      sheetClass: 'Dwarf-Sapper',
+      localize: { 'class.className': 'DwarfSapper.DwarfSapper' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showBackstab': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'dwarf-sapper': { id: 'dwarf-sapper', template: classPartial('dwarf-sapper') } },
+      tabs: { sheet: { tabs: [{ id: 'dwarf-sapper', group: 'sheet', label: 'DwarfSapper.DwarfSapper' }] } }
+    }
+  },
+
+  'invincible-chicken': {
+    label: 'InvincibleChicken.ActorSheetInvincibleChicken',
+    sheetHeight: 635,
+    mixin () {
+      // Sneak & Hide comes from the DCC halfling mixin on the shared Player
+      // schema; the chicken's other quirks are descriptive notes.
+    },
+    defaults: {
+      sheetClass: 'Invincible-Chicken',
+      localize: { 'class.className': 'InvincibleChicken.InvincibleChicken' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'invincible-chicken': { id: 'invincible-chicken', template: classPartial('invincible-chicken') } },
+      tabs: { sheet: { tabs: [{ id: 'invincible-chicken', group: 'sheet', label: 'InvincibleChicken.InvincibleChicken' }] } }
+    }
+  },
+
+  'orc-gfa': {
+    label: 'Orc.ActorSheetOrc',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Rage die: rolled with each attack in place of a fixed attack bonus and
+      // applied to attack and damage. Shared deedDie field; label pinned below.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Orc.RageDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Orc-Gfa',
+      localize: { 'class.className': 'Orc.Orc' },
+      literal: {
+        'details.critRange': 20,
+        'config.attackBonusMode': 'manual',
+        'skills.deedDie.label': 'Orc.RageDie'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'orc-gfa': { id: 'orc-gfa', template: classPartial('orc-gfa') } },
+      tabs: { sheet: { tabs: [{ id: 'orc-gfa', group: 'sheet', label: 'Orc.Orc' }] } }
+    }
+  },
+
+  'half-orc': {
+    label: 'HalfOrc.ActorSheetHalfOrc',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Rage die, as the orc. Shared deedDie field; label pinned below.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'HalfOrc.RageDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Half-Orc',
+      localize: { 'class.className': 'HalfOrc.HalfOrc' },
+      literal: {
+        'details.critRange': 20,
+        'config.attackBonusMode': 'manual',
+        'skills.deedDie.label': 'HalfOrc.RageDie'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'half-orc': { id: 'half-orc', template: classPartial('half-orc') } },
+      tabs: { sheet: { tabs: [{ id: 'half-orc', group: 'sheet', label: 'HalfOrc.HalfOrc' }] } }
+    }
+  },
+
+  'paladin-of-gambrinus': {
+    label: 'PaladinGambrinus.ActorSheetPaladinGambrinus',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // Smite die: added to attack and damage against the unholy (in place of
+      // the normal attack bonus). A class-specific deed-style die.
+      schema.skills.fields.smiteDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'PaladinGambrinus.SmiteDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+      // Casts as a cleric (Personality-based); cleric fields come from the DCC
+      // cleric mixin on the shared Player schema.
+    },
+    defaults: {
+      sheetClass: 'Paladin-Of-Gambrinus',
+      localize: { 'class.className': 'PaladinGambrinus.PaladinGambrinus' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.showSpells': true,
+        'class.spellCheckAbility': 'per',
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'paladin-of-gambrinus': { id: 'paladin-of-gambrinus', template: classPartial('paladin-of-gambrinus') },
+        clericSpells: { id: 'clericSpells', template: 'systems/dcc/templates/actor-partial-cleric-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'paladin-of-gambrinus', group: 'sheet', label: 'PaladinGambrinus.PaladinGambrinus' },
+            { id: 'clericSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
+  },
+
+  'bloody-hound': {
+    label: 'BloodyHound.ActorSheetBloodyHound',
+    sheetHeight: 640,
+    mixin () {
+      // A full-size "halfling" P.I.: uses the halfling table with two 1d16
+      // action dice (Multi-Tasker). Sneak & Hide comes from the DCC halfling
+      // mixin on the shared Player schema; detective skills are notes.
+    },
+    defaults: {
+      sheetClass: 'Bloody-Hound',
+      localize: { 'class.className': 'BloodyHound.BloodyHound' },
+      literal: {
+        'details.critRange': 20,
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), 'bloody-hound': { id: 'bloody-hound', template: classPartial('bloody-hound') } },
+      tabs: { sheet: { tabs: [{ id: 'bloody-hound', group: 'sheet', label: 'BloodyHound.BloodyHound' }] } }
     }
   }
 }

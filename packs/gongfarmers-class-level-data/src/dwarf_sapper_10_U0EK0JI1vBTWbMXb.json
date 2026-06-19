@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "dwarf-sapper",
+    "level": "10",
+    "levelData": "system.details.attackBonus=+8\nsystem.attributes.critical.die=1d30+6\nsystem.attributes.critical.table=II\nsystem.attributes.actionDice.value=1d20,1d20\nsystem.attributes.hitDice.value=1d8\nsystem.class.luckDie=d8\nsystem.class.backstab=+13\nsystem.skills.sneakSilently.value=+13\nsystem.skills.hideInShadows.value=+13\nsystem.skills.pickLock.value=+9\nsystem.skills.findTrap.value=+15\nsystem.skills.disableTrap.value=+15\nsystem.saves.ref.classBonus=+5\nsystem.saves.frt.classBonus=+5\nsystem.saves.wil.classBonus=+4\n"
+  },
+  "name": "dwarf-sapper-10",
+  "type": "level",
+  "folder": "GJlVBMl5aWUL7mhR",
+  "_id": "U0EK0JI1vBTWbMXb",
+  "effects": [],
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!U0EK0JI1vBTWbMXb"
+}

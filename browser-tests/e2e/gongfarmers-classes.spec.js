@@ -46,8 +46,14 @@ const CLASSES = [
   { id: 'rune-sage', sheetClass: 'Rune-Sage', flag: 'dcc-gongfarmers-classes-rune-sage.ActorSheetRuneSage', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'l' },
   { id: 'hot-dog-suit', sheetClass: 'Hot-Dog-Suit', flag: 'dcc-gongfarmers-classes-hot-dog-suit.ActorSheetHotDogSuit', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n', levels: 4 },
   { id: 'barbarian', sheetClass: 'Barbarian', flag: 'dcc-gongfarmers-classes-barbarian.ActorSheetBarbarian', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
-  { id: 'halfling-hucker', sheetClass: 'Halfling-Hucker', flag: 'dcc-gongfarmers-classes-halfling-hucker.ActorSheetHalflingHucker', dieField: 'system.skills.luckDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
-  { id: 'techno-necromancer', sheetClass: 'Techno-Necromancer', flag: 'dcc-gongfarmers-classes-techno-necromancer.ActorSheetTechnoNecromancer', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'c' }
+  { id: 'halfling-hucker', sheetClass: 'Halfling-Hucker', flag: 'dcc-gongfarmers-classes-halfling-hucker.ActorSheetHalflingHucker', dieField: 'system.class.luckDie', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'techno-necromancer', sheetClass: 'Techno-Necromancer', flag: 'dcc-gongfarmers-classes-techno-necromancer.ActorSheetTechnoNecromancer', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'c' },
+  { id: 'dwarf-sapper', sheetClass: 'Dwarf-Sapper', flag: 'dcc-gongfarmers-classes-dwarf-sapper.ActorSheetDwarfSapper', dieField: 'system.class.luckDie', dieAtL1: true, extraTab: null, alignment: 'l' },
+  { id: 'invincible-chicken', sheetClass: 'Invincible-Chicken', flag: 'dcc-gongfarmers-classes-invincible-chicken.ActorSheetInvincibleChicken', dieField: null, dieAtL1: false, extraTab: null, alignment: 'l' },
+  { id: 'orc-gfa', sheetClass: 'Orc-Gfa', flag: 'dcc-gongfarmers-classes-orc-gfa.ActorSheetOrc', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
+  { id: 'half-orc', sheetClass: 'Half-Orc', flag: 'dcc-gongfarmers-classes-half-orc.ActorSheetHalfOrc', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'c' },
+  { id: 'paladin-of-gambrinus', sheetClass: 'Paladin-Of-Gambrinus', flag: 'dcc-gongfarmers-classes-paladin-of-gambrinus.ActorSheetPaladinGambrinus', dieField: 'system.skills.smiteDie.die', dieAtL1: true, extraTab: 'clericSpells', alignment: 'n' },
+  { id: 'bloody-hound', sheetClass: 'Bloody-Hound', flag: 'dcc-gongfarmers-classes-bloody-hound.ActorSheetBloodyHound', dieField: null, dieAtL1: false, extraTab: null, alignment: 'n' }
 ]
 
 const consoleErrors = []

@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "orc-gfa",
+    "level": "8",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=1d30+2\nsystem.attributes.critical.table=V\nsystem.attributes.actionDice.value=1d20,1d16\nsystem.attributes.hitDice.value=1d12\nsystem.skills.deedDie.die=1d12\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+5\nsystem.saves.wil.classBonus=+2\n"
+  },
+  "name": "orc-gfa-8",
+  "type": "level",
+  "folder": "KmsTM3vYTx7F1rJ6",
+  "_id": "SaZkNHQXgo7bCfg0",
+  "effects": [],
+  "sort": 800,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!SaZkNHQXgo7bCfg0"
+}

@@ -11,17 +11,49 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 20 / ~57 implemented
+## Status: 26 / ~57 implemented
 
-### Done & E2E-verified (20)
+### Done & E2E-verified (26)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
   Mystic Arcanist, Spell Thief, Rune Sage
 - **2016:** Hot-Dog Suit (V1), Barbarian (V1), Halfling Hucker (V1),
   Techno-necromancer (V6, Crawljammer)
+- **2017 (V6 "Men and Magic" + V7):** Dwarf Sapper, Invincible Chicken,
+  Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound (V7,
+  Nowhere City Nights)
 
-The DCC-native portions of the 2020 and 2016 collections are now complete.
+The DCC-native portions of the 2020, 2016, and 2017 collections are complete.
+
+#### Source-PDF note (2017)
+The bundled **`Gongfarmers Almanac 2017 Collection.pdf` is a scanned image with
+no text layer** (OCR of it comes back empty). Use the per-volume text PDFs
+instead — `GFA_2017_Volume_6_Final.pdf` (classes) and `..._Volume_7_Final.pdf`
+(Bloody Hound) — which have clean text. (2016/2018/2019/2020 collection PDFs and
+the 2021 per-volume PDFs all have text layers; only the 2017 *collection* scan
+is the exception.)
+
+#### Notes from the 2017 build (canonical thief fields)
+- Thief-style classes use the **DCC built-in fields**, not invented ones:
+  `system.class.luckDie` (the luck-burn die, `dN` format) and
+  `system.class.backstab`, plus the shared thief skill block
+  (`system.skills.<skill>.value`). The core thief level pack
+  (`dcc-core-book/.../thief_*.json`) drives these — and additionally varies them
+  by **alignment** via `skills.{lawful,neutral,chaotic}` sub-blocks.
+- This module's `buildLevelItems.mjs` still only emits `level_info` + a
+  per-alignment **title** — it has **no `skills`-block (alignment-varying)
+  support**. None of the classes built so far need it: Dwarf Sapper's thief
+  skills are a *single fixed* table (placed directly in `level_info`). Extend
+  `buildLevelItems.mjs` to merge `skills.{alignment}` blocks into
+  `levelDataLawful/Neutral/Chaotic` if/when an alignment-varying thief class is
+  added (and consider backfilling the simplified Assassin/Spell Thief/Heavenly
+  Hitman skills then).
+- **Retrofit:** the already-shipped **Halfling Hucker** was switched from a
+  custom `skills.luckDie` field to the canonical `class.luckDie`.
+- **Orc** ships as classId **`orc-gfa`** (plain `orc` collides with
+  `dcc-crawl-classes`); sheetClass `Orc-Gfa`. **Orc & Half-Orc share one
+  rage-die (deedDie) table**, differing only in hit die (1d12 vs 1d10).
 
 #### Notes from the 2016 build
 - **Hot-Dog Suit is a 4-level class** (then multiclasses). Its chart has only
@@ -45,6 +77,8 @@ The DCC-native portions of the 2020 and 2016 collections are now complete.
   points passed dedicate→lord via forcibles), not a standard leveled PC class
 - Moremen (2020 V13) — not a PC class; an antagonist faction ("The Mutants
   with More") plus a Lvl 1–3 mini-adventure with monster stat blocks only
+- Orc Berserker (2017 V6) — an NPC stat block (battle madness/death throes),
+  not a leveled PC class; orcs/half-orcs reduced below Int/Per 3 become these
 
 ### Deferred — MCC (Mutant Crawl Classics) content (2020 V14)
 - Scholar, Mastermind, Insectaur, Geologian (all by Tim Snider) have clean
@@ -55,11 +89,11 @@ The DCC-native portions of the 2020 and 2016 collections are now complete.
   (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
   future dedicated MCC effort rather than mixing systems here.
 
-### Pending (~31)
-- **2017 (6), 2018 (12), 2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
+### Pending (~25)
+- **2018 (12), 2019 (5), 2021 (6), 2024 (6), 2025 (4)** —
   see CLASS_INVENTORY.md for the per-class list, types, and build flags.
 
-Build order: 2020 + 2016 done (DCC-native); next 2017 → 2025.
+Build order: 2020 + 2016 + 2017 done (DCC-native); next 2018 → 2025.
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

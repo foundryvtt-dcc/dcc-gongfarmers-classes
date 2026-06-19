@@ -49,15 +49,15 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Techno-necromancer | 6 | caster (Crawljammer) | ✅ |
 
 ## 2017 Collection
-| Class | Vol | Type |
-|-------|-----|------|
-| Dwarf Sapper | 6 | race |
-| Invincible Chicken | 6 | hybrid (novelty) |
-| Orc | 6 | race ⚠ classId collides with dcc-crawl-classes "orc" |
-| Half-Orc | 6 | race |
-| Paladin of Gambrinus | 6 | hybrid (divine) |
-| Bloody Hound | 7 | skill (PI) |
-| Orc Berserker | 6 | NPC stat block |
+| Class | Vol | Type | Status |
+|-------|-----|------|--------|
+| Dwarf Sapper | 6 | race (dwarf thief) | ✅ |
+| Invincible Chicken | 6 | hybrid (novelty) | ✅ |
+| Orc | 6 | race (rage die) — classId `orc-gfa` (collides with dcc-crawl-classes "orc") | ✅ |
+| Half-Orc | 6 | race (rage die) | ✅ |
+| Paladin of Gambrinus | 6 | caster (cleric) + smite die | ✅ |
+| Bloody Hound | 7 | skill (halfling-variant PI, Nowhere City Nights) | ✅ |
+| Orc Berserker | 6 | NPC stat block | ❌ excluded — NPC stat block, not a leveled class |
 
 ## 2018 Collection (V1: New Class Explosion! + V6)
 | Class | Vol | Type |
@@ -113,10 +113,10 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 20 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4): Hot-Dog Suit, Barbarian, Halfling Hucker, Techno-necromancer. **2020 + 2016 DCC-native classes are complete.**
-- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure, not a PC class).
+- **Done & E2E-verified:** 26 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound. **2020 + 2016 + 2017 DCC-native classes are complete.**
+- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block).
 - **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
-- **Pending:** ~31 — all of 2017/2018/2019/2021/2024/2025.
+- **Pending:** ~25 — all of 2018/2019/2021/2024/2025.
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).
@@ -124,7 +124,7 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 - `browser-tests/e2e/gongfarmers-classes.spec.js` — add a row to its `CLASSES` table and the class is covered by the suite.
 
 ## Build considerations / flags
-- **classId collisions** with the existing `dcc-crawl-classes` module: 2017 **Orc** and 2021 **Gnome** (crawl already ships `orc`/`gnome`). Disambiguate (e.g. `orc-gfa` / `gnome-gfa`) or skip if redundant. 2016 **Barbarian** / 2018 **Berserker** are warrior variants — keep distinct ids.
+- **classId collisions** with the existing `dcc-crawl-classes` module: 2017 **Orc** shipped as **`orc-gfa`** (done). 2021 **Gnome** still to disambiguate (e.g. `gnome-gfa`) or skip if redundant. 2016 **Barbarian** (done) / 2018 **Berserker** are warrior variants — kept distinct ids (`barbarian` vs the bear-race `barbearian`).
 - **Spellcasters** (many): need a `clericSpells` or `wizardSpells` sheet part + `class.spellCheckAbility`, like Heavenly Hitman / the crawl Paladin. Pattern established.
 - **Races/race-as-class:** racial traits go in the class tab as notes; level data still drives saves/crit/action dice/hit die.
 - **Non-standard systems** that won't map cleanly to DCC fields: Weird Frontiers classes (Hex tokens, Fumble Die), Lycanthrope (overlay/template), Adventurer (cycles core classes). These need per-class design decisions; flag for review when reached. (Rune Sage's "rune system" mapped fine — it's a wizard caster whose magic die is the deedDie field, like Arcane Warrior; the rune-carving mechanic is descriptive. Runelords' endowment system has no level table and was excluded.)

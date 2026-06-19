@@ -1,0 +1,30 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "invincible-chicken",
+    "level": "4",
+    "levelData": "system.details.attackBonus=+3\nsystem.attributes.critical.die=1d10\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.skills.sneakAndHide.value=+8\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+2\n"
+  },
+  "name": "invincible-chicken-4",
+  "type": "level",
+  "folder": "CUeZqpxbm3XMN28k",
+  "_id": "hzobtYU0dFLqvARa",
+  "effects": [],
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!hzobtYU0dFLqvARa"
+}

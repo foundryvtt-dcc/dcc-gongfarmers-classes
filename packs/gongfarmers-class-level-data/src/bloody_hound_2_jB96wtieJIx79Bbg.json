@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "bloody-hound",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d8\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d16,1d16\nsystem.attributes.hitDice.value=1d6\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+1\nsystem.skills.sneakAndHide.value=+5\n",
+    "levelDataLawful": "system.details.title.value=Explorer\n",
+    "levelDataNeutral": "system.details.title.value=Explorer\n",
+    "levelDataChaotic": "system.details.title.value=Explorer\n"
+  },
+  "name": "bloody-hound-2",
+  "type": "level",
+  "folder": "59RX42w2sh6jyEr5",
+  "_id": "jB96wtieJIx79Bbg",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!jB96wtieJIx79Bbg"
+}

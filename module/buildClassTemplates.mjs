@@ -105,9 +105,46 @@ const META = {
   },
   'halfling-hucker': {
     prefix: 'HalflingHucker',
-    dice: [{ labelKey: 'HalflingHucker.LuckDie', field: 'system.skills.luckDie.die', roll: false }],
+    dice: [{ labelKey: 'HalflingHucker.LuckDie', field: 'system.class.luckDie', roll: false }],
     abilities: ['WeaponTraining', 'TwoFistedThrower', 'HalflingTraits', 'LuckyTosser', 'Prizewinner'],
-    tableDice: [{ header: 'Luck Die', key: 'system.skills.luckDie.die' }]
+    tableDice: [{ header: 'Luck Die', key: 'system.class.luckDie' }]
+  },
+  'dwarf-sapper': {
+    prefix: 'DwarfSapper',
+    dice: [{ labelKey: 'DwarfSapper.LuckDie', field: 'system.class.luckDie', roll: false }],
+    abilities: ['WeaponTraining', 'DwarfTraits', 'UndergroundSkills', 'ThievingSkills', 'LuckAndWits', 'AlchemicalLearnings'],
+    tableDice: [{ header: 'Backstab', key: 'system.class.backstab' }, { header: 'Luck Die', key: 'system.class.luckDie' }]
+  },
+  'invincible-chicken': {
+    prefix: 'InvincibleChicken',
+    dice: [],
+    abilities: ['WeaponTraining', 'Communication', 'MountedCombat', 'Armor', 'SmallSize', 'SandersBlessing', 'Stealth', 'FowlLuck', 'LimitedFlight', 'HeadlessActions'],
+    tableDice: [{ header: 'Sneak & Hide', key: 'system.skills.sneakAndHide.value' }]
+  },
+  'orc-gfa': {
+    prefix: 'Orc',
+    dice: [{ labelKey: 'Orc.RageDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'RageDieAbility', 'Rageburn', 'Ferocity', 'Infravision', 'Luck', 'Languages'],
+    tableDice: [{ header: 'Rage Die', key: 'system.skills.deedDie.die' }]
+  },
+  'half-orc': {
+    prefix: 'HalfOrc',
+    dice: [{ labelKey: 'HalfOrc.RageDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'RageDieAbility', 'Rageburn', 'Ferocity', 'Infravision', 'Luck', 'Languages'],
+    tableDice: [{ header: 'Rage Die', key: 'system.skills.deedDie.die' }]
+  },
+  'paladin-of-gambrinus': {
+    prefix: 'PaladinGambrinus',
+    dice: [{ labelKey: 'PaladinGambrinus.SmiteDie', field: 'system.skills.smiteDie.die', roll: true }],
+    abilities: ['WeaponTraining', 'Smite', 'Magic', 'HolyDeeds', 'LayOnHands', 'InstillBravery', 'CauseFear', 'Drunkenness'],
+    tableDice: [{ header: 'Smite Die', key: 'system.skills.smiteDie.die' }],
+    caster: 'PaladinGambrinus.CasterNote'
+  },
+  'bloody-hound': {
+    prefix: 'BloodyHound',
+    dice: [],
+    abilities: ['HalflingBase', 'MultiTasker', 'NightOwl', 'Detective', 'HardBoiled', 'Obsessions'],
+    tableDice: [{ header: 'Sneak & Hide', key: 'system.skills.sneakAndHide.value' }]
   },
   'techno-necromancer': {
     prefix: 'TechnoNecromancer',

@@ -20,6 +20,12 @@ import * as HotDogSuitSheets from './actor-sheets-hot-dog-suit.js'
 import * as BarbarianSheets from './actor-sheets-barbarian.js'
 import * as HalflingHuckerSheets from './actor-sheets-halfling-hucker.js'
 import * as TechnoNecromancerSheets from './actor-sheets-techno-necromancer.js'
+import * as DwarfSapperSheets from './actor-sheets-dwarf-sapper.js'
+import * as InvincibleChickenSheets from './actor-sheets-invincible-chicken.js'
+import * as OrcSheets from './actor-sheets-orc-gfa.js'
+import * as HalfOrcSheets from './actor-sheets-half-orc.js'
+import * as PaladinGambrinusSheets from './actor-sheets-paladin-of-gambrinus.js'
+import * as BloodyHoundSheets from './actor-sheets-bloody-hound.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -47,7 +53,13 @@ const GONGFARMERS_SHEETS = [
   { sheet: HotDogSuitSheets.ActorSheetHotDogSuit, scope: 'dcc-gongfarmers-classes-hot-dog-suit', label: 'HotDogSuit.ActorSheetHotDogSuit' },
   { sheet: BarbarianSheets.ActorSheetBarbarian, scope: 'dcc-gongfarmers-classes-barbarian', label: 'Barbarian.ActorSheetBarbarian' },
   { sheet: HalflingHuckerSheets.ActorSheetHalflingHucker, scope: 'dcc-gongfarmers-classes-halfling-hucker', label: 'HalflingHucker.ActorSheetHalflingHucker' },
-  { sheet: TechnoNecromancerSheets.ActorSheetTechnoNecromancer, scope: 'dcc-gongfarmers-classes-techno-necromancer', label: 'TechnoNecromancer.ActorSheetTechnoNecromancer' }
+  { sheet: TechnoNecromancerSheets.ActorSheetTechnoNecromancer, scope: 'dcc-gongfarmers-classes-techno-necromancer', label: 'TechnoNecromancer.ActorSheetTechnoNecromancer' },
+  { sheet: DwarfSapperSheets.ActorSheetDwarfSapper, scope: 'dcc-gongfarmers-classes-dwarf-sapper', label: 'DwarfSapper.ActorSheetDwarfSapper' },
+  { sheet: InvincibleChickenSheets.ActorSheetInvincibleChicken, scope: 'dcc-gongfarmers-classes-invincible-chicken', label: 'InvincibleChicken.ActorSheetInvincibleChicken' },
+  { sheet: OrcSheets.ActorSheetOrc, scope: 'dcc-gongfarmers-classes-orc-gfa', label: 'Orc.ActorSheetOrc' },
+  { sheet: HalfOrcSheets.ActorSheetHalfOrc, scope: 'dcc-gongfarmers-classes-half-orc', label: 'HalfOrc.ActorSheetHalfOrc' },
+  { sheet: PaladinGambrinusSheets.ActorSheetPaladinGambrinus, scope: 'dcc-gongfarmers-classes-paladin-of-gambrinus', label: 'PaladinGambrinus.ActorSheetPaladinGambrinus' },
+  { sheet: BloodyHoundSheets.ActorSheetBloodyHound, scope: 'dcc-gongfarmers-classes-bloody-hound', label: 'BloodyHound.ActorSheetBloodyHound' }
 ]
 
 /* -------------------------------------------- */

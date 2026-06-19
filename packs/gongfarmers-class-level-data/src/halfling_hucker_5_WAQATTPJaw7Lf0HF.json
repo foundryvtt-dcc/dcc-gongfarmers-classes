@@ -3,7 +3,7 @@
   "system": {
     "class": "halfling-hucker",
     "level": "5",
-    "levelData": "system.details.attackBonus=+4\nsystem.attributes.critical.die=1d12\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.skills.luckDie.die=1d7\nsystem.skills.sneakAndHide.value=+9\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+3\n",
+    "levelData": "system.details.attackBonus=+4\nsystem.attributes.critical.die=1d12\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.skills.sneakAndHide.value=+9\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+3\nsystem.class.luckDie=d7\n",
     "levelDataLawful": "system.details.title.value=Grand Hucker\n",
     "levelDataNeutral": "system.details.title.value=Grand Hucker\n",
     "levelDataChaotic": "system.details.title.value=Grand Hucker\n"
