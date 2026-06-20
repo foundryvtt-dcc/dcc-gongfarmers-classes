@@ -11,9 +11,9 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 51 / ~57 implemented
+## Status: 52 / ~55 implemented
 
-### Done & E2E-verified (51)
+### Done & E2E-verified (52)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
@@ -33,9 +33,10 @@ level 1–10 progression pack, a class sheet tab, and live E2E coverage.
   Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6)
 - **2024 (V5, V6):** Chimeraman (V5), Investigator (V5), Therapist (V5),
   Taurune (V6)
+- **2025 (V3 "Classes & Judge's Tools"):** Minovean Sage
 
 The DCC-native portions of the 2020, 2016, 2017, 2018, and 2019 collections are
-complete, as are the buildable classes of the 2021 and 2024 collections.
+complete, as are the buildable classes of the 2021, 2024, and 2025 collections.
 
 #### Notes from the 2024 build
 - **Chimeraman** (V5, Greg Setliff) is a chimeric **race** (HD 1d10, flat
@@ -77,6 +78,30 @@ complete, as are the buildable classes of the 2021 and 2024 collections.
   Collection.pdf`** is supplied (no per-volume PDFs); it has a clean text layer
   (`pdftotext -layout`). Classes live in Vol 5 (Monsters, Classes & Rules) and
   Vol 6 (Rules, Items, Classes & Adventures).
+
+#### Notes from the 2025 build
+- **Minovean Sage** (V3, Shane "Kablooey" Madgett) is a cyclopean **race/caster**
+  — last of a forgotten one-eyed people. The writeup gives **no explicit 1–10
+  table**, but it states **"Attack Bonus: As Cleric,"** HD d6, Action Dice 1d20,
+  and saves **Fort Medium / Ref Low / Will High** — a complete, faithful mapping
+  (same approach as Priest of the Old Father / Paladin of Gambrinus). The chart
+  mirrors the in-repo cleric progression (attack +1→+5, crit 1d8/III→1d16/III,
+  action dice gaining a die at 6/7/8) with HD 1d6 and a **Will-high / Fort-medium
+  / Ref-low** save spread. Modeled as a **wizard-spells** caster on `int`: its
+  magic is Intelligence/memory-based ("they remember it," Cyclopean Lore), and
+  **Memory Burn = spellburn** plus the natural-1 **backfire + misfire tables** are
+  wizard mechanics (clerics use disapproval, which it lacks). Cyclopean Lore, the
+  All-Seeing Eye, Unyielding Stance, Mighty Grasp, Survivor of the Ancient Age
+  (L5+), and the Voidseer table (L5+) are notes. No title table in source — titles
+  module-supplied (uniform across alignments, themed Eye-Opened → Last Eye of the
+  Void).
+- **Excluded — El Padre, The St(ranger), The Demolitionist** (all V3): Weird
+  Frontiers classes built on the Hex-token subsystem; excluded per user direction
+  ("skip the weird frontiers stuff"), same rationale as Enmascarado / Tommyknocker.
+- **Source-PDF note (2025):** only the combined **`Gongfarmers Almanac 2025
+  Collection.pdf`** is supplied; clean text layer (`pdftotext -layout`). The
+  buildable class (Minovean Sage) and the three WF classes all live in Vol 3
+  (Classes & Judge's Tools).
 
 #### Notes from the 2021 build
 - **Aetherian Warcat** (V3, Dan Steeby) is a warrior-style **deed-die** race-class
@@ -240,6 +265,8 @@ is the exception.)
 - Adventurer (2024 V5) — "Master of None": no fixed progression of its own,
   gains the level-1 benefits of a randomly rolled core class each level (chart
   reads "Per Class" for levels 2–5, "retire" at 6); not statically representable
+- El Padre, The St(ranger), The Demolitionist (all 2025 V3) — Weird Frontiers
+  classes on the Hex-token subsystem; excluded per user direction (skip WF)
 
 ### Deferred — incomplete source data
 - Street Rat (2021 V1) — a complete class concept (HD 1d7, skullduggery deed
@@ -256,12 +283,13 @@ is the exception.)
   (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
   future dedicated MCC effort rather than mixing systems here.
 
-### Pending (~4)
-- **2025 (4)** —
-  see CLASS_INVENTORY.md for the per-class list, types, and build flags.
+### Pending (none)
+- All supplied collections (2015–2025) are processed. The 2025 V3 buildable
+  class (Minovean Sage) is done; its three Weird Frontiers classes are excluded
+  per user direction. See CLASS_INVENTORY.md for the full per-collection status.
 
-Build order: 2020 + 2016 + 2017 + 2018 + 2019 + 2021 + 2024 done (DCC-native);
-next 2025 (the last supplied collection).
+Build order: 2020 + 2016 + 2017 + 2018 + 2019 + 2021 + 2024 + 2025 done
+(DCC-native). All supplied collections processed — nothing left in the queue.
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

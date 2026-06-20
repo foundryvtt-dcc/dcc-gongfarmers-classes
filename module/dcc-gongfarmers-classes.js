@@ -51,6 +51,7 @@ import * as ChimeramanSheets from './actor-sheets-chimeraman.js'
 import * as InvestigatorSheets from './actor-sheets-investigator.js'
 import * as TherapistSheets from './actor-sheets-therapist.js'
 import * as TauruneSheets from './actor-sheets-taurune.js'
+import * as MinoveanSageSheets from './actor-sheets-minovean-sage.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -109,7 +110,8 @@ const GONGFARMERS_SHEETS = [
   { sheet: ChimeramanSheets.ActorSheetChimeraman, scope: 'dcc-gongfarmers-classes-chimeraman', label: 'Chimeraman.ActorSheetChimeraman' },
   { sheet: InvestigatorSheets.ActorSheetInvestigator, scope: 'dcc-gongfarmers-classes-investigator', label: 'Investigator.ActorSheetInvestigator' },
   { sheet: TherapistSheets.ActorSheetTherapist, scope: 'dcc-gongfarmers-classes-therapist', label: 'Therapist.ActorSheetTherapist' },
-  { sheet: TauruneSheets.ActorSheetTaurune, scope: 'dcc-gongfarmers-classes-taurune', label: 'Taurune.ActorSheetTaurune' }
+  { sheet: TauruneSheets.ActorSheetTaurune, scope: 'dcc-gongfarmers-classes-taurune', label: 'Taurune.ActorSheetTaurune' },
+  { sheet: MinoveanSageSheets.ActorSheetMinoveanSage, scope: 'dcc-gongfarmers-classes-minovean-sage', label: 'MinoveanSage.ActorSheetMinoveanSage' }
 ]
 
 /* -------------------------------------------- */

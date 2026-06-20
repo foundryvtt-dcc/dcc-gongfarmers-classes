@@ -1724,6 +1724,41 @@ export const GONGFARMERS_CLASSES = {
       parts: { ...commonParts(), taurune: { id: 'taurune', template: classPartial('taurune') } },
       tabs: { sheet: { tabs: [{ id: 'taurune', group: 'sheet', label: 'Taurune.Taurune' }] } }
     }
+  },
+
+  // ---- 2025 Collection ----
+  'minovean-sage': {
+    label: 'MinoveanSage.ActorSheetMinoveanSage',
+    sheetHeight: 640,
+    mixin () {},
+    defaults: {
+      sheetClass: 'Minovean-Sage',
+      localize: { 'class.className': 'MinoveanSage.MinoveanSage' },
+      literal: {
+        'config.showSkills': true,
+        'config.showSpells': true,
+        // "They remember it" — a wizard-style caster (Memory Burn = spellburn,
+        // natural-1 backfire + misfire tables) whose magic is keyed to the
+        // Intelligence-based memory of the Cyclopean Lore. Attack is "As Cleric".
+        'class.spellCheckAbility': 'int',
+        'config.attackBonusMode': 'flat'
+      }
+    },
+    sheetPart: {
+      parts: {
+        ...commonParts(),
+        'minovean-sage': { id: 'minovean-sage', template: classPartial('minovean-sage') },
+        wizardSpells: { id: 'wizardSpells', template: 'systems/dcc/templates/actor-partial-wizard-spells.html' }
+      },
+      tabs: {
+        sheet: {
+          tabs: [
+            { id: 'minovean-sage', group: 'sheet', label: 'MinoveanSage.MinoveanSage' },
+            { id: 'wizardSpells', group: 'sheet', label: 'DCC.Spells' }
+          ]
+        }
+      }
+    }
   }
 }
 

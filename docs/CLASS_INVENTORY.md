@@ -105,19 +105,20 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Tommyknocker | 5 | race (Weird Frontiers; add-on options) | ❌ excluded — "Dark Inheritances," a set of mien/power options (Mummy, Vampyire, …) for the WF tommyknocker; no level 1–10 table |
 
 ## 2025 Collection (V3: Classes & Judge's Tools)
-| Class | Vol | Type |
-|-------|-----|------|
-| El Padre | 3 | hybrid (Weird Frontiers) ⚠ Hex-token system |
-| The St(ranger) | 3 | martial (Weird Frontiers) ⚠ Hex tokens |
-| The Demolitionist | 3 | martial (Weird Frontiers) ⚠ Hex tokens |
-| Minovean Sage | 3 | race/caster |
+| Class | Vol | Type | Status |
+|-------|-----|------|--------|
+| Minovean Sage | 3 | race/caster (wizard spells; "As Cleric" attack) — classId `minovean-sage` | ✅ |
+| El Padre | 3 | hybrid (Weird Frontiers) ⚠ Hex-token system | ❌ excluded — Weird Frontiers, per user direction (skip WF) |
+| The St(ranger) | 3 | martial (Weird Frontiers) ⚠ Hex tokens | ❌ excluded — Weird Frontiers, per user direction (skip WF) |
+| The Demolitionist | 3 | martial (Weird Frontiers) ⚠ Hex tokens | ❌ excluded — Weird Frontiers, per user direction (skip WF) |
 
 ## Totals
-- **Done & E2E-verified:** 51 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6); 2019 (5): Anti-Cleric, Cambion, Children of the Wild, Godling, Fater (all V11); 2021 (4): Supernatural Model (V1), Aetherian Warcat (V3), Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6); 2024 (4): Chimeraman (V5), Investigator (V5), Therapist (V5), Taurune (V6). **2020 + 2016 + 2017 + 2018 + 2019 DCC-native classes are complete; 2021's and 2024's buildable classes are complete.**
+- **Done & E2E-verified:** 52 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6); 2019 (5): Anti-Cleric, Cambion, Children of the Wild, Godling, Fater (all V11); 2021 (4): Supernatural Model (V1), Aetherian Warcat (V3), Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6); 2024 (4): Chimeraman (V5), Investigator (V5), Therapist (V5), Taurune (V6); 2025 (1): Minovean Sage (V3). **2020 + 2016 + 2017 + 2018 + 2019 DCC-native classes are complete; 2021's, 2024's, and 2025's buildable (non–Weird Frontiers) classes are complete.**
 - **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block), Enmascarado (2021 V1 — mask subsystem for the WF luchador, no level table), Tommyknocker (2024 V5 — WF mien/power options, no level table), Adventurer (2024 V5 — "Master of None": no fixed progression of its own, borrows other classes' level-1 benefits).
+- **Excluded (Weird Frontiers, per user direction — skip WF):** El Padre, The St(ranger), The Demolitionist (all 2025 V3 — Hex-token / WF subsystems that don't map to DCC fields).
 - **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
 - **Deferred (incomplete source):** Street Rat (2021 V1) — the supplied PDF prints only levels 1–2 of its progression chart; revisit if a complete table surfaces.
-- **Pending:** ~4 — 2025 (4).
+- **Pending:** none — all supplied collections processed (2025's buildable class done; its three Weird Frontiers classes excluded per user direction).
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).

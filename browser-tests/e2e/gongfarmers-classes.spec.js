@@ -78,7 +78,8 @@ const CLASSES = [
   { id: 'chimeraman', sheetClass: 'Chimeraman', flag: 'dcc-gongfarmers-classes-chimeraman.ActorSheetChimeraman', dieField: null, dieAtL1: false, extraTab: null, alignment: 'c' },
   { id: 'investigator', sheetClass: 'Investigator', flag: 'dcc-gongfarmers-classes-investigator.ActorSheetInvestigator', dieField: 'system.skills.expertiseDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
   { id: 'therapist', sheetClass: 'Therapist', flag: 'dcc-gongfarmers-classes-therapist.ActorSheetTherapist', dieField: 'system.skills.techniqueDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
-  { id: 'taurune', sheetClass: 'Taurune', flag: 'dcc-gongfarmers-classes-taurune.ActorSheetTaurune', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'l' }
+  { id: 'taurune', sheetClass: 'Taurune', flag: 'dcc-gongfarmers-classes-taurune.ActorSheetTaurune', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'l' },
+  { id: 'minovean-sage', sheetClass: 'Minovean-Sage', flag: 'dcc-gongfarmers-classes-minovean-sage.ActorSheetMinoveanSage', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'n' }
 ]
 
 const consoleErrors = []

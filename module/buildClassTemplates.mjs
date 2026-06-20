@@ -323,6 +323,16 @@ const META = {
     dice: [{ labelKey: 'Taurune.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
     abilities: ['HitPoints', 'WeaponTraining', 'LeatheryHide', 'MightyDeed', 'DeedDieAbility', 'HornedFury', 'Bellows', 'LabyrinthineCunning', 'Soulburn', 'BuildingThePath', 'Infravision', 'Languages'],
     tableDice: [{ header: 'Deed Die', key: 'system.skills.deedDie.die' }]
+  },
+
+  // ---- 2025 Collection ----
+
+  'minovean-sage': {
+    prefix: 'MinoveanSage',
+    dice: [],
+    abilities: ['HitPoints', 'CyclopeanLore', 'AllSeeingEye', 'ArcaneIntuition', 'UnyieldingStance', 'MightyGrasp', 'SurvivorOfTheAncientAge', 'Voidseer', 'MemoryBurn', 'WeaponTraining', 'Alignment'],
+    tableDice: [],
+    caster: 'MinoveanSage.CasterNote'
   }
 }
 
