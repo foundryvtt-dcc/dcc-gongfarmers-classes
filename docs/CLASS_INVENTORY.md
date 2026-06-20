@@ -95,14 +95,14 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Street Rat | 1 | skill (rogue; skullduggery die) | ⏸ deferred — supplied PDF's progression chart prints only levels 1–2 (rest of page is artwork); no faithful 10-level data |
 
 ## 2024 Collection
-| Class | Vol | Type |
-|-------|-----|------|
-| Chimeraman | 5 | race |
-| Adventurer | 5 | hybrid (cycles classes) |
-| Investigator | 5 | skill |
-| Therapist | 5 | skill (technique die) |
-| Tommyknocker | 5 | race (Weird Frontiers; may be add-on options) |
-| Taurune | 6 | race (minotaur, deed die) |
+| Class | Vol | Type | Status |
+|-------|-----|------|--------|
+| Chimeraman | 5 | race (chimeric hybrid; head attacks) — classId `chimeraman` | ✅ |
+| Investigator | 5 | skill (expertise die; tactics) — classId `investigator` | ✅ |
+| Therapist | 5 | skill (technique die) — classId `therapist` | ✅ |
+| Taurune | 6 | race (minotaur; deed die + Mighty Deeds) — classId `taurune` | ✅ |
+| Adventurer | 5 | hybrid (cycles classes) | ❌ excluded — no fixed progression of its own; "Master of None" gains the level-1 benefits of a randomly-rolled core class each level (chart reads "Per Class" for levels 2–5, "retire" at 6) |
+| Tommyknocker | 5 | race (Weird Frontiers; add-on options) | ❌ excluded — "Dark Inheritances," a set of mien/power options (Mummy, Vampyire, …) for the WF tommyknocker; no level 1–10 table |
 
 ## 2025 Collection (V3: Classes & Judge's Tools)
 | Class | Vol | Type |
@@ -113,11 +113,11 @@ Status: ✅ done & E2E-verified · ⬜ pending · ⏸ deferred · ❌ excluded.
 | Minovean Sage | 3 | race/caster |
 
 ## Totals
-- **Done & E2E-verified:** 47 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6); 2019 (5): Anti-Cleric, Cambion, Children of the Wild, Godling, Fater (all V11); 2021 (4): Supernatural Model (V1), Aetherian Warcat (V3), Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6). **2020 + 2016 + 2017 + 2018 + 2019 DCC-native classes are complete; 2021's buildable classes are complete.**
-- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block), Enmascarado (2021 V1 — mask subsystem for the WF luchador, no level table).
+- **Done & E2E-verified:** 51 (✅) — 2015: all 4; 2020 (DCC-native, 12): through Rune Sage; 2016 (all 4); 2017 (6): Dwarf Sapper, Invincible Chicken, Orc (`orc-gfa`), Half-Orc, Paladin of Gambrinus, Bloody Hound; 2018 (12): all of V1's New Class Explosion! + Soldier (V6); 2019 (5): Anti-Cleric, Cambion, Children of the Wild, Godling, Fater (all V11); 2021 (4): Supernatural Model (V1), Aetherian Warcat (V3), Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6); 2024 (4): Chimeraman (V5), Investigator (V5), Therapist (V5), Taurune (V6). **2020 + 2016 + 2017 + 2018 + 2019 DCC-native classes are complete; 2021's and 2024's buildable classes are complete.**
+- **Excluded (not leveled classes):** Kraken Slayer (magic item), Hive Master (no progression), Runelords (endowment subsystem, no level table), Moremen (antagonist faction + adventure), Orc Berserker (NPC stat block), Enmascarado (2021 V1 — mask subsystem for the WF luchador, no level table), Tommyknocker (2024 V5 — WF mien/power options, no level table), Adventurer (2024 V5 — "Master of None": no fixed progression of its own, borrows other classes' level-1 benefits).
 - **Deferred (MCC / Terra A.D., 2020 V14):** Scholar, Mastermind, Insectaur, Geologian — DCC-native-only decision (2026-06-19); see 00-progress.md.
 - **Deferred (incomplete source):** Street Rat (2021 V1) — the supplied PDF prints only levels 1–2 of its progression chart; revisit if a complete table surfaces.
-- **Pending:** ~10 — 2024 (6), 2025 (4).
+- **Pending:** ~4 — 2025 (4).
 
 ## Tooling for the remaining build
 - `node module/buildLevelItems.mjs` — auto-discovers every `assets/json/*-combined-chart.json` and regenerates pack source (then `npm run todb`).

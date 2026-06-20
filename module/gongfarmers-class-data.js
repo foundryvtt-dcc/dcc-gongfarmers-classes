@@ -1608,6 +1608,122 @@ export const GONGFARMERS_CLASSES = {
         }
       }
     }
+  },
+
+  // ---- 2024 Collection ----
+  chimeraman: {
+    label: 'Chimeraman.ActorSheetChimeraman',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // A chimeric race: flat attack, but gains a chimeric-head-only second
+      // action die earlier than most. "Max 2nd Class Level" is a display-only
+      // per-level column tracking the cap on their secondary (3rd-level) class.
+      schema.skills.fields.secondClassLevel = new f.SchemaField({
+        label: new f.StringField({ initial: 'Chimeraman.SecondClassLevel' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Chimeraman',
+      localize: { 'class.className': 'Chimeraman.Chimeraman' },
+      literal: {
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat',
+        'skills.secondClassLevel.label': 'Chimeraman.SecondClassLevel'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), chimeraman: { id: 'chimeraman', template: classPartial('chimeraman') } },
+      tabs: { sheet: { tabs: [{ id: 'chimeraman', group: 'sheet', label: 'Chimeraman.Chimeraman' }] } }
+    }
+  },
+  investigator: {
+    label: 'Investigator.ActorSheetInvestigator',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // The Expertise Die is rolled with each investigator tactic (Action Die +
+      // Expertise Die + Luck); it climbs the dice chain with level. Tactics is a
+      // display-only per-level column counting tactics known by tier (T1/T2/T3).
+      schema.skills.fields.expertiseDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Investigator.ExpertiseDie' }),
+        die: new f.StringField({ initial: '1d4' })
+      })
+      schema.skills.fields.tactics = new f.SchemaField({
+        label: new f.StringField({ initial: 'Investigator.Tactics' }),
+        value: new f.StringField({ initial: '' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Investigator',
+      localize: { 'class.className': 'Investigator.Investigator' },
+      literal: {
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat',
+        'skills.expertiseDie.label': 'Investigator.ExpertiseDie',
+        'skills.tactics.label': 'Investigator.Tactics'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), investigator: { id: 'investigator', template: classPartial('investigator') } },
+      tabs: { sheet: { tabs: [{ id: 'investigator', group: 'sheet', label: 'Investigator.Investigator' }] } }
+    }
+  },
+  therapist: {
+    label: 'Therapist.ActorSheetTherapist',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // The Technique Die works like a warrior's deed die but fuels therapy
+      // checks (1d20 + Personality + technique die), not attacks; rolled per
+      // therapeutic technique. Rollable field; label pinned in defaults.
+      schema.skills.fields.techniqueDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Therapist.TechniqueDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Therapist',
+      localize: { 'class.className': 'Therapist.Therapist' },
+      literal: {
+        'config.showSkills': true,
+        'config.attackBonusMode': 'flat',
+        'skills.techniqueDie.label': 'Therapist.TechniqueDie'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), therapist: { id: 'therapist', template: classPartial('therapist') } },
+      tabs: { sheet: { tabs: [{ id: 'therapist', group: 'sheet', label: 'Therapist.Therapist' }] } }
+    }
+  },
+  taurune: {
+    label: 'Taurune.ActorSheetTaurune',
+    sheetHeight: 640,
+    mixin (schema) {
+      const f = foundry.data.fields
+      // A bovine warrior-race with a Mighty Deed of Arms: the deed die drives
+      // attack, damage and Mighty Deeds (manual attack bonus). Shared deedDie
+      // field; label pinned in defaults.
+      schema.skills.fields.deedDie = new f.SchemaField({
+        label: new f.StringField({ initial: 'Taurune.DeedDie' }),
+        die: new f.StringField({ initial: '1d3' })
+      })
+    },
+    defaults: {
+      sheetClass: 'Taurune',
+      localize: { 'class.className': 'Taurune.Taurune' },
+      enrichHtml: { 'class.mightyDeedsLink': 'DCC.MightyDeedsLink' },
+      literal: {
+        'config.showSkills': true,
+        'config.attackBonusMode': 'manual',
+        'skills.deedDie.label': 'Taurune.DeedDie'
+      }
+    },
+    sheetPart: {
+      parts: { ...commonParts(), taurune: { id: 'taurune', template: classPartial('taurune') } },
+      tabs: { sheet: { tabs: [{ id: 'taurune', group: 'sheet', label: 'Taurune.Taurune' }] } }
+    }
   }
 }
 

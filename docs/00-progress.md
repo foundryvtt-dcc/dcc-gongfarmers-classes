@@ -11,9 +11,9 @@ Implement every playable PC class (and race-as-class) from the Gongfarmer's
 Almanac collections (2015–2025) as DCC-system Foundry classes, each with a
 level 1–10 progression pack, a class sheet tab, and live E2E coverage.
 
-## Status: 47 / ~57 implemented
+## Status: 51 / ~57 implemented
 
-### Done & E2E-verified (47)
+### Done & E2E-verified (51)
 - **2015 V1:** Assassin, Dervish, Luchador, Sword Monger
 - **2020:** Martial Grandmaster, Peasant, Barbearian, Heavenly Hitman, Human,
   Fowl Summoner, Tarantino Elf, Priest of the Old Father, Arcane Warrior,
@@ -31,9 +31,52 @@ level 1–10 progression pack, a class sheet tab, and live E2E coverage.
   (`children-of-the-wild`), Godling, Fater
 - **2021 (V1, V3, V4, V6):** Supernatural Model (V1), Aetherian Warcat (V3),
   Gnome (`gnome-gfa`, V4), Sin Eater of the Shudders (V6)
+- **2024 (V5, V6):** Chimeraman (V5), Investigator (V5), Therapist (V5),
+  Taurune (V6)
 
 The DCC-native portions of the 2020, 2016, 2017, 2018, and 2019 collections are
-complete, as are the buildable classes of the 2021 collection.
+complete, as are the buildable classes of the 2021 and 2024 collections.
+
+#### Notes from the 2024 build
+- **Chimeraman** (V5, Greg Setliff) is a chimeric **race** (HD 1d10, flat
+  attack). It gains a chimeric-head-only **second action die** earlier than most
+  (from level 2, growing per the table) and carries dual crit tables — table **M**
+  for chimeric-head attacks, III→IV→V for everything else; the chart stores the
+  general weapon table and the head-attack table M is described in notes. New
+  display-only field `secondClassLevel` tracks the cap on the level-3 "secondary
+  class." Head attacks, traits, and the creation tables are notes. No title table
+  in source — titles are module-supplied (uniform across alignments).
+- **Investigator** (V5, Stuart C. Killian) is a thief-adjacent **skill class**
+  (HD 1d7, flat attack). Its **Expertise Die** (d4→d20, rollable) is added to
+  every tactical roll (Action Die + Expertise + Luck); the display-only `tactics`
+  column shows tactics known by tier ("T1 / T2 / T3"). The three tactic tiers are
+  notes. Alignment-varying titles given for levels 1–4; 5–10 module-supplied.
+- **Therapist** (V5, Matt Pelfrey) is a **skill class** (HD 1d6, flat attack,
+  crit table I) whose **Technique Die** works like a warrior's deed die but fuels
+  *therapy checks* (1d20 + Personality + technique die), NOT attacks — so it keeps
+  `attackBonusMode: flat` and the technique die is a separate rollable field
+  (d3→d8, then 1d10+1…1d10+4). The per-technique skill bonuses (which vary by the
+  Healer/Success-Coach/Cult-Leader alignment paths) and the post-adventure trauma
+  rules are notes. Alignment titles given 1–5; 6–10 module-supplied.
+- **Taurune** (V6, Aaron Wolk) is a bovine warrior-**race** with a **Mighty Deed
+  of Arms** — the Goat'o'war / Aetherian-Warcat pattern: `attackBonusMode: manual`,
+  chart `attackBonus +0`, shared `deedDie` field (1d3→1d6+3), `mightyDeedsLink`
+  (the deed die IS used for Mighty Deeds). HD 1d12, growing 2nd/3rd action die.
+  Soulburn, Building the Path, Fell End, Horned Fury, Bellows, and Labyrinthine
+  Cunning are notes. Alignment titles given 1–5; 6–10 module-supplied.
+- **Excluded — Tommyknocker** (V5, Justin Davis): "Dark Inheritances," a set of
+  Weird Frontiers **mien/power options** (Mummy, Vampyire, …) bolted onto the
+  existing WF tommyknocker — no HD / saves / crit / level table. Same rationale as
+  Enmascarado.
+- **Excluded — Adventurer** (V5, Max Moon): the "Master of None" has **no fixed
+  progression of its own** — each level it gains the level-1 benefits of a randomly
+  rolled core class, so its chart literally reads "Per Class" for levels 2–5 and
+  "retire" at level 6 (only levels 1 and 7–10 give concrete numbers). Not faithfully
+  representable as a static level pack; excluded by user decision (2026-06-19).
+- **Source-PDF note (2024):** only the combined **`Gongfarmers Almanac 2024
+  Collection.pdf`** is supplied (no per-volume PDFs); it has a clean text layer
+  (`pdftotext -layout`). Classes live in Vol 5 (Monsters, Classes & Rules) and
+  Vol 6 (Rules, Items, Classes & Adventures).
 
 #### Notes from the 2021 build
 - **Aetherian Warcat** (V3, Dan Steeby) is a warrior-style **deed-die** race-class
@@ -192,6 +235,11 @@ is the exception.)
   not a leveled PC class; orcs/half-orcs reduced below Int/Per 3 become these
 - Enmascarado (2021 V1) — a mask subsystem (Paths, à-la-carte mask powers,
   Lucha de Apuestas) for the Weird Frontiers luchador; no level 1–10 table
+- Tommyknocker (2024 V5) — "Dark Inheritances," Weird Frontiers mien/power
+  options (Mummy, Vampyire, …) for the WF tommyknocker; no level 1–10 table
+- Adventurer (2024 V5) — "Master of None": no fixed progression of its own,
+  gains the level-1 benefits of a randomly rolled core class each level (chart
+  reads "Per Class" for levels 2–5, "retire" at 6); not statically representable
 
 ### Deferred — incomplete source data
 - Street Rat (2021 V1) — a complete class concept (HD 1d7, skullduggery deed
@@ -208,12 +256,12 @@ is the exception.)
   (2026-06-19): keep this module DCC-native only — defer the MCC quartet** to a
   future dedicated MCC effort rather than mixing systems here.
 
-### Pending (~10)
-- **2024 (6), 2025 (4)** —
+### Pending (~4)
+- **2025 (4)** —
   see CLASS_INVENTORY.md for the per-class list, types, and build flags.
 
-Build order: 2020 + 2016 + 2017 + 2018 + 2019 + 2021 done (DCC-native);
-next 2024 → 2025.
+Build order: 2020 + 2016 + 2017 + 2018 + 2019 + 2021 + 2024 done (DCC-native);
+next 2025 (the last supplied collection).
 
 ## How a class is added (the pattern)
 1. `assets/json/<id>-combined-chart.json` — authoritative level 1–10 data

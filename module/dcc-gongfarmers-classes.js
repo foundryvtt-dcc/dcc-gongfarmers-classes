@@ -47,6 +47,10 @@ import * as AetherianWarcatSheets from './actor-sheets-aetherian-warcat.js'
 import * as GnomeGfaSheets from './actor-sheets-gnome-gfa.js'
 import * as SinEaterSheets from './actor-sheets-sin-eater-of-the-shudders.js'
 import * as SupernaturalModelSheets from './actor-sheets-supernatural-model.js'
+import * as ChimeramanSheets from './actor-sheets-chimeraman.js'
+import * as InvestigatorSheets from './actor-sheets-investigator.js'
+import * as TherapistSheets from './actor-sheets-therapist.js'
+import * as TauruneSheets from './actor-sheets-taurune.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
 import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
@@ -101,7 +105,11 @@ const GONGFARMERS_SHEETS = [
   { sheet: AetherianWarcatSheets.ActorSheetAetherianWarcat, scope: 'dcc-gongfarmers-classes-aetherian-warcat', label: 'AetherianWarcat.ActorSheetAetherianWarcat' },
   { sheet: GnomeGfaSheets.ActorSheetGnomeGfa, scope: 'dcc-gongfarmers-classes-gnome-gfa', label: 'Gnome.ActorSheetGnomeGfa' },
   { sheet: SinEaterSheets.ActorSheetSinEaterOfTheShudders, scope: 'dcc-gongfarmers-classes-sin-eater-of-the-shudders', label: 'SinEater.ActorSheetSinEaterOfTheShudders' },
-  { sheet: SupernaturalModelSheets.ActorSheetSupernaturalModel, scope: 'dcc-gongfarmers-classes-supernatural-model', label: 'SupernaturalModel.ActorSheetSupernaturalModel' }
+  { sheet: SupernaturalModelSheets.ActorSheetSupernaturalModel, scope: 'dcc-gongfarmers-classes-supernatural-model', label: 'SupernaturalModel.ActorSheetSupernaturalModel' },
+  { sheet: ChimeramanSheets.ActorSheetChimeraman, scope: 'dcc-gongfarmers-classes-chimeraman', label: 'Chimeraman.ActorSheetChimeraman' },
+  { sheet: InvestigatorSheets.ActorSheetInvestigator, scope: 'dcc-gongfarmers-classes-investigator', label: 'Investigator.ActorSheetInvestigator' },
+  { sheet: TherapistSheets.ActorSheetTherapist, scope: 'dcc-gongfarmers-classes-therapist', label: 'Therapist.ActorSheetTherapist' },
+  { sheet: TauruneSheets.ActorSheetTaurune, scope: 'dcc-gongfarmers-classes-taurune', label: 'Taurune.ActorSheetTaurune' }
 ]
 
 /* -------------------------------------------- */

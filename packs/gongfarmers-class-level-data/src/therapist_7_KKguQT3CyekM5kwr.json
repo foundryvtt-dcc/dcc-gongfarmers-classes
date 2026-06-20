@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "therapist",
+    "level": "7",
+    "levelData": "system.details.attackBonus=+4\nsystem.attributes.critical.die=1d12\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20,1d14\nsystem.attributes.hitDice.value=1d6\nsystem.skills.techniqueDie.die=1d10+1\nsystem.saves.ref.classBonus=+3\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+4\n",
+    "levelDataLawful": "system.details.title.value=Mind-Healer\n",
+    "levelDataNeutral": "system.details.title.value=Peak Guide\n",
+    "levelDataChaotic": "system.details.title.value=Visionary\n"
+  },
+  "name": "therapist-7",
+  "type": "level",
+  "folder": "sZEdfljLL84KIFPX",
+  "_id": "KKguQT3CyekM5kwr",
+  "effects": [],
+  "sort": 700,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!KKguQT3CyekM5kwr"
+}

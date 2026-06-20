@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "chimeraman",
+    "level": "3",
+    "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d12\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20,1d14\nsystem.attributes.hitDice.value=1d10\nsystem.skills.secondClassLevel.value=1\nsystem.saves.ref.classBonus=+2\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+2\n",
+    "levelDataLawful": "system.details.title.value=Stray\n",
+    "levelDataNeutral": "system.details.title.value=Stray\n",
+    "levelDataChaotic": "system.details.title.value=Stray\n"
+  },
+  "name": "chimeraman-3",
+  "type": "level",
+  "folder": "AuCRBGwoCF8qT1EJ",
+  "_id": "Z8So2JVAK9RTuJHI",
+  "effects": [],
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!Z8So2JVAK9RTuJHI"
+}

@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "therapist",
+    "level": "2",
+    "levelData": "system.details.attackBonus=+1\nsystem.attributes.critical.die=1d6\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.skills.techniqueDie.die=1d4\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+0\nsystem.saves.wil.classBonus=+1\n",
+    "levelDataLawful": "system.details.title.value=Clinician\n",
+    "levelDataNeutral": "system.details.title.value=Motivator\n",
+    "levelDataChaotic": "system.details.title.value=Guide\n"
+  },
+  "name": "therapist-2",
+  "type": "level",
+  "folder": "sZEdfljLL84KIFPX",
+  "_id": "GH7hufhHlvWPdgym",
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!GH7hufhHlvWPdgym"
+}

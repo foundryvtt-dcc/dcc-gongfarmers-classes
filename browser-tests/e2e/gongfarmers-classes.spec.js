@@ -74,7 +74,11 @@ const CLASSES = [
   { id: 'aetherian-warcat', sheetClass: 'Aetherian-Warcat', flag: 'dcc-gongfarmers-classes-aetherian-warcat.ActorSheetAetherianWarcat', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
   { id: 'gnome-gfa', sheetClass: 'Gnome-Gfa', flag: 'dcc-gongfarmers-classes-gnome-gfa.ActorSheetGnomeGfa', dieField: 'system.skills.trickDie.die', dieAtL1: true, extraTab: 'wizardSpells', alignment: 'n' },
   { id: 'sin-eater-of-the-shudders', sheetClass: 'Sin-Eater-Of-The-Shudders', flag: 'dcc-gongfarmers-classes-sin-eater-of-the-shudders.ActorSheetSinEaterOfTheShudders', dieField: null, dieAtL1: false, extraTab: 'clericSpells', alignment: 'n' },
-  { id: 'supernatural-model', sheetClass: 'Supernatural-Model', flag: 'dcc-gongfarmers-classes-supernatural-model.ActorSheetSupernaturalModel', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'c' }
+  { id: 'supernatural-model', sheetClass: 'Supernatural-Model', flag: 'dcc-gongfarmers-classes-supernatural-model.ActorSheetSupernaturalModel', dieField: null, dieAtL1: false, extraTab: 'wizardSpells', alignment: 'c' },
+  { id: 'chimeraman', sheetClass: 'Chimeraman', flag: 'dcc-gongfarmers-classes-chimeraman.ActorSheetChimeraman', dieField: null, dieAtL1: false, extraTab: null, alignment: 'c' },
+  { id: 'investigator', sheetClass: 'Investigator', flag: 'dcc-gongfarmers-classes-investigator.ActorSheetInvestigator', dieField: 'system.skills.expertiseDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'therapist', sheetClass: 'Therapist', flag: 'dcc-gongfarmers-classes-therapist.ActorSheetTherapist', dieField: 'system.skills.techniqueDie.die', dieAtL1: true, extraTab: null, alignment: 'n' },
+  { id: 'taurune', sheetClass: 'Taurune', flag: 'dcc-gongfarmers-classes-taurune.ActorSheetTaurune', dieField: 'system.skills.deedDie.die', dieAtL1: true, extraTab: null, alignment: 'l' }
 ]
 
 const consoleErrors = []

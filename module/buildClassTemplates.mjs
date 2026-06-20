@@ -296,6 +296,33 @@ const META = {
     abilities: ['WeaponTraining', 'Magic', 'Spellburn', 'CasterLevel', 'SupernaturalPatrons', 'Clapback', 'RefinedSensibilities', 'ActionDice'],
     tableDice: [{ header: 'Spells Known', key: 'system.skills.knownSpells.value' }, { header: 'Max Spell Lvl', key: 'system.skills.maxSpellLevel.value' }],
     caster: 'SupernaturalModel.CasterNote'
+  },
+
+  // ---- 2024 Collection ----
+
+  chimeraman: {
+    prefix: 'Chimeraman',
+    dice: [],
+    abilities: ['HitPoints', 'NeverUnarmed', 'HeadAttacks', 'ActionDice', 'CritTables', 'SecondaryClass', 'WeaponTraining', 'CustomGear', 'Alignment', 'Luck', 'Languages'],
+    tableDice: [{ header: 'Max 2nd Class Lvl', key: 'system.skills.secondClassLevel.value' }]
+  },
+  investigator: {
+    prefix: 'Investigator',
+    dice: [{ labelKey: 'Investigator.ExpertiseDie', field: 'system.skills.expertiseDie.die', roll: true }],
+    abilities: ['HitPoints', 'WeaponTraining', 'TacticalRoll', 'CatastrophicFailure', 'Tactics', 'ExpertiseDieAbility', 'ThiefTactics', 'Alignment'],
+    tableDice: [{ header: 'Expertise Die', key: 'system.skills.expertiseDie.die' }, { header: 'Tactics (T1/T2/T3)', key: 'system.skills.tactics.value' }]
+  },
+  therapist: {
+    prefix: 'Therapist',
+    dice: [{ labelKey: 'Therapist.TechniqueDie', field: 'system.skills.techniqueDie.die', roll: true }],
+    abilities: ['HitPoints', 'WeaponTraining', 'TechniqueDieAbility', 'TherapyCheck', 'Techniques', 'AlignmentPaths', 'PostAdventureTrauma'],
+    tableDice: [{ header: 'Technique Die', key: 'system.skills.techniqueDie.die' }]
+  },
+  taurune: {
+    prefix: 'Taurune',
+    dice: [{ labelKey: 'Taurune.DeedDie', field: 'system.skills.deedDie.die', roll: true }],
+    abilities: ['HitPoints', 'WeaponTraining', 'LeatheryHide', 'MightyDeed', 'DeedDieAbility', 'HornedFury', 'Bellows', 'LabyrinthineCunning', 'Soulburn', 'BuildingThePath', 'Infravision', 'Languages'],
+    tableDice: [{ header: 'Deed Die', key: 'system.skills.deedDie.die' }]
   }
 }
 

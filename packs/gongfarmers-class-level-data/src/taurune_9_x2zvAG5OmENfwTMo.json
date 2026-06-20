@@ -1,0 +1,33 @@
+{
+  "img": "modules/dcc-core-book/assets/svg/game-icons-net/up-card.svg",
+  "system": {
+    "class": "taurune",
+    "level": "9",
+    "levelData": "system.details.attackBonus=+0\nsystem.attributes.critical.die=2d20\nsystem.attributes.critical.table=V\nsystem.attributes.actionDice.value=1d20,1d20\nsystem.attributes.hitDice.value=1d12\nsystem.skills.deedDie.die=1d6+2\nsystem.saves.ref.classBonus=+5\nsystem.saves.frt.classBonus=+5\nsystem.saves.wil.classBonus=+4\n",
+    "levelDataLawful": "system.details.title.value=Lawkeeper\n",
+    "levelDataNeutral": "system.details.title.value=Pathmaster\n",
+    "levelDataChaotic": "system.details.title.value=Doom-Horn\n"
+  },
+  "name": "taurune-9",
+  "type": "level",
+  "folder": "SREPPaYOv1xbowCp",
+  "_id": "x2zvAG5OmENfwTMo",
+  "effects": [],
+  "sort": 900,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!items!x2zvAG5OmENfwTMo"
+}
