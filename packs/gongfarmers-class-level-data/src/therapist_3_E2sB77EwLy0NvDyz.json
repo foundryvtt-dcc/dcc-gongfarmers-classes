@@ -4,7 +4,7 @@
     "class": "therapist",
     "level": "3",
     "levelData": "system.details.attackBonus=+2\nsystem.attributes.critical.die=1d8\nsystem.attributes.critical.table=I\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.skills.techniqueDie.die=1d5\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+2\n",
-    "levelDataLawful": "system.details.title.value=Councilor\n",
+    "levelDataLawful": "system.details.title.value=Counselor\n",
     "levelDataNeutral": "system.details.title.value=Trainer\n",
     "levelDataChaotic": "system.details.title.value=Mentor\n"
   },

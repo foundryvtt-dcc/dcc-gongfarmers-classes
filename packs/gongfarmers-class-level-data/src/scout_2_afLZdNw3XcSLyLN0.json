@@ -3,7 +3,7 @@
   "system": {
     "class": "scout",
     "level": "2",
-    "levelData": "system.details.attackBonus=+1\nsystem.attributes.critical.die=1d14\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.class.luckDie=d4\nsystem.skills.sneakSilently.value=+3\nsystem.skills.climbSheerSurfaces.value=+5\nsystem.skills.findTrap.value=+5\nsystem.skills.disableTrap.value=+5\nsystem.skills.handlePoison.value=+1\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+2\nsystem.saves.wil.classBonus=+0\n",
+    "levelData": "system.details.attackBonus=+1\nsystem.attributes.critical.die=1d14\nsystem.attributes.critical.table=III\nsystem.attributes.actionDice.value=1d20\nsystem.attributes.hitDice.value=1d6\nsystem.class.luckDie=d4\nsystem.skills.sneakSilently.value=+3\nsystem.skills.climbSheerSurfaces.value=+5\nsystem.skills.findTrap.value=+5\nsystem.skills.disableTrap.value=+5\nsystem.skills.handlePoison.value=+1\nsystem.saves.ref.classBonus=+1\nsystem.saves.frt.classBonus=+1\nsystem.saves.wil.classBonus=+0\n",
     "levelDataLawful": "system.details.title.value=Runner\n",
     "levelDataNeutral": "system.details.title.value=Wanderer\n",
     "levelDataChaotic": "system.details.title.value=Brigand\n"
