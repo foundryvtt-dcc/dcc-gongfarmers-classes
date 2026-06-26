@@ -1,6 +1,6 @@
 {
   "name": "dcc-gongfarmers-classes",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Player classes from the Gongfarmer's Almanac 2015 Collection for Dungeon Crawl Classics",
   "scripts": {
     "format": "standard --fix",
