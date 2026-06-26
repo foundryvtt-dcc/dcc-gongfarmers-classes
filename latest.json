@@ -58,7 +58,7 @@
     }
   ],
   "url": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes",
-  "manifest": "https://raw.githubusercontent.com/foundryvtt-dcc/dcc-gongfarmers-classes/main/latest.json",
+  "manifest": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.1.0/module.json",
   "download": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.1.0/dcc-gongfarmers-classes.zip",
   "license": "LICENSE.txt",
   "packs": [
@@ -68,6 +68,13 @@
       "path": "packs/gongfarmers-class-level-data",
       "system": "dcc",
       "type": "Item"
+    },
+    {
+      "name": "gongfarmers-almanac-reference",
+      "label": "Gongfarmer's Almanac — About & Credits",
+      "path": "packs/gongfarmers-almanac-reference",
+      "system": "dcc",
+      "type": "JournalEntry"
     }
   ]
 }

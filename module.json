@@ -58,7 +58,7 @@
     }
   ],
   "url": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes",
-  "manifest": "https://raw.githubusercontent.com/foundryvtt-dcc/dcc-gongfarmers-classes/main/latest.json",
+  "manifest": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.1.0/module.json",
   "download": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.1.0/dcc-gongfarmers-classes.zip",
   "license": "LICENSE.txt",
   "packs": [
