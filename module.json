@@ -2,7 +2,7 @@
   "id": "dcc-gongfarmers-classes",
   "title": "DCC Gongfarmer's Almanac Classes",
   "description": "Player classes from the Gongfarmer's Almanac Collections for Dungeon Crawl Classics in FoundryVTT. From 2015: Assassin, Dervish, Luchador, Sword Monger. From 2020: Martial Grandmaster (more in progress).",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14",
@@ -58,8 +58,8 @@
     }
   ],
   "url": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes",
-  "manifest": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.1.2/module.json",
-  "download": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.1.2/dcc-gongfarmers-classes.zip",
+  "manifest": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.2.0/module.json",
+  "download": "https://github.com/foundryvtt-dcc/dcc-gongfarmers-classes/releases/download/v0.2.0/dcc-gongfarmers-classes.zip",
   "license": "LICENSE.txt",
   "packs": [
     {
