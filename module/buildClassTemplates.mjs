@@ -58,7 +58,7 @@ const META = {
   },
   'priest-of-the-old-father': {
     prefix: 'PriestOldFather',
-    dice: [],
+    dice: [{ labelKey: 'PriestOldFather.HeightenedSenses', field: 'system.skills.detectSecretDoors.value', roll: true }],
     abilities: ['Magic', 'LayOnHands', 'Patrons', 'Luck', 'HeightenedSenses', 'ElfTraits'],
     tableDice: [],
     caster: 'PriestOldFather.CasterNote'
