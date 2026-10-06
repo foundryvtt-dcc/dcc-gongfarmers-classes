@@ -1793,6 +1793,10 @@ export function registerGongfarmersClasses (api) {
     api.registerClassDefaults(classId, def.defaults)
     api.registerSheetPart(classId, def.sheetPart)
     api.registerHomebrewClassForProgressionLoad(classId, classId)
-    if (def.traits) api.registerClassTraits(classId, def.traits)
+    // `registerClassTraits` ships in DCC 0.70.61; skip it on older systems
+    // rather than throwing and leaving the remaining classes unregistered.
+    if (def.traits && typeof api.registerClassTraits === 'function') {
+      api.registerClassTraits(classId, def.traits)
+    }
   }
 }

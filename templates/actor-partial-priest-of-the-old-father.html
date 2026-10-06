@@ -6,7 +6,10 @@
     <div class="grid-col-span-12 dark-border">
       <div class="box-title">{{localize "PriestOldFather.Abilities"}}</div>
       <div class="grid-tpl-two grid-row-gap-8 p-5">
-
+        <div class="grid-tpl-max-25" data-skill="detectSecretDoors">
+          <label class="skill-check rollable" for="system.skills.detectSecretDoors.value" data-action="rollSkillCheck" data-drag="true" data-drag-action="skill" title="{{localize 'DCC.RollSkillCheckHint'}}">{{localize "PriestOldFather.HeightenedSenses"}}</label>
+          <input type="text" id="system.skills.detectSecretDoors.value" name="system.skills.detectSecretDoors.value" value="{{system.skills.detectSecretDoors.value}}" data-dtype="String"/>
+        </div>
         <ul class="class-note grid-col-span-2 data-font">
           <li>{{localize "PriestOldFather.Magic"}}
             <ul class="class-note flexcol"><li>{{localize "PriestOldFather.MagicDesc"}}</li></ul>
