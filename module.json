@@ -20,8 +20,8 @@
         "id": "dcc",
         "type": "system",
         "compatibility": {
-          "minimum": "0.70.0",
-          "verified": "0.70.0"
+          "minimum": "0.70.61",
+          "verified": "0.70.61"
         }
       }
     ]

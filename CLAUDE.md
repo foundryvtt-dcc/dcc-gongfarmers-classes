@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A Foundry VTT module that adds player classes from **The Gongfarmer's Almanac
 2015 Collection** (Volume 1: Men & Magic) to the Dungeon Crawl Classics (DCC)
-RPG system. This module depends on the `dcc` system (v0.70.0+, ApplicationV2 /
+RPG system. This module depends on the `dcc` system (v0.70.61+, ApplicationV2 /
 V14) and registers each class through the DCC **extension API**
 (`game.dcc.*`) — it does NOT use the legacy `Actors.registerSheet` /
 `definePlayerSchema` patterns.

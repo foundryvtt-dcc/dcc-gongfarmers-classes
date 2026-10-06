@@ -21,6 +21,10 @@
  *     teaches the DCC level-data-pack loader to assemble a lib
  *     `ClassProgression` from the `{itemPrefix}-{level}` items in the
  *     pack registered via `dcc.registerLevelDataPack`.
+ *   - `registerClassTraits(classId, traits)` — only for classes with a
+ *     `traits` entry: core-class rules the class borrows (cleric idol
+ *     magic, halfling two-weapon fighting, elf secret doors, thief Luck
+ *     recovery). Needs DCC 0.70.61+.
  *
  * `classId` is the lowercase canonical identifier (`actor.classId`
  * resolves `system.details.sheetClass.toLowerCase()`), matching the
@@ -264,6 +268,7 @@ export const GONGFARMERS_CLASSES = {
   'heavenly-hitman': {
     label: 'HeavenlyHitman.ActorSheetHeavenlyHitman',
     sheetHeight: 640,
+    traits: { idolMagic: true },
     mixin () {
       // Casts as a cleric and uses the thief skill block — both already
       // contributed to the shared Player schema by the DCC cleric/thief
@@ -384,6 +389,7 @@ export const GONGFARMERS_CLASSES = {
   'priest-of-the-old-father': {
     label: 'PriestOldFather.ActorSheetPriestOldFather',
     sheetHeight: 640,
+    traits: { idolMagic: true, detectSecretDoorsBonus: '+4' },
     mixin () {},
     defaults: {
       sheetClass: 'Priest-Of-The-Old-Father',
@@ -585,6 +591,7 @@ export const GONGFARMERS_CLASSES = {
   'hot-dog-suit': {
     label: 'HotDogSuit.ActorSheetHotDogSuit',
     sheetHeight: 635,
+    traits: { luckRecovers: true },
     mixin () {
       // A four-level joke class with no class-specific rollable die; its
       // abilities (Baffle, Pink Paper Flyers, the Bastich Luck tricks) are
@@ -649,6 +656,7 @@ export const GONGFARMERS_CLASSES = {
   'halfling-hucker': {
     label: 'HalflingHucker.ActorSheetHalflingHucker',
     sheetHeight: 640,
+    traits: { twoWeaponMinAgility: 16, twoWeaponCritOnMax: true, twoWeaponFumbleBothOnes: true, luckRecovers: true },
     mixin () {
       // Luck Die (spent with a Luck point to add to thrown-weapon attack and
       // damage) is the DCC built-in `class.luckDie`; Sneak & Hide comes from
@@ -710,6 +718,7 @@ export const GONGFARMERS_CLASSES = {
   'dwarf-sapper': {
     label: 'DwarfSapper.ActorSheetDwarfSapper',
     sheetHeight: 640,
+    traits: { luckRecovers: true },
     mixin () {
       // A dwarf skirmisher with backstab + a thief skill set + a luck die,
       // all DCC built-ins (`class.backstab`, `class.luckDie`, the thief skill
@@ -809,6 +818,7 @@ export const GONGFARMERS_CLASSES = {
   'paladin-of-gambrinus': {
     label: 'PaladinGambrinus.ActorSheetPaladinGambrinus',
     sheetHeight: 640,
+    traits: { idolMagic: true },
     mixin (schema) {
       const f = foundry.data.fields
       // Smite die: added to attack and damage against the unholy (in place of
@@ -851,6 +861,7 @@ export const GONGFARMERS_CLASSES = {
   'bloody-hound': {
     label: 'BloodyHound.ActorSheetBloodyHound',
     sheetHeight: 640,
+    traits: { luckRecovers: true },
     mixin () {
       // A full-size "halfling" P.I.: uses the halfling table with two 1d16
       // action dice (Multi-Tasker). Sneak & Hide comes from the DCC halfling
@@ -876,6 +887,7 @@ export const GONGFARMERS_CLASSES = {
   'bardic-rocker': {
     label: 'BardicRocker.ActorSheetBardicRocker',
     sheetHeight: 640,
+    traits: { idolMagic: true },
     mixin (schema) {
       const f = foundry.data.fields
       // Performance die: rolled to inspire allies (1d20 + performance die +
@@ -1017,6 +1029,7 @@ export const GONGFARMERS_CLASSES = {
   gongfarmer: {
     label: 'Gongfarmer.ActorSheetGongfarmer',
     sheetHeight: 635,
+    traits: { luckRecovers: true },
     mixin () {
       // No class-specific rollable die; the gongfarmer's abilities (Luck of the
       // Pail, Extreme Fortitude, Night Soil) are descriptive notes.
@@ -1135,6 +1148,7 @@ export const GONGFARMERS_CLASSES = {
   'quantum-traveler': {
     label: 'QuantumTraveler.ActorSheetQuantumTraveler',
     sheetHeight: 640,
+    traits: { luckRecovers: true },
     mixin () {
       // Luck die (`class.luckDie`), the thief skill block, and Luck & Wits are
       // DCC built-ins on the shared Player schema (the traveler uses them as a
@@ -1158,6 +1172,7 @@ export const GONGFARMERS_CLASSES = {
   sage: {
     label: 'Sage.ActorSheetSage',
     sheetHeight: 640,
+    traits: { luckRecovers: true },
     mixin (schema) {
       const f = foundry.data.fields
       // Curse die: Luck spent to inflict a penalty die on a foe; grows by level.
@@ -1200,6 +1215,7 @@ export const GONGFARMERS_CLASSES = {
   scout: {
     label: 'Scout.ActorSheetScout',
     sheetHeight: 640,
+    traits: { luckRecovers: true },
     mixin () {
       // A thief variant: Luck die (`class.luckDie`) and the thief skill block
       // (sneak silently, climb sheer surfaces, find/disable trap, handle poison)
@@ -1249,6 +1265,7 @@ export const GONGFARMERS_CLASSES = {
   'anti-cleric': {
     label: 'AntiCleric.ActorSheetAntiCleric',
     sheetHeight: 640,
+    traits: { idolMagic: true },
     mixin () {
       // No class-specific rollable die. The anti-cleric is a cleric in all
       // mechanics (attack, crit, action dice, saves, hit die, spells known);
@@ -1320,6 +1337,7 @@ export const GONGFARMERS_CLASSES = {
   'children-of-the-wild': {
     label: 'ChildrenOfTheWild.ActorSheetChildrenOfTheWild',
     sheetHeight: 640,
+    traits: { luckRecovers: true },
     mixin (schema) {
       const f = foundry.data.fields
       // The faerie casts as a hedge-magician wizard (no spellburn/corruption);
@@ -1775,5 +1793,6 @@ export function registerGongfarmersClasses (api) {
     api.registerClassDefaults(classId, def.defaults)
     api.registerSheetPart(classId, def.sheetPart)
     api.registerHomebrewClassForProgressionLoad(classId, classId)
+    if (def.traits) api.registerClassTraits(classId, def.traits)
   }
 }
