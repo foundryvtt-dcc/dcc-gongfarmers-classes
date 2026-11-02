@@ -24,7 +24,7 @@
  *   - `registerClassTraits(classId, traits)` — only for classes with a
  *     `traits` entry: core-class rules the class borrows (cleric idol
  *     magic, halfling two-weapon fighting, elf secret doors, thief Luck
- *     recovery). Needs DCC 0.70.61+.
+ *     recovery, disapproval die). Needs DCC 0.70.72+.
  *
  * `classId` is the lowercase canonical identifier (`actor.classId`
  * resolves `system.details.sheetClass.toLowerCase()`), matching the
@@ -37,6 +37,12 @@
  */
 
 const MODULE_ID = 'dcc-gongfarmers-classes'
+
+/** The RollTable pack registered with `dcc.registerDisapprovalPack`. */
+export const DISAPPROVAL_PACK = `${MODULE_ID}.gongfarmers-disapproval`
+
+/** The Anti-Cleric's `system.class.disapprovalTable` path (`{pack}.{table name}`). */
+export const CATASTROPHE_TABLE = `${DISAPPROVAL_PACK}.Catastrophe!`
 
 /** Template path for a class partial. */
 function classPartial (name) {
@@ -1265,11 +1271,12 @@ export const GONGFARMERS_CLASSES = {
   'anti-cleric': {
     label: 'AntiCleric.ActorSheetAntiCleric',
     sheetHeight: 640,
-    traits: { idolMagic: true },
+    traits: { idolMagic: true, disapprovalDie: 'd10', disapprovalIncreasesOnFailure: false },
     mixin () {
       // No class-specific rollable die. The anti-cleric is a cleric in all
       // mechanics (attack, crit, action dice, saves, hit die, spells known);
       // its Power!/Sacrifice/Drain Life/Command Chaos features are notes.
+      // Catastrophe! is automated through the disapproval traits and table.
       // Cleric spell fields come from the DCC cleric mixin on the shared
       // Player schema. Spell check uses Personality (DCC supports int/per/sta).
     },
@@ -1281,6 +1288,7 @@ export const GONGFARMERS_CLASSES = {
         'config.showSkills': true,
         'config.showSpells': true,
         'class.spellCheckAbility': 'per',
+        'class.disapprovalTable': CATASTROPHE_TABLE,
         'config.attackBonusMode': 'flat'
       }
     },

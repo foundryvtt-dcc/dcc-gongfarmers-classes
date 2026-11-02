@@ -34,6 +34,8 @@ const TPL_DIR = path.join(ROOT, 'templates')
  * - tableDice: extra level-table columns pulled from the chart level_info.
  *     {header, key}  (key is the system path in level_info)
  * - caster: optional note string key shown under the table (e.g. spell tab).
+ * - disapprovalRange: true → show the core cleric's disapproval range field,
+ *     for a class whose only other class parts lack it.
  */
 const META = {
   human: {
@@ -240,7 +242,8 @@ const META = {
     dice: [],
     abilities: ['ClericBaseline', 'ChoosingAGod', 'WeaponArmor', 'CasterLevel', 'Power', 'Catastrophe', 'Sacrifice', 'DrainLife', 'LayOnHands', 'CommandChaos'],
     tableDice: [],
-    caster: 'AntiCleric.CasterNote'
+    caster: 'AntiCleric.CasterNote',
+    disapprovalRange: true
   },
   cambion: {
     prefix: 'Cambion',
@@ -393,6 +396,22 @@ function buildDice (meta, tabId) {
   }).join('\n')
 }
 
+/** Same field and click-to-raise label as the core cleric tab. */
+const DISAPPROVAL_RANGE_FIELD = `        <div class="grid-col-span-2 grid-tpl-max-auto grid-col-gap-5">
+          <label class="disapproval-range rollable" for="system.class.disapproval" title="{{localize 'DCC.DisapprovalRangeHint'}}" data-drag="true" data-action="applyDisapproval" data-drag-action="disapprovalRange">
+            {{localize "DCC.DisapprovalRange"}}
+          </label>
+          <select class="number" name="system.class.disapproval" id="system.class.disapproval">
+            {{selectOptions config.disapprovalRanges selected=system.class.disapproval localize=true}}
+          </select>
+        </div>`
+
+function buildClassFields (meta, tabId) {
+  return [buildDice(meta, tabId), meta.disapprovalRange ? DISAPPROVAL_RANGE_FIELD : '']
+    .filter(Boolean)
+    .join('\n')
+}
+
 function buildAbilities (meta) {
   return meta.abilities.map(a =>
     `          <li>{{localize "${meta.prefix}.${a}"}}
@@ -413,7 +432,7 @@ for (const [tabId, meta] of Object.entries(META)) {
     <div class="grid-col-span-12 dark-border">
       <div class="box-title">{{localize "${meta.prefix}.Abilities"}}</div>
       <div class="grid-tpl-two grid-row-gap-8 p-5">
-${buildDice(meta, tabId)}
+${buildClassFields(meta, tabId)}
         <ul class="class-note grid-col-span-2 data-font">
 ${buildAbilities(meta)}
         </ul>

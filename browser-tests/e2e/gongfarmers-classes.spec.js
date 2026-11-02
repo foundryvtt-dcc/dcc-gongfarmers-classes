@@ -145,6 +145,153 @@ test('ships a reference journal crediting every class with the downloads link', 
   expect(out.creditLines).toBe(CLASSES.length)
 })
 
+/**
+ * Run `fn` in the page with every die forced by `CONFIG.Dice.randomUniform` and
+ * cleric automation on, restoring both and removing any chat cards afterwards.
+ * Foundry maps a uniform value `u` on a dN to `ceil((1 - u) * N)`.
+ */
+async function withForcedDice (page, fn, arg) {
+  return page.evaluate(async ({ fnSource, arg }) => {
+    const originalUniform = CONFIG.Dice.randomUniform
+    const originalAutomate = game.settings.get('dcc', 'automateClericDisapproval')
+    const messagesBefore = new Set(game.messages.map(m => m.id))
+    const force = (u) => { CONFIG.Dice.randomUniform = () => u }
+    await game.settings.set('dcc', 'automateClericDisapproval', true)
+    try {
+      // eslint-disable-next-line no-eval -- the body is defined in this spec file
+      return await eval(`(${fnSource})`)({ force, arg })
+    } finally {
+      CONFIG.Dice.randomUniform = originalUniform
+      await game.settings.set('dcc', 'automateClericDisapproval', originalAutomate)
+      const created = game.messages.filter(m => !messagesBefore.has(m.id)).map(m => m.id)
+      if (created.length) await ChatMessage.deleteDocuments(created)
+    }
+  }, { fnSource: fn.toString(), arg })
+}
+
+test.describe('Anti-Cleric Catastrophe!', () => {
+  // ceil((1 - 0.875) * 20) = natural 3 on the d20.
+  const NATURAL_3 = 0.875
+  const ANTI_CLERIC_FLAG = 'dcc-gongfarmers-classes-anti-cleric.ActorSheetAntiCleric'
+
+  test('a new anti-cleric defaults to the shipped Catastrophe! table', async ({ page }) => {
+    const out = await page.evaluate(async (flag) => {
+      const actor = await Actor.create({ name: 'ZZ E2E catastrophe default', type: 'Player', flags: { core: { sheetClass: flag } } })
+      const app = actor.sheet
+      await app.render(true)
+      await new Promise(resolve => setTimeout(resolve, 900))
+      await app.close()
+      const path = actor.system.class.disapprovalTable
+      return {
+        sheetClass: actor.system.details.sheetClass,
+        path,
+        listed: Object.values(CONFIG.DCC.disapprovalTables).some(t => t.path === path),
+        registered: CONFIG.DCC.disapprovalPacks.packs.includes('dcc-gongfarmers-classes.gongfarmers-disapproval')
+      }
+    }, ANTI_CLERIC_FLAG)
+    expect(out.sheetClass).toBe('Anti-Cleric')
+    expect(out.path).toBe('dcc-gongfarmers-classes.gongfarmers-disapproval.Catastrophe!')
+    expect(out.registered, 'pack registered with DCC').toBe(true)
+    expect(out.listed, 'table listed in CONFIG.DCC.disapprovalTables').toBe(true)
+  })
+
+  test('natural 3 rolls 3d10 minus Luck and names the right corruption band', async ({ page }) => {
+    const out = await withForcedDice(page, async ({ force }) => {
+      const actor = await Actor.create({ name: 'ZZ E2E catastrophe bands', type: 'Player' })
+      await actor.update({
+        'system.details.sheetClass': 'Anti-Cleric',
+        'system.class.disapproval': 4,
+        'system.class.disapprovalTable': 'dcc-gongfarmers-classes.gongfarmers-disapproval.Catastrophe!',
+        'system.abilities.lck.value': 16,
+        'system.abilities.lck.max': 16
+      })
+      const luck = actor.system.abilities.lck.mod
+      const rolls = {}
+      // Each d10 lands on 1, 5, then 10: totals of 3, 15, and 30 before Luck.
+      for (const [band, u] of Object.entries({ minor: 0.95, major: 0.5, greater: 0 })) {
+        force(u)
+        const r = await actor.rollDisapproval(3)
+        rolls[band] = { formula: r.formula, roll: r.roll, luckModifier: r.luckModifier, description: r.description }
+      }
+      return { luck, rolls }
+    })
+    expect(out.luck, 'Luck 16 gives a +2 modifier').toBe(2)
+    expect(out.rolls.minor).toMatchObject({ formula: '3d10', roll: 1, luckModifier: 2 })
+    expect(out.rolls.minor.description).toContain('table 5-3')
+    expect(out.rolls.major).toMatchObject({ formula: '3d10', roll: 13, luckModifier: 2 })
+    expect(out.rolls.major.description).toContain('table 5-4')
+    expect(out.rolls.greater).toMatchObject({ formula: '3d10', roll: 28, luckModifier: 2 })
+    expect(out.rolls.greater.description).toContain('table 5-5')
+  })
+
+  test('a failed spell check or Lay on Hands leaves the anti-cleric range unchanged', async ({ page }) => {
+    const out = await withForcedDice(page, async ({ force, arg }) => {
+      const actor = await Actor.create({ name: 'ZZ E2E catastrophe range', type: 'Player' })
+      await actor.update({ 'system.details.sheetClass': 'Anti-Cleric', 'system.class.disapproval': 4 })
+      const disapprovalDice = []
+      const original = actor._onRollDisapproval.bind(actor)
+      actor._onRollDisapproval = (terms, ...rest) => {
+        disapprovalDice.push(terms[0].formula)
+        return original(terms, ...rest)
+      }
+      force(arg.natural3)
+      await actor.rollSpellCheck({ abilityId: 'per' })
+      const afterSpell = actor.system.class.disapproval
+      await actor.rollSkillCheck('layOnHands')
+      return { afterSpell, afterLayOnHands: actor.system.class.disapproval, disapprovalDice }
+    }, { natural3: NATURAL_3 })
+    expect(out.afterSpell).toBe(4)
+    expect(out.afterLayOnHands).toBe(4)
+    expect(out.disapprovalDice, 'each check triggered Catastrophe!').toEqual(['3d10', '3d10'])
+  })
+
+  test('a core cleric still rolls d4s and widens its range on failure', async ({ page }) => {
+    const out = await withForcedDice(page, async ({ force, arg }) => {
+      const actor = await Actor.create({ name: 'ZZ E2E core cleric', type: 'Player' })
+      await actor.update({ 'system.details.sheetClass': 'Cleric', 'system.class.disapproval': 4 })
+      const disapprovalDice = []
+      const original = actor._onRollDisapproval.bind(actor)
+      actor._onRollDisapproval = (terms, ...rest) => {
+        disapprovalDice.push(terms[0].formula)
+        return original(terms, ...rest)
+      }
+      force(arg.natural3)
+      await actor.rollSpellCheck({ abilityId: 'per' })
+      return { range: actor.system.class.disapproval, disapprovalDice }
+    }, { natural3: NATURAL_3 })
+    expect(out.range).toBe(5)
+    expect(out.disapprovalDice).toEqual(['3d4'])
+  })
+
+  test('the class tab shows and edits the disapproval range', async ({ page }) => {
+    const out = await withForcedDice(page, async ({ arg }) => {
+      const actor = await Actor.create({ name: 'ZZ E2E catastrophe range field', type: 'Player', flags: { core: { sheetClass: arg.flag } } })
+      const app = actor.sheet
+      await app.render(true)
+      await new Promise(resolve => setTimeout(resolve, 900))
+      const tab = () => app.element.querySelector('section[data-tab="anti-cleric"]')
+      const select = () => tab().querySelector('select[name="system.class.disapproval"]')
+      const res = { initial: select()?.value }
+
+      select().value = '7'
+      select().dispatchEvent(new Event('change', { bubbles: true }))
+      await new Promise(resolve => setTimeout(resolve, 900))
+      res.afterSelect = actor.system.class.disapproval
+
+      tab().querySelector('label.disapproval-range').click()
+      await new Promise(resolve => setTimeout(resolve, 900))
+      res.afterLabelClick = actor.system.class.disapproval
+      res.rendered = select()?.value
+      await app.close()
+      return res
+    }, { flag: ANTI_CLERIC_FLAG })
+    expect(out.initial).toBe('1')
+    expect(out.afterSelect).toBe(7)
+    expect(out.afterLabelClick).toBe(8)
+    expect(out.rendered).toBe('8')
+  })
+})
+
 for (const c of CLASSES) {
   test(`${c.id}: level-1 data applies and the sheet renders cleanly`, async ({ page }) => {
     const result = await page.evaluate(async ({ c, pack }) => {

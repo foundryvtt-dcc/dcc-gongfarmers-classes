@@ -6,7 +6,8 @@
     "format": "standard --fix",
     "todb": "node module/compilePacks.js",
     "tojson": "node module/extractPacks.js",
-    "build-levels": "node module/buildLevelItems.mjs"
+    "build-levels": "node module/buildLevelItems.mjs",
+    "build-tables": "node module/buildDisapprovalTables.mjs"
   },
   "engines": {
     "npm": ">=10.0.0",

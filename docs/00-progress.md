@@ -150,8 +150,12 @@ complete, as are the buildable classes of the 2021, 2024, and 2025 collections.
   saves, hit die (1d8), and spells known all "as a cleric" — so its chart is the
   DCC cleric chart (no spell-slot fields, matching this module's other casters)
   with Chaos-themed titles. Only its fuel (Power!) and disapproval (Catastrophe!)
-  differ, and those are descriptive notes. Spell check uses Personality (`per`)
-  since DCC supports only int/per/sta. clericSpells tab.
+  differ. Power! is a descriptive note; Catastrophe! is automated (d10 disapproval
+  die, no range increase on failure, `gongfarmers-disapproval` RollTable pack, DCC
+  0.70.72+). The class tab shows the disapproval range because nothing raises it
+  automatically; the player or judge raises it for Power! and above-level casting.
+  Spell check uses Personality (`per`) since DCC supports only int/per/sta.
+  clericSpells tab.
 - **Cambion** is a flat-attack martial using crit table **M** at every level. New
   custom fields: `beastDie` (natural-weapon damage die, rollable) and `aspects`
   (display-only count of demonic aspects gained). Its full Aspect lists (Vermin/

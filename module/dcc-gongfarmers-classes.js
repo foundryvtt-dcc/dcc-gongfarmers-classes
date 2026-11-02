@@ -1,4 +1,4 @@
-/* global game, Hooks */
+/* global Actor, game, Hooks */
 
 import * as AssassinSheets from './actor-sheets-assassin.js'
 import * as DervishSheets from './actor-sheets-dervish.js'
@@ -53,7 +53,7 @@ import * as TherapistSheets from './actor-sheets-therapist.js'
 import * as TauruneSheets from './actor-sheets-taurune.js'
 import * as MinoveanSageSheets from './actor-sheets-minovean-sage.js'
 import { createClassItems, createAllClassItems } from './createClassItems.js'
-import { registerGongfarmersClasses } from './gongfarmers-class-data.js'
+import { CATASTROPHE_TABLE, DISAPPROVAL_PACK, registerGongfarmersClasses } from './gongfarmers-class-data.js'
 
 /**
  * Sheet registrations: each class is a 5-line `DCCSheet` stub. The
@@ -138,4 +138,30 @@ Hooks.once('init', async function () {
   for (const { sheet, scope, label } of GONGFARMERS_SHEETS) {
     game.dcc.registerActorSheet('Player', sheet, { scope, label })
   }
+
+  // Added here rather than at the top level so it runs after the `dcc.ready`
+  // listeners sibling modules add when they load. The core cleric's table
+  // <select> has no blank option, so a cleric whose stored table matches no
+  // option shows the first one and saves it. Registering last keeps
+  // Catastrophe! from being that first option when a core disapproval pack is
+  // active.
+  Hooks.once('dcc.ready', async function () {
+    Hooks.callAll('dcc.registerDisapprovalPack', DISAPPROVAL_PACK)
+    await assignCatastropheToExistingAntiClerics()
+  })
 })
+
+/**
+ * Class defaults only apply on a sheet's first open, and the Anti-Cleric sheet
+ * has no table picker, so anti-clerics created before Catastrophe! shipped
+ * would stay on the schema's initial 'Disapproval' table. A table anyone has
+ * set deliberately is left alone.
+ */
+async function assignCatastropheToExistingAntiClerics () {
+  if (game.user !== game.users.activeGM) return
+  const updates = game.actors
+    .filter(actor => actor.system?.details?.sheetClass === 'Anti-Cleric' &&
+      ['', 'Disapproval'].includes(actor.system.class?.disapprovalTable ?? ''))
+    .map(actor => ({ _id: actor.id, 'system.class.disapprovalTable': CATASTROPHE_TABLE }))
+  if (updates.length) await Actor.updateDocuments(updates)
+}

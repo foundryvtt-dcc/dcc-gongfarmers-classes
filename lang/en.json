@@ -762,7 +762,7 @@
   "AntiCleric.Power": "Power!",
   "AntiCleric.PowerDesc": "Magic-point fuel that sets the current caster level and is spent on each casting or class feature. Without Power! the anti-cleric rolls only d20 + Personality. Unspent Power! decays 1 point/hour; while it is 20 or more she counts as an unholy creature for a Law cleric's Turn Unholy. Every 10 points of Power! raises disapproval by +1.",
   "AntiCleric.Catastrophe": "Catastrophe!",
-  "AntiCleric.CatastropheDesc": "Anti-clerics never roll normal disapproval — they suffer Catastrophe! When a disapproval triggers, roll d10s equal to the number shown on the d20 (multiplied by the disapproval range), reduced by the Luck modifier. A total of 1–10 is minor corruption (DCC table 5-3), 11–20 major (5-4), and 21+ greater (5-5).",
+  "AntiCleric.CatastropheDesc": "Anti-clerics never roll normal disapproval — they suffer Catastrophe! When a disapproval triggers, roll d10s equal to the number shown on the d20, reduced by the Luck modifier. A total of 1–10 is minor corruption (DCC table 5-3), 11–20 major (5-4), and 21+ greater (5-5).",
   "AntiCleric.Sacrifice": "Sacrifice",
   "AntiCleric.SacrificeDesc": "Ritually killing a bound, helpless, intelligent, living mortal in the patron's name grants Power! equal to the victim's current hit points (about 1 minute of ritual, or per HD for powerful creatures).",
   "AntiCleric.DrainLife": "Drain Life",
