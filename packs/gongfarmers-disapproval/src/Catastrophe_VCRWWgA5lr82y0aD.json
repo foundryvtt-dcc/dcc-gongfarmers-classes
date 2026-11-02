@@ -1,0 +1,107 @@
+{
+  "_id": "VCRWWgA5lr82y0aD",
+  "name": "Catastrophe!",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "The Anti-Cleric rolls this instead of normal disapproval: 1d10 for every point on the spell check, reduced by the Luck modifier.",
+  "formula": "3d10",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "aWNVXkaYNxVgYUlB",
+      "name": "Minor Corruption",
+      "description": "Minor corruption: roll on DCC RPG table 5-3.",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        -500,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "dcc",
+        "systemVersion": "0.70.0",
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": "dccGongfarmer000"
+      },
+      "_key": "!tables.results!VCRWWgA5lr82y0aD.aWNVXkaYNxVgYUlB"
+    },
+    {
+      "_id": "ysqpj4hidoQ6fQG0",
+      "name": "Major Corruption",
+      "description": "Major corruption: roll on DCC RPG table 5-4.",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        11,
+        20
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "dcc",
+        "systemVersion": "0.70.0",
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": "dccGongfarmer000"
+      },
+      "_key": "!tables.results!VCRWWgA5lr82y0aD.ysqpj4hidoQ6fQG0"
+    },
+    {
+      "_id": "HYWA2Sy0vtcfD6Wx",
+      "name": "Greater Corruption",
+      "description": "Greater corruption: roll on DCC RPG table 5-5.",
+      "type": "text",
+      "img": "icons/svg/d20-black.svg",
+      "weight": 1,
+      "range": [
+        21,
+        500
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.348",
+        "systemId": "dcc",
+        "systemVersion": "0.70.0",
+        "createdTime": 0,
+        "modifiedTime": 0,
+        "lastModifiedBy": "dccGongfarmer000"
+      },
+      "_key": "!tables.results!VCRWWgA5lr82y0aD.HYWA2Sy0vtcfD6Wx"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.348",
+    "systemId": "dcc",
+    "systemVersion": "0.70.0",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "dccGongfarmer000"
+  },
+  "_key": "!tables!VCRWWgA5lr82y0aD"
+}

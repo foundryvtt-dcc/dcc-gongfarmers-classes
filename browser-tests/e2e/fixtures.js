@@ -1,4 +1,4 @@
-/* eslint-disable no-undef -- browser globals (game) used inside page.evaluate / waitForFunction */
+/* eslint-disable no-undef -- browser globals (game, CONFIG) used inside page.evaluate / waitForFunction */
 /**
  * Shared Playwright fixtures for the Gongfarmer's Almanac Classes e2e suite.
  *
@@ -18,7 +18,7 @@ async function login (page) {
 
   const isInGame = await page.locator('.game.system-dcc').isVisible({ timeout: 1000 }).catch(() => false)
   if (!isInGame) {
-    const userSelect = page.locator('select[name="userid"]')
+    const userSelect = page.locator('select[name="userId" i]')
     await userSelect.waitFor({ state: 'visible', timeout: 10000 })
     const gmDisabled = await userSelect
       .locator('option', { hasText: 'Gamemaster' })
@@ -31,12 +31,21 @@ async function login (page) {
         'is disabled). Close the Foundry browser tab logged in as GM and re-run.'
       )
     }
-    await page.selectOption('select[name="userid"]', { label: 'Gamemaster' })
+    await page.selectOption('select[name="userId" i]', { label: 'Gamemaster' })
     await page.click('button[name="join"]')
     await page.waitForSelector('.game.system-dcc', { timeout: 30000 })
   }
 
   await page.waitForFunction(() => game?.ready === true && !!game?.user, { timeout: 30000 })
+
+  // `dcc.ready` fires well after `game.ready` (the system awaits its migrations
+  // and class-progression load first), and this module registers its disapproval
+  // pack from it. Specs that roll on that table need it in place.
+  await page.waitForFunction(
+    (pack) => CONFIG.DCC.disapprovalPacks?.packs?.includes(pack),
+    `${MODULE_ID}.gongfarmers-disapproval`,
+    { timeout: 150000 }
+  )
 
   // This module must be enabled in the world for the suite to mean anything.
   const active = await page.evaluate((id) => game.modules.get(id)?.active === true, MODULE_ID)
@@ -57,7 +66,7 @@ function createSessionTest () {
       await login(page)
       await use(page)
       await context.close()
-    }, { scope: 'worker' }],
+    }, { scope: 'worker', timeout: 180000 }],
 
     page: async ({ sessionPage }, use) => {
       await use(sessionPage)

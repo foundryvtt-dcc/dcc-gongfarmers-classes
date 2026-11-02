@@ -20,8 +20,8 @@
         "id": "dcc",
         "type": "system",
         "compatibility": {
-          "minimum": "0.70.61",
-          "verified": "0.70.61"
+          "minimum": "0.70.72",
+          "verified": "0.70.79"
         }
       }
     ]
@@ -68,6 +68,13 @@
       "path": "packs/gongfarmers-class-level-data",
       "system": "dcc",
       "type": "Item"
+    },
+    {
+      "name": "gongfarmers-disapproval",
+      "label": "Gongfarmer's Almanac Disapproval Tables",
+      "path": "packs/gongfarmers-disapproval",
+      "system": "dcc",
+      "type": "RollTable"
     },
     {
       "name": "gongfarmers-almanac-reference",
